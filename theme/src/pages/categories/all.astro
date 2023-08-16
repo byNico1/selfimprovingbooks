@@ -1,0 +1,210 @@
+---
+
+import { Icon } from "astro-icon";
+import {
+  AnnouncementBar,
+  Button,
+  CustomerQuoteSection,
+  ThreeColumnTextSection,
+  StickyTextImageSection,
+  CtaCardSection,
+} from "@littlesticks/odyssey-theme-components";
+import Layout from "../../layouts/Page.astro";
+import TextAndImageHero from "../../components/sections/heros/TextAndImageHero.astro";
+
+const seo = {
+  title: "Landing Page #1 | Astro Odyssey Theme",
+  description: "Landing Page #1 | Astro Odyssey Theme",
+};
+
+---
+
+<Layout {seo} announcementBar={true}>
+  <AnnouncementBar
+    text="Read Our Latest Blog Post"
+    href="/blog/posts/remote-work-mental-health/"
+    slot="announcement-bar"
+  />
+
+  <section class="flex-col mt-12">
+    <div class="text-center">
+      <h1 class="text-4xl">Categories</h1>
+    </div>
+
+    <div
+    class="swiper-container mySwiper min-h-screen mt-12 overflow-hidden"
+    >
+      <div class="swiper-wrapper">
+        {[...Array(4)].map(el => (
+          <div class="swiper-slide swipe w-[80%] flex justify-center max-w-sm ">
+            1
+          </div>
+        ))}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- <section class="hero-container min-h-screen">
+    <div class="title"></div>
+    <div class="swiper-container px-6 mx-auto overflow-hidden">
+      <div class="wrapper relative flex box-content">
+        <div class="card overflow-visible mr-4 min-w-[200px] bg-slate-500">
+          1
+        </div>
+        <div
+          class="card overflow-visible mr-4 min-w-[200px] h-[500px] bg-slate-500"
+        >
+          1
+        </div>
+        <div class="card overflow-visible mr-4 min-w-[200px] bg-slate-500">
+          1
+        </div>
+        <div class="card overflow-visible mr-4 min-w-[200px] bg-slate-500">
+          1
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- <TextAndImageHero reversed>
+    <div slot="text-container">
+      <h1>Don't Reinvent the Wheel</h1>
+      <p>Use Odyssey Theme to jumpstart your company's marketing website.</p>
+    </div>
+    <div slot="btns-container">
+      <Button href="/theme/get-started" customIcon>
+        Get Started
+        <span slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </span>
+      </Button>
+    </div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/landing-1/landing-hero-1.jpg"
+        alt="Astro Odyssee"
+        id="home-hero-image"
+      />
+    </picture>
+  </TextAndImageHero> -->
+
+  <!-- <CustomerQuoteSection
+    quoteText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero nobis? Voluptas assumenda, voluptatibus commodi qui ducimus delectus praesentium maiores, impedit iure labore ratione, ea facilis numquam doloremque aperiam aspernatur."
+    customerName="Happy Customer"
+  /> -->
+
+  <ThreeColumnTextSection>
+    <div slot="column-1-body">
+      <h2>Why?</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+        mollitia cumque. Velit.
+      </p>
+    </div>
+    <Button slot="column-1-cta">Learn More</Button>
+    <div slot="column-2-body">
+      <h2>How?</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+        mollitia cumque. Velit.
+      </p>
+    </div>
+    <Button slot="column-2-cta" outlined>Learn More</Button>
+    <div slot="column-3-body">
+      <h2>What?</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+        mollitia cumque. Velit.
+      </p>
+    </div>
+    <Button slot="column-3-cta">Learn More</Button>
+  </ThreeColumnTextSection>
+
+
+  <StickyTextImageSection>
+    <div slot="text-container">
+      <h2>Features</h2>
+      <h3>SEO</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+        mollitia cumque. Velit.
+      </p>
+      <h3>Responsive</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+        mollitia cumque. Velit.
+      </p>
+      <h3>Themeable</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
+        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
+        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
+        mollitia cumque. Velit.
+      </p>
+    </div>
+    <picture slot="image-container">
+      <img
+        src="/assets/images/landing-1/landing-sticky.jpg"
+        alt="Astro Odyssey"
+        loading="lazy"
+      />
+    </picture>
+  </StickyTextImageSection>
+
+  <CtaCardSection
+    background="var(--theme-surface-2)"
+    color="var(--theme-on-surface-2)"
+  >
+    <h2>Start Your Website Today</h2>
+    <p>
+      It only takes a couple clicks to have a new, modern website for your
+      business or startup.
+    </p>
+    <Button href="/theme/get-started" customIcon>
+      Get Started
+      <span slot="icon">
+        <Icon name="ic:baseline-chevron-right" />
+      </span>
+    </Button>
+  </CtaCardSection>
+</Layout>
+
+<style>
+  .swiper-slide {
+    background-color: var(--theme-surface-1);
+    height: 400px;
+  }
+</style>
+
+<script>
+  import Swiper from 'swiper'
+  import {Pagination} from 'swiper/modules'
+  import 'swiper/css'
+  import 'swiper/css/pagination'
+  const swiper = new Swiper('.swiper-container', {
+    modules: [Pagination],
+  // Optional parameters
+  // direction: 'vertical',
+  // loop: true,
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween: 20,
+
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+});
+</script>

@@ -1,0 +1,128 @@
+---
+const {navData} = Astro.props
+import Theme from '../../components/Theme-UI/theme.astro'
+---
+<!-- lg:flex-wrap lg:justify-start lg:py-4 -->
+
+<!-- Main navigation container -->
+<!-- text-slate-50 bg-[#272f27] -->
+<!-- bg-[#17191e] text-white -->
+<header
+class="relative flex w-full flex-nowrap items-center justify-between py-4 lg:px-5 text-gray-2 "
+data-te-navbar-ref
+>
+<!-- lg:flex-col -->
+	<nav class="flex lg:flex-col xl:flex-row  w-full flex-wrap items-center justify-between px-3">
+		<slot />
+
+		<!-- Collapsible navbar container --> 
+		<div
+		class="!visible mt-2 hidden  basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto"
+		id="navbarSupportedContent15"
+		data-te-collapse-item
+		>
+			<!-- Left links --> 
+			<!-- Link --> 
+			<ul
+			class="list-style-none mr-auto flex flex-col pl-0 lg:flex-row"
+			data-te-navbar-nav-ref
+			>
+				{navData.map(data => {
+					if(data.dropdown === true) {
+						return (
+							<div class="hidden sm:block relative dropdowns mx-2 lg:flex 	">
+        						<button data-title={data.title} class="dropdown text-sm rounded flex gap-1  items-center">
+									{data.title}
+									<svg viewBox="0 0 1024 1024" class="icon w-3" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" ></path></g></svg>
+								</button>
+								<div data-title={data.title} class="absolute right-0 top-7 mt-2 w-48 bg-gray-800 rounded-md overflow-hidden z-10 hidden">
+									{data.subcat.map(el => (
+										<a href={el.slug} class="block px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">
+											{el.title}
+										</a>
+									))}
+								</div>
+							</div>
+					)}
+					else {
+						return (
+							<li class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
+								<a
+								class="p-0 text-sm transition duration-200  hover:ease-in-out motion-reduce:transition-none lg:px-2"
+								href={`${data.slug}`}
+								data-te-nav-link-ref
+								>
+									{data.title}
+									</a>
+									</li>
+									)}
+								})}
+					<Theme />
+			</ul>
+		</div>
+		
+		<div class="lg:hidden flex">
+			
+			<!-- <Theme class=" inline-block" client:load  /> -->
+			
+			
+			<button
+			class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline  focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+			type="button"
+			data-te-collapse-init
+			data-te-target="#navbarSupportedContent15"
+			aria-controls="navbarSupportedContent15"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+			>
+				<!-- Hamburger icon --> 
+				<span class="[&>svg]:w-7">
+					<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="h-7 w-7"
+					>
+						<path
+						fill-rule="evenodd"
+						d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+						clip-rule="evenodd"
+						/>
+					</svg>
+				</span>
+			</button>
+		</div>
+	</nav>
+</header>
+
+<style>
+	svg {
+		
+	}
+	header {
+		box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,  
+              100%, 0.075),
+              /* shadow ring 👇 */
+              0 0 0 1px hsla(0, 0%, 0%, 0.05),
+              /* multiple soft shadows 👇 */
+              0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+              0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+              0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+	}
+</style>
+
+<script>
+  const dropdownToggle = document.querySelectorAll('.dropdown');
+  const dropdownMenu = document.querySelectorAll('.dropdowns > div');
+  console.log(dropdownMenu);
+  console.log(dropdownToggle);
+
+  dropdownToggle.forEach(elDad => elDad.addEventListener('click', () => {
+    dropdownMenu.forEach(el => {
+		console.log(elDad.getAttribute('data-title'));
+		if(elDad.getAttribute('data-title') === el.getAttribute('data-title')){
+			el.classList.toggle('hidden')
+		}
+	});
+  }))
+</script>
