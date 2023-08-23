@@ -19,9 +19,9 @@ class="fixed lg:static top-0 w-full z-30 bg-[var(--theme-bg)]"
 						if(data.dropdown === true) {
 							return (
 								<li data-title={data.title} class="sm:block relative mx-2 lg:flex dropdown-container ">
-										<button data-title={data.title} class="dropbtn flex gap-1 items-center">
+										<button data-title={data.title} class="drops dropbtn flex gap-1 items-center">
 											{data.title}
-											<svg viewBox="0 0 1024 1024" class="icon w-3" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" ></path></g></svg>
+											<svg viewBox="0 0 1024 1024" class="arrow icon w-3" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" ></path></g></svg>
 										</button>
 										<div data-title={data.title} class="dropdown-content absolute right-0 top-7 mt-2 w-48 bg-gray-800 rounded-md overflow-hidden z-10">
 											{data.subcat.map(el => (
@@ -50,7 +50,7 @@ class="fixed lg:static top-0 w-full z-30 bg-[var(--theme-bg)]"
 		</div>
 		
 		<input class="side-menu lg:hidden" type="checkbox" id="side-menu"/>
-		<label class="hamb lg:hidden px-4" for="side-menu"><span class="hamb-line"></span></label>
+		<label class="hamb lg:hidden p-4" for="side-menu"><span class="hamb-line"></span></label>
 	</div>
 
 		
@@ -67,12 +67,12 @@ class="fixed lg:static top-0 w-full z-30 bg-[var(--theme-bg)]"
 				navData.map(data => {
 					if(data.dropdown === true) {
 						return (
-							<li class="mb-4 px-2 relative dropdowns">
-								<button data-title={data.title} class="rounded flex gap-1 dropdownM  items-center">
+							<li class="mb-4 px-2 relative dropdowns dropdown-container">
+								<button data-title={data.title} class="drops dropbtn flex gap-1 dropdownM  items-center">
 									{data.title}
-									<svg viewBox="0 0 1024 1024" class="icon w-3" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" ></path></g></svg>
+									<svg viewBox="0 0 1024 1024" class="arrow icon w-3" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" ></path></g></svg>
 								</button>
-								<div data-title={data.title} class=" mt-2 rounded-md overflow-hidden z-10 hidden">
+								<div data-title={data.title} class="dropdown-content mt-2 rounded-md overflow-hidden z-10">
 									{data.subcat.map(el => (
 										<a href={el.slug} class="block py-2 text-sm">
 											{el.title}
@@ -85,7 +85,7 @@ class="fixed lg:static top-0 w-full z-30 bg-[var(--theme-bg)]"
 						return (
 							<li class="mb-4 px-2 ">
 								<a
-								class="p-0 transition duration-200  hover:ease-in-out 	motion-reduce:transition-none lg:px-2"
+								class="p-0 transition duration-200  hover:ease-in-out motion-reduce:transition-none lg:px-2"
 								href={`${data.slug}`}
 								data-te-nav-link-ref
 								>
@@ -111,9 +111,7 @@ header {
 			0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
 			0 3.5px 6px hsla(0, 0%, 0%, 0.09);
 }
-.dropdown-content {
-	display: none;
-}
+
 	/* Menu Icon */
 .hamb{
     cursor: pointer;
@@ -145,8 +143,22 @@ header {
     top: -5px;
 }
 
+/* DropDown Styles */
+
+.dropdown-content {
+	display: none;
+}
+
 .side-menu {
     display: none;
+}
+
+.arrow {
+	transition: transform 0.3s ease;
+}
+
+.show .arrow {
+	transform: rotate(180deg);
 }
 
 .show {
@@ -155,12 +167,6 @@ header {
 </style>
 
 <script>
-const dropdownToggle = document.querySelectorAll('.dropdownM');
-
-dropdownToggle.forEach(button => button.addEventListener('click', () => {
-	let menu = button.nextElementSibling
-	menu.classList.toggle('hidden')
-}))
 
 var dropdownContainers = document.querySelectorAll(".dropdown-container");
 
@@ -175,6 +181,9 @@ dropdownContainers.forEach(function(container:HTMLDivElement) {
       closeAllDropdowns();
       if (!isDropdownVisible) {
         dropdownContent.classList.add("show");
+		targetDropdown.querySelector<HTMLElement>(".arrow").style.transform = "rotate(180deg)";
+      } else {
+        targetDropdown.querySelector<HTMLElement>(".arrow").style.transform = "rotate(0deg)"; // Reset arrow rotation
       }
     }
   });
@@ -188,8 +197,14 @@ document.addEventListener("click", function(event) {
 
 function closeAllDropdowns() {
   var dropdownContents = document.querySelectorAll(".dropdown-content");
+  var arrows = document.querySelectorAll(".arrow");
+  
   dropdownContents.forEach(function(content) {
     content.classList.remove("show");
+  });
+  
+  arrows.forEach(function(arrow:HTMLElement) {
+    arrow.style.transform = "rotate(0deg)";
   });
 }
 	
