@@ -1,0 +1,23 @@
+---
+import ProductCard from '../productCard/productCard.astro'
+---
+
+<section class="grid-container">
+  {
+    [...Array(12)].map(el => <ProductCard/>)
+  }
+  <!-- Repeat the above book-card elements for more books -->
+</section>
+
+<!-- more products -->
+
+<style>
+  .grid-container {
+    display: grid;
+    grid-gap: 20px;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  }
+
+
+</style>

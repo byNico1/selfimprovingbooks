@@ -19,13 +19,3 @@ pre {
 pre .language-id {
   display: none;
 }
-
-/* [data-theme="default"] header {
-  background-color: var(--theme-on-bg);
-  color: var(--theme-bg);
-}*/
-/* 
-[data-theme="dark"] header {
-  background-color: var(--theme-surface-1);
-  color: var(--theme-on-surface-1);
-} */

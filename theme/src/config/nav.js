@@ -5,15 +5,13 @@ export const nav = [
     dropdown: false,
   },
   {
-    title: "Categories",
+    title: "Topics",
     slug: "/categories",
     subcat: [
-      { title: "Biographies & Memoirs", slug: "/categories/bio-memoirs" },
-      { title: "Business & Money", slug: "/categories/business-money" },
-      { title: "Self-Help", slug: "/categories/self-help" },
-      { title: "All", slug: "/categories/all" },
+      { title: "Biographies & Memoirs", slug: "/topics/bio-memoirs" },
+      { title: "Business & Money", slug: "/topics/business-money" },
+      { title: "Self-Help", slug: "/topics/self-help" },
     ],
-    // subcatslug: ["/bio-memoirs", "/business-money", "/self-help"],
     dropdown: true,
   },
   {
@@ -22,9 +20,17 @@ export const nav = [
     dropdown: false,
   },
   {
-    title: "Deals and Discounts",
-    slug: "/deals",
-    dropdown: false,
+    title: "Most Reviews Categories",
+    slug: "/categories",
+    subcat: [
+      { title: "Economics", slug: "/topics/categories/economics" },
+      {
+        title: "Sports and Outdoors",
+        slug: "/topics/categories/sports-and-outdoors",
+      },
+      { title: "Motivational", slug: "/topics/categories/otivational" },
+    ],
+    dropdown: true,
   },
   {
     title: "Community",
