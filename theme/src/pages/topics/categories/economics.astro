@@ -1,16 +1,7 @@
 ---
 import { Icon } from "astro-icon";
-import {
-  AnnouncementBar,
-  Button,
-  CustomerQuoteSection,
-  ThreeColumnTextSection,
-  StickyTextImageSection,
-  CtaCardSection,
-} from "@littlesticks/odyssey-theme-components";
 import Layout from "../../../layouts/Page.astro";
 import ProductsContainer from "../../../components/sections/products/productsContainer/productsContainer.astro";
-import TextAndImageHero from "../../../components/sections/heros/TextAndImageHero.astro";
 
 const seo = {
   title: "Landing Page #1 | Astro Odyssey Theme",
@@ -19,132 +10,71 @@ const seo = {
 ---
 
 <Layout {seo} announcementBar={true}>
-  <!-- <AnnouncementBar
-    text="Read Our Latest Blog Post"
-    href="/blog/posts/remote-work-mental-health/"
-    slot="announcement-bar"
-  /> -->
-
-  <TextAndImageHero reversed>
-    <div slot="text-container">
-      <h1 class="text-3xl  sm:text-5xl">Economics</h1>
-      <p>
-        Dive into the Economics Category, your gateway to understanding
-        financial dynamics and making informed decisions. Discover handpicked
-        self-improvement books that illuminate economic concepts and empower
-        your journey toward financial mastery.
-      </p>
-
-      <div slot="btns-container">
-        <Button href="/theme/get-started" customIcon>
-          Get Started
-          <span slot="icon">
-            <Icon name="ic:baseline-chevron-right" />
-          </span>
-        </Button>
-      </div>
-    </div>
-    <picture slot="image-container">
-      <img
-        src="/assets/images/landing-1/landing-hero-1.jpg"
-        alt="Astro Odyssee"
-        id="home-hero-image"
-      />
-    </picture>
-  </TextAndImageHero>
-
-  <section class="flex-col flex justify-around min-h-[90vh]">
-    <div class="text-center">
-      <h2 class="text-3xl sm:text-5xl">BEST SELLING ECONOMICS BOOKS</h2>
-    </div>
-
-    <ProductsContainer />
+  <section class="mx-auto w-11/12 max-w-2xl lg:my-12 my-24">
+    <h1 class="text-3xl  sm:text-5xl">
+      Economics Books and Financial Literacy Knowledge
+    </h1>
+    <p class="!mt-10">
+      In a rapidly evolving world, understanding the principles of economics and
+      mastering financial literacy are essential components of making informed
+      decisions. Welcome to our comprehensive guide on economics books and
+      financial literacy, where we explore the profound impact of economic
+      knowledge on personal growth and financial well-being.
+    </p>
   </section>
 
-  <!-- <CustomerQuoteSection
-    quoteText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero nobis? Voluptas assumenda, voluptatibus commodi qui ducimus delectus praesentium maiores, impedit iure labore ratione, ea facilis numquam doloremque aperiam aspernatur."
-    customerName="Happy Customer"
-  /> -->
+    <section class="flex-col flex justify-around min-h-[90vh] mt-24">
+      <div class="text-center sm:mx-auto">
+        <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">BEST SELLING ECONOMICS BOOKS</h2>
+      </div>
 
-  <h2 class="text-center !my-16 px-5">3 Advantages of Economics Books</h2>
+      <ProductsContainer />
+    </section>
+  </section>
 
-  <ThreeColumnTextSection>
-    <div slot="column-1-body">
-      <h2>Informed Financial Decision Making</h2>
-      <p>
-        Economics books provide you with insights into economic principles,
-        helping you make well-informed financial decisions, from investments to
-        budgeting.
-      </p>
-    </div>
-
-    <div slot="column-2-body">
-      <h2>Practical Wealth Strategies</h2>
-      <p>
-        Learn actionable strategies for managing money, growing wealth, and
-        achieving financial stability through the wisdom shared in economics
-        books.
-      </p>
-    </div>
-
-    <div slot="column-3-body">
-      <h2>Personal Empowerment</h2>
-      <p>
-        Gain the knowledge and confidence to navigate economic challenges,
-        understand market trends, and take control of your financial future,
-        thanks to the guidance found in economics literature.
-      </p>
-    </div>
-  </ThreeColumnTextSection>
-  <!-- 
-  <StickyTextImageSection>
-    <div slot="text-container">
-      <h2>Features</h2>
-      <h3>SEO</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-        mollitia cumque. Velit.
-      </p>
-      <h3>Responsive</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-        mollitia cumque. Velit.
-      </p>
-      <h3>Themeable</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolorem
-        tempore odio! Nemo consectetur ipsa aperiam similique maxime maiores
-        consequatur explicabo ut quibusdam fugiat corporis, dignissimos tenetur,
-        mollitia cumque. Velit.
-      </p>
-    </div>
-    <picture slot="image-container">
-      <img
-        src="/assets/images/landing-1/landing-sticky.jpg"
-        alt="Astro Odyssey"
-        loading="lazy"
-      />
-    </picture>
-  </StickyTextImageSection>
-
-  <CtaCardSection
-    background="var(--theme-surface-2)"
-    color="var(--theme-on-surface-2)"
-  >
-    <h2>Start Your Website Today</h2>
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Why Economics Education Matters</h2>
     <p>
-      It only takes a couple clicks to have a new, modern website for your
-      business or startup.
+      Economics, often considered a complex subject, plays an intricate role in
+      our lives. From microeconomic concepts that explain individual choices to
+      macroeconomic trends that shape national economies, economics provides a
+      lens through which we can understand the dynamics of the modern world.
     </p>
-    <Button href="/theme/get-started" customIcon>
-      Get Started
-      <span slot="icon">
-        <Icon name="ic:baseline-chevron-right" />
-      </span>
-    </Button>
-  </CtaCardSection> -->
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">The Power of Financial Literacy</h2>
+    <p>
+      Financial literacy empowers individuals to take charge of their financial futures. Equipped with skills to manage money wisely and make informed decisions, financial literacy fosters confidence in navigating personal finance.
+    </p>
+  </section>
+  
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Exploring Basic Economics Concepts</h2>
+    <p>
+      Our exploration of economics begins with diving into fundamental concepts that underpin economic theory. Microeconomics examines how individuals, households, and businesses make decisions in resource-constrained environments. We'll explore concepts such as supply and demand, market equilibrium, and consumer behavior. On the macroeconomic front, we'll delve into topics like GDP, inflation, unemployment, and fiscal policy.
+    </p>
+  </section>
+  
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Embracing Financial Education</h2>
+    <p>
+      Financial education is a catalyst for informed financial decision-making. Whether through formal education programs, workplace workshops, or self-directed learning, embracing financial education empowers individuals to navigate complex financial landscapes with confidence.
+    </p>
+  </section>
+  
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Navigating Financial Literacy Month</h2>
+    <p>
+      Financial Literacy Month is a dedicated time to enhance our understanding of financial concepts and foster financial well-being. Throughout this month, various organizations, institutions, and communities come together to offer events, workshops, and resources aimed at improving financial literacy.
+    </p>
+  </section>
+ 
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Conclusion</h2>
+    <p>
+      In conclusion, the journey through economics books and financial literacy is one of self-improvement and empowerment. As you explore the concepts of economics, financial literacy, and their real-world applications, you're taking proactive steps towards achieving greater financial understanding.
+    </p>
+  </section>
+
 </Layout>

@@ -2,7 +2,7 @@
 import ProductCard from '../productCard/productCard.astro'
 ---
 
-<section class="grid-container">
+<section class="grid-container sm:mx-auto sm:w-11/12 ">
   {
     [...Array(12)].map(el => <ProductCard/>)
   }
@@ -13,11 +13,11 @@ import ProductCard from '../productCard/productCard.astro'
 
 <style>
   .grid-container {
+    max-width: 1024px;
     display: grid;
     grid-gap: 20px;
     padding: 10px;
     grid-template-columns: repeat(auto-fill, minmax(300px, auto));
   }
-
 
 </style>
