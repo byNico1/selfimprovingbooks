@@ -1,0 +1,124 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "../../../layouts/Page.astro";
+import ProductsContainer from "../../../components/sections/products/productsContainer/productsContainer.astro";
+import Button from "../../../components/Button/button.astro";
+
+const seo = {
+  title: "Landing Page #1 | Astro Odyssey Theme",
+  description: "Landing Page #1 | Astro Odyssey Theme",
+};
+---
+
+<Layout {seo} announcementBar={true}>
+  <section class="mx-auto w-11/12 max-w-2xl lg:my-12 mt-24 mb-6">
+    <h1 class="text-3xl  sm:text-5xl">
+      Leadership in Sports: Books that Inspire and Lead
+    </h1>
+    <p class="!mt-10">
+      Welcome to our guide on leadership in sports, where we dive into the
+      captivating world of athletes who have demonstrated exceptional leadership
+      skills. In this page, we explore a curated selection of sports and outdoor
+      books that showcase stories of determination, teamwork, and leadership
+      both on and off the playing field.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Featured Sports and Outdoor Books</h2>
+    <p>
+      Explore a collection of inspiring sports and outdoor books that delve into
+      leadership, resilience, and the remarkable journeys of athletes. These
+      recommended titles offer valuable insights into the world of sports
+      leadership and the indomitable spirit of individuals who have excelled on
+      and off the field.
+    </p>
+  </section>
+
+  <section class="flex-col flex justify-around min-h-[90vh] mt-12">
+    <div class="text-center sm:mx-auto">
+      <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">
+        BEST SELLING ECONOMICS BOOKS
+      </h2>
+    </div>
+
+    <ProductsContainer />
+
+    <div class="flex justify-center items-center mt-10">
+      <Button
+        href="https://www.amazon.com/s?bbn=26&rh=n%3A283155%2Cn%3A26&dc&qid=1693184566&ref=lp_2446_ex_n_1"
+        customIcon
+      >
+        More offers on Amazon
+        <span slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </span>
+      </Button>
+    </div>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Unveiling Leadership in Sports</h2>
+    <p>
+      Sports and outdoor activities often serve as a canvas for leaders to
+      emerge. From coaches who mentor their teams to athletes who inspire with
+      their actions, leadership in sports goes beyond the wins and losses. These
+      books provide a deeper understanding of the qualities that propel
+      individuals to excel as leaders in the realm of sports.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Embodied Leadership: Athletes' Journeys</h2>
+    <p>
+      Explore sports autobiography books that offer a firsthand account of
+      athletes' journeys. These captivating memoirs provide insights into the
+      challenges athletes face, the values that drive them, and the leadership
+      lessons they've learned through their experiences.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">The Best Sports Books: Leadership Edition</h2>
+    <p>
+      Delve into a collection of the best sports books that emphasize
+      leadership. These titles have captured the essence of leadership within
+      the context of sports, offering valuable lessons applicable to various
+      aspects of life. From team dynamics to individual growth, these books
+      inspire readers to harness their leadership potential.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Elevating Team Performance</h2>
+    <p>
+      Effective leadership plays a pivotal role in elevating team performance.
+      These books explore strategies employed by successful coaches and athletes
+      to create a culture of excellence, teamwork, and growth. Through real-life
+      examples, readers can gain insights into fostering leadership skills that
+      extend beyond the game.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Navigating the Outdoors: Leadership and Adventure</h2>
+    <p>
+      Leadership extends to the great outdoors, where adventurers and explorers
+      exhibit qualities of resilience and resourcefulness. Discover outdoor
+      books that highlight leadership in the face of challenges, be it
+      conquering mountains, traversing deserts, or navigating uncharted waters.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Conclusion</h2>
+    <p>
+      In the world of sports and outdoor pursuits, leadership stands as a
+      guiding principle that drives individuals to surpass their limits. Through
+      the captivating stories within these books, you'll witness how athletes,
+      coaches, and adventurers exemplify leadership in their journeys. Embrace
+      the wisdom shared within these pages and harness the inspiration to lead
+      and excel, both in your chosen field and in life.
+    </p>
+  </section>
+</Layout>
