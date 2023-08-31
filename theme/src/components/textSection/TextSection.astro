@@ -1,0 +1,11 @@
+---
+interface Props {
+  bg?: string;
+  txt?: string;
+}
+const { bg = "", txt } = Astro.props as Props;
+---
+
+<div class={`mt-8 text-left ${bg && `bg-[${bg}] text-[${txt}]`} `}>
+  <slot />
+</div>

@@ -1,0 +1,146 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "../../layouts/Page.astro";
+import ProductsContainer from "../../components/sections/products/productsContainer/productsContainer.astro";
+import Button from "../../components/Button/button.astro";
+
+const seo = {
+  title: "Landing Page #1 | Astro Odyssey Theme",
+  description: "Landing Page #1 | Astro Odyssey Theme",
+};
+---
+
+<Layout {seo} announcementBar={true}>
+  <section class="mx-auto w-11/12 max-w-2xl lg:my-12 mt-24 mb-6">
+    <h1 class="text-4xl  sm:text-5xl">
+      Explore Our Topics: Your Path to Personal Growth
+    </h1>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Unveiling the World of Self-Improvement</h2>
+    <p>
+      Welcome to our Topics section, where you'll discover a treasure trove of
+      content designed to empower, inspire, and guide you on your journey of
+      self-improvement. Dive into carefully curated categories that cover a
+      range of topics, each offering a unique perspective and valuable insights.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Discover Our Categories</h2>
+
+    <div class="category-container">
+      <h3>Business and Money</h3>
+      <p>
+        Explore a collection of content dedicated to the world of business and
+        money. From insightful guides on economics to strategies for success in
+        the corporate realm, this category offers valuable resources for
+        aspiring entrepreneurs and business enthusiasts.
+      </p>
+      <div class="flex justify-left items-center">
+        <Button href="/topics/categories/business-and-money" customIcon>
+          Start your Business journey
+          <span slot="icon">
+            <Icon name="ic:baseline-chevron-right" />
+          </span>
+        </Button>
+      </div>
+    </div>
+
+    <div class="category-container">
+      <h3>Sports and Outdoor</h3>
+      <p>
+        Immerse yourself in the realm of sports and outdoor pursuits. Dive into
+        inspiring stories of athletes who have conquered challenges, leadership
+        strategies that apply both on and off the field, and insights into
+        personal growth through athletic achievement.
+      </p>
+      <div class="flex justify-left items-center">
+        <Button href="/categories/sports-and-outdoor" customIcon>
+          Start your journey
+          <span slot="icon">
+            <Icon name="ic:baseline-chevron-right" />
+          </span>
+        </Button>
+      </div>
+    </div>
+
+    <div class="category-container">
+      <h3>Success and Personal Growth</h3>
+      <p>
+        Unlock the keys to success and personal growth through a curated
+        collection of content. From mindset shifts to principles of achievement,
+        this category provides a roadmap for individuals seeking to reach their
+        fullest potential.
+      </p>
+      <div class="flex justify-left items-center">
+        <Button href="/categories/success" customIcon>
+          Start your Success journey
+          <span slot="icon">
+            <Icon name="ic:baseline-chevron-right" />
+          </span>
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="flex-col flex justify-around min-h-[90vh] mt-12">
+    <div class="text-center sm:mx-auto">
+      <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">
+        BEST SELLING ECONOMICS BOOKS
+      </h2>
+    </div>
+
+    <ProductsContainer />
+
+    <div class="flex justify-center items-center mt-10">
+      <Button
+        href="https://www.amazon.com/b/?node=2581&ref_=Oct_d_odnav_d_3_0&pd_rd_w=e2NWo&content-id=amzn1.sym.da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_p=da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_r=64PAYA8YMH05D2WN1YQ0&pd_rd_wg=2EAmh&pd_rd_r=fd9967f0-c191-4e96-bdbe-f04a773e1c24"
+        customIcon
+      >
+        More offers on Amazon
+        <span slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </span>
+      </Button>
+    </div>
+  </section> -->
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Navigating Our Content</h2>
+    <p class="!mt-10">
+      Each category is thoughtfully designed to provide you with a comprehensive
+      resource for your self-improvement journey. Whether you're looking for
+      advice on navigating the world of economics, seeking inspiration from
+      athletic triumphs, or exploring the principles of success, our Topics
+      section offers something for everyone.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Engage and Explore</h2>
+    <p>
+      Engage with our content, delve into articles that offer actionable advice,
+      dive into book recommendations that fuel your growth, and tap into the
+      wisdom shared by experts and individuals who have excelled in their chosen
+      fields.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Embrace Your Journey</h2>
+    <p>
+      Remember that self-improvement is a lifelong journey. Our Topics section
+      aims to be your guide and companion as you navigate the path to personal
+      growth, success, and fulfillment. Explore, learn, and embrace the
+      opportunity to become the best version of yourself.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .category-container {
+    margin-block: 30px;
+  }
+</style>

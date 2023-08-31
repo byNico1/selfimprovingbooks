@@ -1,0 +1,133 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "../../../layouts/Page.astro";
+import ProductsContainer from "../../../components/sections/products/productsContainer/productsContainer.astro";
+import Button from "../../../components/Button/button.astro";
+
+const seo = {
+  title: "Landing Page #1 | Astro Odyssey Theme",
+  description: "Landing Page #1 | Astro Odyssey Theme",
+};
+---
+
+<Layout {seo} announcementBar={true}>
+  <section class="mx-auto w-11/12 max-w-2xl lg:my-12 mt-24 mb-6">
+    <h1 class="text-4xl  sm:text-5xl">
+      Motivational Books for Athletes: Ignite Your Inner Drive
+    </h1>
+    <p class="!mt-10">
+      Welcome to our guide on motivational books for athletes, where we delve
+      into the world of literature that empowers, uplifts, and propels athletes
+      to achieve their personal best. Beyond physical training, these books
+      provide the mental and emotional tools that drive athletes to excel both
+      on and off the field.
+    </p>
+  </section>
+
+  <!-- <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Featured Economics Books</h2>
+    <p>
+      Discover a selection of top-rated economics books that offer valuable
+      insights into economic principles, financial literacy, and more. Explore
+      these recommended titles and deepen your understanding of the world of
+      economics.
+    </p>
+  </section> -->
+
+  <section class="flex-col flex justify-around min-h-[90vh] mt-12">
+    <div class="text-center sm:mx-auto">
+      <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">
+        BEST SELLING ECONOMICS BOOKS
+      </h2>
+    </div>
+
+    <ProductsContainer />
+
+    <div class="flex justify-center items-center mt-10">
+      <Button
+        href="https://www.amazon.com/b/?node=2581&ref_=Oct_d_odnav_d_3_0&pd_rd_w=e2NWo&content-id=amzn1.sym.da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_p=da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_r=64PAYA8YMH05D2WN1YQ0&pd_rd_wg=2EAmh&pd_rd_r=fd9967f0-c191-4e96-bdbe-f04a773e1c24"
+        customIcon
+      >
+        More offers on Amazon
+        <span slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </span>
+      </Button>
+    </div>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Unleash Your Inner Champion</h2>
+    <p>
+      More than physical prowess, the journey of an athlete is defined by the
+      strength of their mindset. These motivational books offer a deep dive into
+      the stories of athletes who have risen above challenges, sharing their
+      strategies, triumphs, and the mental fortitude that fueled their success.
+      Gain insights into the mindset that separates champions from contenders.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Navigating Challenges: The Athlete's Journey</h2>
+    <p>
+      Every athlete faces obstacles that test their limits. These motivational
+      books illuminate the journey of athletes who have overcome adversity,
+      proving that setbacks can be stepping stones to success. Discover how
+      resilience, determination, and a positive mindset are essential in
+      tackling challenges head-on.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Inspiring Stories of Triumph</h2>
+    <p>
+      Inspirational stories have the ability to spark motivation and ignite
+      determination. Dive into books that showcase extraordinary journeys of
+      athletes who triumphed over adversity, using their experiences to inspire
+      others to reach for their own goals.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Cultivating a Winning Mindset</h2>
+    <p>
+      A winning mindset is the cornerstone of athletic achievement. Explore
+      books that provide practical advice and exercises to develop mental
+      toughness, focus, and a positive outlook. From visualization techniques to
+      managing pressure, these resources equip athletes with the mental tools
+      they need to succeed.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Empowering Women in Sports</h2>
+    <p>
+      For female athletes, these motivational books celebrate stories of
+      courage, empowerment, and accomplishment. Discover narratives that shine a
+      spotlight on women athletes who broke barriers, shattered stereotypes, and
+      inspired generations. These books uplift and motivate women to embrace
+      their strength and reach for the stars.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Becoming Your Best Self</h2>
+    <p>
+      Athletic excellence goes hand in hand with personal development. These
+      books delve into strategies for self-improvement, enhancing skills,
+      building confidence, and nurturing overall well-being. By nurturing
+      personal growth, athletes can elevate their performance in sports and
+      life.
+    </p>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="">Conclusion</h2>
+    <p>
+      In the journey of athletic pursuit, motivation is the driving force that
+      propels athletes forward. Through the pages of these motivational books,
+      you'll find the inspiration to overcome obstacles, nurture your potential,
+      and become a stronger, more determined athlete.
+    </p>
+  </section>
+</Layout>

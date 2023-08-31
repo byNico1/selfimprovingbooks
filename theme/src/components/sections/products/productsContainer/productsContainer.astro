@@ -1,13 +1,16 @@
 ---
 import ProductCard from '../productCard/productCard.astro'
+const {
+  products
+} = Astro.props;
 ---
 
-<section class="grid-container sm:mx-auto sm:w-11/12 ">
+<div class="grid-container z-10 relative">
   {
-    [...Array(12)].map(el => <ProductCard/>)
+    [...Array(products)].map(el => <ProductCard/>)
   }
   <!-- Repeat the above book-card elements for more books -->
-</section>
+</div>
 
 <!-- more products -->
 
@@ -17,7 +20,7 @@ import ProductCard from '../productCard/productCard.astro'
     display: grid;
     grid-gap: 20px;
     padding: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
   }
 
 </style>

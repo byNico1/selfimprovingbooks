@@ -1,0 +1,26 @@
+<section
+  class="hero mt-14 lg:mt-0 mb-6 bg-[--theme-surface-1] relative overflow-hidden w-full mx-auto"
+>
+  <!-- <div class="!mx-auto  max-w-2xl w-11/12"> -->
+  <div class="!mx-auto px-5 pt-5">
+    <div class="py-5 sm:w-11/12 max-w-2xl mx-auto">
+      <slot name="intro" />
+    </div>
+    <div class="featured-container relative mx-auto max-w-2xl mt-[-10px]">
+      <slot name="featured" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured-container::before {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    right: -100vw;
+    bottom: 0;
+    height: 50%;
+    background-color: var(--theme-bg);
+    z-index: 1;
+  }
+</style>

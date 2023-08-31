@@ -4,118 +4,344 @@ import Layout from "../../../layouts/Page.astro";
 import ProductsContainer from "../../../components/sections/products/productsContainer/productsContainer.astro";
 import Button from "../../../components/Button/button.astro";
 
+import TextSection from "../../../components/textSection/TextSection.astro";
+import FAQs from "../../../components/FAQs/FAQs.astro";
+import FAQ from "../../../components/FAQs/FAQ.astro";
+import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
+
 const seo = {
   title: "Landing Page #1 | Astro Odyssey Theme",
   description: "Landing Page #1 | Astro Odyssey Theme",
 };
+
+const faqs = [
+  {
+    question: "FAQ question",
+    answer: "FAQ answer",
+  },
+  {
+    question: "FAQ question",
+    answer: "FAQ answer",
+    open: true,
+  },
+];
 ---
 
 <Layout {seo} announcementBar={true}>
-  <section class="mx-auto w-11/12 max-w-2xl lg:my-12 mt-24 mb-6">
-    <h1 class="text-3xl  sm:text-5xl">
-      Economics Books and Financial Literacy Knowledge
+  <IntroSection>
+    <h1 class="text-3xl sm:text-5xl text-center" slot="intro">
+      Economics Books: The Ultimate guide for [EVERYONE]
     </h1>
-    <p class="!mt-10">
-      In a rapidly evolving world, understanding the principles of economics and
-      mastering financial literacy are essential components of making informed
-      decisions. Welcome to our comprehensive guide on economics books and
-      financial literacy, where we explore the profound impact of economic
-      knowledge on personal growth and financial well-being.
+    <p slot="intro">I think you will agree with me when I say:</p>
+    <p slot="intro">
+      NOT many people have really taught us how to care, invest and generate
+      money
     </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Featured Economics Books</h2>
-    <p>
-      Discover a selection of top-rated economics books that offer valuable
-      insights into economic principles, financial literacy, and more. Explore
-      these recommended titles and deepen your understanding of the world of
-      economics.
+    <p slot="intro">
+      well it turns out that I bring you the best strategy depending on the type
+      of person you are to learn this right now
     </p>
-  </section>
+    <p slot="intro">in fact I have already learned a lot these last years</p>
 
-  <section class="flex-col flex justify-around min-h-[90vh] mt-12">
-    <div class="text-center sm:mx-auto">
-      <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">
-        BEST SELLING ECONOMICS BOOKS
-      </h2>
+    <h2 class="text-center" slot="featured">BEST-SELLING ECONOMY BOOK</h2>
+    <ProductsContainer products={1} slot="featured" />
+  </IntroSection>
+  <article class="pt-3 px-5 sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto">
+    <div class="sm:p-0 sm:w-11/12 sm:mx-auto max-w-lg">
+      <h3>Topics you'll learn on this post:</h3>
+      <ul class="items-left list-decimal ml-3 underline">
+        <li>
+          <a class="cursor-pointer" href="#why-economics-books-matter"
+            >Why Economics Books Matters</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer" href="#best-economics-books-for-beginners"
+            >Best Economics Books for Beginners</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer" href="#the-power-of-financial-literacy"
+            >The Power of Financial Literacy</a
+          >
+        </li>
+        <li>
+          <a
+            class="cursor-pointer"
+            href="#must-read-economics-books-for-students"
+            >Must-Read Economics Books for Students</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer" href="#all-time-best-econmics-books"
+            >Exploring the All-Time Best Economics Books</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer" href="#getting-started-top-picks"
+            >Getting Started: Top Picks for Learning Economics</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer" href="#entrepreneur-economics-books"
+            >Entrepreneur's Corner: Economics Books for Business Minds</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer" href="#popular-economics-books-for-success"
+            >Unveiling Popular Economics Books for Success</a
+          >
+        </li>
+        <li>
+          <a class="cursor-pointer" href="#personal-reading-list"
+            >Unlocking Financial Insights: Your Personal Reading List</a
+          >
+        </li>
+        <li><a class="cursor-pointer" href="#conclusion">Conclusion</a></li>
+        <li><a class="cursor-pointer" href="#faqs">FAQs</a></li>
+      </ul>
     </div>
-
-    <ProductsContainer />
-
-    <div class="flex justify-center items-center mt-10">
-      <Button
-        href="https://www.amazon.com/b/?node=2581&ref_=Oct_d_odnav_d_3_0&pd_rd_w=e2NWo&content-id=amzn1.sym.da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_p=da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_r=64PAYA8YMH05D2WN1YQ0&pd_rd_wg=2EAmh&pd_rd_r=fd9967f0-c191-4e96-bdbe-f04a773e1c24"
-        customIcon
+    <div class="flex-col flex justify-around min-h-[90vh] mt-6">
+      <div class="text-center sm:mx-auto">
+        <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">
+          BEST SELLING ECONOMICS BOOKS
+        </h2>
+      </div>
+      <ProductsContainer products={12} />
+      <div class="flex justify-center items-center mt-10 flex-wrap gap-3">
+        <Button
+          href="https://www.amazon.com/b/?node=2581&ref_=Oct_d_odnav_d_3_0&pd_rd_w=e2NWo&content-id=amzn1.sym.da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_p=da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_r=64PAYA8YMH05D2WN1YQ0&pd_rd_wg=2EAmh&pd_rd_r=fd9967f0-c191-4e96-bdbe-f04a773e1c24"
+          customIcon
+        >
+          More offers on Amazon
+          <span slot="icon">
+            <Icon name="ic:baseline-chevron-right" />
+          </span>
+        </Button>
+      </div>
+    </div>
+    <TextSection bg="--theme-surface-1">
+      <h2
+        id="why-economics-books-matter"
+        class="text-base sm:text-lg px-6 pt-6"
       >
-        More offers on Amazon
-        <span slot="icon">
-          <Icon name="ic:baseline-chevron-right" />
-        </span>
-      </Button>
+        Why Economics Books Matters
+      </h2>
+      <p class="px-6">
+        Economics books aren't just collections of theories—they're roadmaps to
+        making informed decisions.
+      </p>
+      <p class="px-6 pb-6">
+        They demystify complex economic concepts, equipping you with the tools
+        to comprehend global economic trends, personal finance strategies, and
+        the mechanisms driving markets.
+      </p>
+    </TextSection>
+
+    <TextSection>
+      <h2 id="best-economics-books-for-beginners">
+        Best Economics Books for Beginners
+      </h2>
+      <p>
+        If you're new to the world of economics, fear not! There are plenty of
+        books tailored to beginners.
+      </p>
+      <p>We recommend titles like "Economics in One Lesson" by Henry Hazlitt</p>
+      <p>and "Freakonomics" by Steven D. Levitt and Stephen J. Dubner.</p>
+      <p>
+        These books simplify economic concepts and make learning an enjoyable
+        experience.
+      </p>
+      <ProductsContainer products={2} />
+    </TextSection>
+    <TextSection>
+      <h2 id="the-power-of-financial-literacy">
+        The Power of Financial Literacy
+      </h2>
+      <p>
+        Financial literacy empowers individuals to take charge of their
+        financial futures.
+      </p>
+      <p>
+        Equipped with skills to manage money wisely and make informed decisions,
+        financial literacy fosters confidence in navigating personal finance.
+      </p>
+    </TextSection>
+    <TextSection>
+      <h2 id="must-read-economics-books-for-students">
+        Must-Read Economics Books for Students
+      </h2>
+      <p>
+        For students pursuing degrees in economics or related fields, certain
+        books offer comprehensive insights.
+      </p>
+      <p>"Principles of Economics" by N. Gregory Mankiw</p>
+      <p>
+        and "Macroeconomics" by Paul Krugman and Robin Wells are staples in
+        academic reading lists.
+      </p>
+      <ProductsContainer products={2} />
+    </TextSection>
+    <TextSection>
+      <h2 id="all-time-best-econmics-books">
+        Exploring the All-Time Best Economics Books
+      </h2>
+      <p>When it comes to the all-time classics,</p>
+      <p>"The Wealth of Nations" by Adam Smith</p>
+      <p>and</p>
+      <p>
+        "Capital in the Twenty-First Century" by Thomas Piketty take center
+        stage.
+      </p>
+      <p>
+        These foundational works have shaped economic thought and continue to
+        influence scholars and thinkers.
+      </p>
+      <ProductsContainer products={2} />
+    </TextSection>
+    <TextSection>
+      <h2 id="getting-started-top-picks">
+        Getting Started: Top Picks for Learning Economics
+      </h2>
+      <p>
+        If you're eager to dive deeper into the world of economics, consider
+      </p>
+      <p>"Thinking, Fast and Slow" by Daniel Kahneman and</p>
+      <p>"Nudge" by Richard H. Thaler and Cass R. Sunstein.</p>
+      <p>
+        These books explore behavioral economics, shedding light on the
+        psychology behind decision-making.
+      </p>
+      <ProductsContainer products={2} />
+    </TextSection>
+    <TextSection>
+      <h2 id="entrepreneur-economics-books">
+        Entrepreneur's Corner: Economics Books for Business Minds
+      </h2>
+      <p>
+        Entrepreneurs seeking to understand economic forces that impact
+        businesses can benefit from
+      </p>
+      <p>"The Lean Startup" by Eric Ries and "Zero to One" by Peter Thiel.</p>
+      <p>
+        These books offer strategic insights for navigating the business
+        landscape.
+      </p>
+      <ProductsContainer products={2} />
+    </TextSection>
+    <TextSection>
+      <h2 id="popular-economics-books-for-success">
+        Unveiling Popular Economics Books for Success
+      </h2>
+      <p>
+        Looking for books that have captured the imagination of readers
+        worldwide?
+      </p>
+      <p>"Predictably Irrational" by Dan Ariely and "Freakonomics"</p>
+      <p>
+        are not only informative but also engaging, making them must-reads for
+        anyone curious about economics.
+      </p>
+      <ProductsContainer products={2} />
+    </TextSection>
+    <TextSection>
+      <h2 id="personal-reading-list">
+        Unlocking Financial Insights: Your Personal Reading List
+      </h2>
+      <p>For a holistic understanding of economics, consider</p>
+      <p>
+        "Naked Economics" by Charles Wheelan and "Misbehaving" by Richard H.
+        Thaler.
+      </p>
+      <p>
+        These books provide practical applications of economic theories to
+        real-world scenarios.
+      </p>
+      <ProductsContainer products={2} />
+    </TextSection>
+
+    <TextSection>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>
+        Economics books hold the key to a deeper understanding of the economic
+        world we navigate daily. Whether you're a beginner, a student, an
+        entrepreneur, or simply curious, these books offer a wealth of knowledge
+        to empower your decisions and broaden your horizons.
+      </p>
+    </TextSection>
+    <div id="faqs">
+      <FAQs>
+        <FAQ>
+          <h3
+            slot="question"
+            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+          >
+            Q: What are the best economics books for beginners?<span
+              class="icon">+</span
+            >
+          </h3>
+          <p slot="answer" class="!m-0">
+            Discover beginner-friendly recommendations like "Economics in One
+            Lesson" and "Freakonomics" to kickstart your learning journey.
+          </p>
+        </FAQ>
+        <FAQ>
+          <h3
+            slot="question"
+            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+          >
+            Q: Which economics books are essential for students?<span
+              class="icon">+</span
+            >
+          </h3>
+          <p slot="answer" class="!m-0">
+            Essential titles include "Principles of Economics" and
+            "Macroeconomics" for students diving into economics studies
+          </p>
+        </FAQ>
+        <FAQ>
+          <h3
+            slot="question"
+            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+          >
+            Q: What are the must-read classics in economics?<span class="icon"
+              >+</span
+            >
+          </h3>
+          <p slot="answer" class="!m-0">
+            Classics like "The Wealth of Nations" and "Capital in the
+            Twenty-First Century" provide timeless insights into economic
+            thought.
+          </p>
+        </FAQ>
+        <FAQ>
+          <h3
+            slot="question"
+            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+          >
+            Q: What books are recommended for entrepreneurs interested in
+            economics?<span class="icon">+</span>
+          </h3>
+          <p slot="answer" class="!m-0">
+            Entrepreneurs can gain valuable insights from books like "The Lean
+            Startup" and "Zero to One."
+          </p>
+        </FAQ>
+        <FAQ>
+          <h3
+            slot="question"
+            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+          >
+            Q: What popular economics books offer engaging insights?<span
+              class="icon">+</span
+            >
+          </h3>
+          <p slot="answer" class="!m-0">
+            Engage your curiosity with "Predictably Irrational" and
+            "Freakonomics," which combine information and entertainment.
+          </p>
+        </FAQ>
+      </FAQs>
     </div>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Why Economics Education Matters</h2>
-    <p>
-      Economics, often considered a complex subject, plays an intricate role in
-      our lives. From microeconomic concepts that explain individual choices to
-      macroeconomic trends that shape national economies, economics provides a
-      lens through which we can understand the dynamics of the modern world.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">The Power of Financial Literacy</h2>
-    <p>
-      Financial literacy empowers individuals to take charge of their financial
-      futures. Equipped with skills to manage money wisely and make informed
-      decisions, financial literacy fosters confidence in navigating personal
-      finance.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Exploring Basic Economics Concepts</h2>
-    <p>
-      Our exploration of economics begins with diving into fundamental concepts
-      that underpin economic theory. Microeconomics examines how individuals,
-      households, and businesses make decisions in resource-constrained
-      environments. We'll explore concepts such as supply and demand, market
-      equilibrium, and consumer behavior. On the macroeconomic front, we'll
-      delve into topics like GDP, inflation, unemployment, and fiscal policy.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Embracing Financial Education</h2>
-    <p>
-      Financial education is a catalyst for informed financial decision-making.
-      Whether through formal education programs, workplace workshops, or
-      self-directed learning, embracing financial education empowers individuals
-      to navigate complex financial landscapes with confidence.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Navigating Financial Literacy Month</h2>
-    <p>
-      Financial Literacy Month is a dedicated time to enhance our understanding
-      of financial concepts and foster financial well-being. Throughout this
-      month, various organizations, institutions, and communities come together
-      to offer events, workshops, and resources aimed at improving financial
-      literacy.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Conclusion</h2>
-    <p>
-      In conclusion, the journey through economics books and financial literacy
-      is one of self-improvement and empowerment. As you explore the concepts of
-      economics, financial literacy, and their real-world applications, you're
-      taking proactive steps towards achieving greater financial understanding.
-    </p>
-  </section>
+  </article>
 </Layout>

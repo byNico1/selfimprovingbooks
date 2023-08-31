@@ -6,13 +6,13 @@ export const nav = [
   },
   {
     title: "Topics",
-    slug: "/categories",
-    subcat: [
-      { title: "Biographies & Memoirs", slug: "/topics/bio-memoirs" },
-      { title: "Business & Money", slug: "/topics/business-money" },
-      { title: "Self-Help", slug: "/topics/self-help" },
-    ],
-    dropdown: true,
+    slug: "/topics",
+    // subcat: [
+    //   { title: "Biographies & Memoirs", slug: "/topics/bio-memoirs" },
+    //   { title: "Business & Money", slug: "/topics/business-money" },
+    //   { title: "Self-Help", slug: "/topics/self-help" },
+    // ],
+    // dropdown: true,
   },
   {
     title: "Best Sellers",
@@ -20,7 +20,7 @@ export const nav = [
     dropdown: false,
   },
   {
-    title: "Most Reviews Categories",
+    title: "Most Viewed Categories",
     slug: "/categories",
     subcat: [
       { title: "Economics", slug: "/topics/categories/economics" },
@@ -28,7 +28,8 @@ export const nav = [
         title: "Sports and Outdoors",
         slug: "/topics/categories/sports-and-outdoors",
       },
-      { title: "Motivational", slug: "/topics/categories/otivational" },
+      { title: "Motivational", slug: "/topics/categories/motivational" },
+      { title: "Success", slug: "/topics/categories/success" },
     ],
     dropdown: true,
   },
