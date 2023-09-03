@@ -3,122 +3,158 @@ import { Icon } from "astro-icon";
 import Layout from "../../../layouts/Page.astro";
 import ProductsContainer from "../../../components/sections/products/productsContainer/productsContainer.astro";
 import Button from "../../../components/Button/button.astro";
+import TextSection from "../../../components/textSection/TextSection.astro";
+import FAQs from "../../../components/FAQs/FAQs.astro";
+import FAQ from "../../../components/FAQs/FAQ.astro";
+import BestSportsAndOutdoors from "../../../components/sections/Sports-article/BestSportsAndOutdoors.astro";
+import BestSportsBooksOfAllTime from "../../../components/sections/Sports-article/BestSportsBooksOfAllTime.astro";
+import BestBooksForAthletes from "../../../components/sections/Sports-article/BestBooksForAthletes.astro";
+import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
 
 const seo = {
-  title: "Landing Page #1 | Astro Odyssey Theme",
-  description: "Landing Page #1 | Astro Odyssey Theme",
+  title: "Get Inspired by the Top 25 Sports and Outdoor Books | SIB",
+  description:
+    "Whether you're a beginner or an experienced adventure-seeker, get inspired with this list of the top 25 sports and outdoor books. Read to learn more about key lessons on everything from climbing to skiing to hiking!",
 };
 ---
 
 <Layout {seo} announcementBar={true}>
-  <section class="mx-auto w-11/12 max-w-2xl lg:my-12 mt-24 mb-6">
-    <h1 class="text-3xl  sm:text-5xl">
-      Leadership in Sports: Books that Inspire and Lead
+  <IntroSection>
+    <h1 class="text-3xl sm:text-5xl text-center" slot="intro">
+      Top 25 Sports Books & Lessons for Athletes and [EVERYONE]
     </h1>
-    <p class="!mt-10">
-      Welcome to our guide on leadership in sports, where we dive into the
-      captivating world of athletes who have demonstrated exceptional leadership
-      skills. In this page, we explore a curated selection of sports and outdoor
-      books that showcase stories of determination, teamwork, and leadership
-      both on and off the playing field.
+    <p slot="intro">
+      Are you an avid sports fan? Do you want to take your game to the next
+      level? Look no further than books! They’re full of wisdom, facts about the
+      sport(s) you love and help develop a positive attitude.
     </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Featured Sports and Outdoor Books</h2>
-    <p>
-      Explore a collection of inspiring sports and outdoor books that delve into
-      leadership, resilience, and the remarkable journeys of athletes. These
-      recommended titles offer valuable insights into the world of sports
-      leadership and the indomitable spirit of individuals who have excelled on
-      and off the field.
+    <p slot="intro">
+      Whether someone is just starting out or has been playing for years; these
+      picks will help any athlete make improvements in their life by helping
+      them gain insight into training techniques, rest days (and why they
+      matter!) nutrition tips plus build valuable team dynamics
     </p>
-  </section>
 
-  <section class="flex-col flex justify-around min-h-[90vh] mt-12">
-    <div class="text-center sm:mx-auto">
-      <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">
-        BEST SELLING ECONOMICS BOOKS
+    <h2 class="text-center" slot="featured">BEST-SELLING SPORTS BOOK</h2>
+    <ProductsContainer products={1} slot="featured" />
+  </IntroSection>
+  <article class="pt-3 px-5 sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto">
+    <div
+      class="sm:w-11/12 max-w-2xl sm:mx-auto mt-10 bg-[--theme-surface-2] py-10 px-4 rounded-lg"
+    >
+      <h2 class="leading-7">List Of Content:</h2>
+      <ul class="items-left list-decimal ml-6 underline">
+        <li class="mb-2">
+          <a class="cursor-pointer" href="#best-books-for-athletes"
+            >Top 5 Best Books For Athletes</a
+          >
+        </li>
+        <li class="mb-2">
+          <a class="cursor-pointer" href="#best-sports-and-outdoor-books"
+            >Best Sports and Outdoors Books</a
+          >
+        </li>
+        <li class="mb-2">
+          <a class="cursor-pointer" href="#best-sports-books-oat"
+            >Top 5 Best Sports Books Of All Time:</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <BestBooksForAthletes />
+
+    <BestSportsAndOutdoors />
+
+    <BestSportsBooksOfAllTime />
+
+    <TextSection>
+      <h3 id="conclusion">Conclusion</h3>
+      <p>
+        No matter what sport you enjoy, these books offer an essential roadmap
+        for surpassing your current goals and exploring new boundaries in your
+        performance. So if you’re looking to take it to the next level, pick up
+        one of these books and start mastering sports like never before! If you
+        want to get serious about reaching peak performance intensity, the “Peak
+        Performance” book is highly recommended.
+      </p>
+    </TextSection>
+
+    <TextSection>
+      <h2 id="why-economics-books-matter" class="text-base sm:text-lg pt-6">
+        Wich is the best book for athletes?
       </h2>
+      <p class="">
+        As an athlete, you know that the mental game can be just as important as
+        the physical.
+      </p>
+      <p class="">
+        So, which book should you pick up to give you the mental edge you need
+        to push through those tough workouts or competition days?.
+      </p>
+      <p class="">
+        From autobiographies of legends like Michael Jordan and Serena Williams
+        to more instructional reads like "The Mind Gym" by Gary Mack and David
+        Casstevens, there is no shortage of options.
+      </p>
+
+      <div class="flex justify-center items-center pb-6">
+        <Button href="#best-books-for-athletes" customIcon>
+          Best Books For Athletes
+          <Fragment slot="icon">
+            <Icon name="ic:baseline-chevron-right" />
+          </Fragment>
+        </Button>
+      </div>
+
+      <p class="">
+        If you don't know how to decide my recomendation is "Peak Performance"
+      </p>
+
+      <ProductsContainer products={1} />
+    </TextSection>
+
+    <div id="faqs">
+      <FAQs>
+        <FAQ>
+          <h3
+            slot="question"
+            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+          >
+            Q: What are the best sports and outdoor books for all ages?<span
+              class="icon">+</span
+            >
+          </h3>
+          <p slot="answer" class="!m-0">
+            Calling all sports enthusiasts and outdoor adventurers! Whether
+            you're looking for a gripping tale of perseverance and triumph or a
+            comprehensive guide to mastering your favorite activity, the world
+            of sports and outdoor literature has something for everyone. From
+            heart-racing memoirs to practical how-to's, there's no shortage of
+            page-turners to choose from. Some popular picks for all ages include
+            "Born to Run" by Christopher McDougall, "Wild" by Cheryl Strayed,
+            and "Into Thin Air" by Jon Krakauer. So grab a cozy blanket and a
+            hot cup of cocoa, and get ready to be inspired, informed, and
+            entertained by the very best sports books out there.
+          </p>
+        </FAQ>
+        <FAQ>
+          <h3
+            slot="question"
+            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+          >
+            Q: What are the must-read books for athletes<span class="icon"
+              >+</span
+            >
+          </h3>
+          <p slot="answer" class="!m-0">
+            "Peak Performance", "The Champion's Mind: How Great Athletes Think,
+            Train, and Thrive" and "Mamba Mentality" are some if not the best
+            books for athletes, where you can learn how to improve you overall
+            Performance
+          </p>
+        </FAQ>
+      </FAQs>
     </div>
-
-    <ProductsContainer />
-
-    <div class="flex justify-center items-center mt-10">
-      <Button
-        href="https://www.amazon.com/s?bbn=26&rh=n%3A283155%2Cn%3A26&dc&qid=1693184566&ref=lp_2446_ex_n_1"
-        customIcon
-      >
-        More offers on Amazon
-        <span slot="icon">
-          <Icon name="ic:baseline-chevron-right" />
-        </span>
-      </Button>
-    </div>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Unveiling Leadership in Sports</h2>
-    <p>
-      Sports and outdoor activities often serve as a canvas for leaders to
-      emerge. From coaches who mentor their teams to athletes who inspire with
-      their actions, leadership in sports goes beyond the wins and losses. These
-      books provide a deeper understanding of the qualities that propel
-      individuals to excel as leaders in the realm of sports.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Embodied Leadership: Athletes' Journeys</h2>
-    <p>
-      Explore sports autobiography books that offer a firsthand account of
-      athletes' journeys. These captivating memoirs provide insights into the
-      challenges athletes face, the values that drive them, and the leadership
-      lessons they've learned through their experiences.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">The Best Sports Books: Leadership Edition</h2>
-    <p>
-      Delve into a collection of the best sports books that emphasize
-      leadership. These titles have captured the essence of leadership within
-      the context of sports, offering valuable lessons applicable to various
-      aspects of life. From team dynamics to individual growth, these books
-      inspire readers to harness their leadership potential.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Elevating Team Performance</h2>
-    <p>
-      Effective leadership plays a pivotal role in elevating team performance.
-      These books explore strategies employed by successful coaches and athletes
-      to create a culture of excellence, teamwork, and growth. Through real-life
-      examples, readers can gain insights into fostering leadership skills that
-      extend beyond the game.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Navigating the Outdoors: Leadership and Adventure</h2>
-    <p>
-      Leadership extends to the great outdoors, where adventurers and explorers
-      exhibit qualities of resilience and resourcefulness. Discover outdoor
-      books that highlight leadership in the face of challenges, be it
-      conquering mountains, traversing deserts, or navigating uncharted waters.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Conclusion</h2>
-    <p>
-      In the world of sports and outdoor pursuits, leadership stands as a
-      guiding principle that drives individuals to surpass their limits. Through
-      the captivating stories within these books, you'll witness how athletes,
-      coaches, and adventurers exemplify leadership in their journeys. Embrace
-      the wisdom shared within these pages and harness the inspiration to lead
-      and excel, both in your chosen field and in life.
-    </p>
-  </section>
+  </article>
 </Layout>

@@ -2,10 +2,15 @@
 interface Props {
   bg?: string;
   txt?: string;
+  mxw?: string;
 }
-const { bg = "", txt } = Astro.props as Props;
+const { bg = "", txt, mxw } = Astro.props as Props;
 ---
 
-<div class={`mt-8 text-left ${bg && `bg-[${bg}] text-[${txt}]`} `}>
+<div
+  class={`mt-8 text-left ${bg && `bg-[${bg}] text-[${txt}]`} ${
+    mxw && `${mxw}`
+  } `}
+>
   <slot />
 </div>
