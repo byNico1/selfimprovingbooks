@@ -1,30 +1,39 @@
-<div class="book-card">
+---
+const { mobile } = Astro.props;
+---
+
+<div class=`book-card ${mobile && '!block relative'} sm:flex`>
   <img
+    width="200"
+    height="248"
     class="book-cover"
-    src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369"
+    src="https://jamesclear.com/wp-content/uploads/2023/05/atomic-habits-dots.png"
     alt="Book Cover"
   />
-  <h3 class="book-title">Book Title</h3>
-  <div class="book-author">by Author</div>
-  <div class="book-delivery">
+  <div class=`sm:w-1/2 ${mobile && '!w-full'} self-center`>
+    <h3 class="book-title">Atomic Habits</h3>
+    <div class="book-author">by James Clear</div>
+    <!-- <div class="book-delivery">
     FREE delivery Fri, Sep 1 on $35 of items shipped by Amazon Or fastest
     delivery Today 2 PM - 6 PM
+  </div> -->
+    <div class="book-price">Price: $19.99</div>
   </div>
-  <div class="book-price">Price: $XX.XX</div>
 </div>
 
 <style>
   .book-card {
+    z-index: 99;
     color: #000000;
     border-radius: 15px;
     background-color: #fff;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 30px;
     text-align: center;
   }
 
   .book-cover {
-    max-width: 100px;
+    /* max-width: 100%; */
     height: auto;
     margin: 0 auto;
   }
@@ -46,6 +55,7 @@
 
   .book-price {
     color: green;
+    margin: 10px 0;
     font-weight: bold;
   }
 </style>
