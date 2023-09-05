@@ -1,6 +1,7 @@
 ---
-import TextSection from "../../textSection/TextSection.astro";
-import ProductsContainer from "../products/productsContainer/productsContainer.astro";
+import TextSection from "../../../textSection/TextSection.astro";
+import ProductCard from "../../products/productCard/productCard.astro";
+import ProductContainer from "../../products/productsContainer/productsContainer.astro";
 ---
 
 <div
@@ -40,10 +41,13 @@ import ProductsContainer from "../products/productsContainer/productsContainer.a
 <!-- <li class="sm:pl-10"> -->
 <TextSection>
   <h3 class="link--theme" id="peak-performance">
-    <span class="text-[--theme-on-bg]">1.</span> "Peak Performance"
+    <span class="text-[--theme-on-bg]">1.</span>
+    <a href="">"Peak Performance"</a>
   </h3>
 
-  <ProductsContainer products={1} />
+  <div class="max-w-lg mx-auto">
+    <ProductCard products={1} slot="featured" />
+  </div>
 
   <p class="!mt-6">Are you an athlete looking for ways to improve your game?</p>
   <p>
@@ -72,11 +76,14 @@ import ProductsContainer from "../products/productsContainer/productsContainer.a
 <!-- <li class="sm:pl-10"> -->
 <TextSection>
   <h3 class="link--theme" id="champions-mind">
-    <span class="text-[--theme-on-bg]">2. </span>"The Champion's Mind: How Great
-    Athletes Think, Train, and Thrive"
+    <span class="text-[--theme-on-bg]">2. </span><a href=""
+      >"The Champion's Mind: How Great Athletes Think, Train, and Thrive"</a
+    >
   </h3>
 
-  <ProductsContainer products={1} />
+  <div class="max-w-lg mx-auto">
+    <ProductCard products={1} slot="featured" />
+  </div>
 
   <p class="!mt-6">Have you ever wondered what makes great athletes tick?</p>
   <p>
@@ -100,15 +107,17 @@ import ProductsContainer from "../products/productsContainer/productsContainer.a
     take your performance, ambition, motivation & expectations to whole new level!
   </p>
 </TextSection>
-<!-- </li> -->
-<!-- <li class=" sm:pl-10"> -->
+
 <TextSection>
   <h3 class="link--theme" id="mind-gym">
-    <span class="text-[--theme-on-bg]">3. </span> "Mind Gym: An Athlete's Guide to
-    Inner Excellence"
+    <span class="text-[--theme-on-bg]">3. </span><a href=""
+      >"Mind Gym: An Athlete's Guide to Inner Excellence"</a
+    >
   </h3>
 
-  <ProductsContainer products={1} />
+  <div class="max-w-lg mx-auto">
+    <ProductCard products={1} slot="featured" />
+  </div>
 
   <p class="!mt-6">Are you an athlete looking to unlock your true potential?</p>
   <p>
@@ -128,20 +137,22 @@ import ProductsContainer from "../products/productsContainer/productsContainer.a
   </p>
   <p>
     Get a copy of <a class="underline link--theme " href="">Mind Gym</a> today and
-    start training smarter! With our easy-to-follow strategies, develop invaluable
-    tools to enhance peak performance - no matter what obstacles come up along the
-    way. Unlock inner excellence now!
+    start training smarter!
   </p>
 </TextSection>
-<!-- </li> -->
-<!-- <li class=" sm:pl-10"> -->
+
 <TextSection mxw="">
   <h3 class="link--theme" id="endure">
-    <span class="text-[--theme-on-bg]">4. </span> "Endure: Mind, Body, and the Curiously
-    Elastic Limits of Human Performance"
+    <span class="text-[--theme-on-bg]">4. </span>
+    <a href=""
+      >"Endure: Mind, Body, and the Curiously Elastic Limits of Human
+      Performance"</a
+    >
   </h3>
 
-  <ProductsContainer products={1} />
+  <div class="max-w-lg mx-auto">
+    <ProductCard products={1} slot="featured" />
+  </div>
 
   <p class="!mt-6">Ever wonder what makes some athletes push their limits?</p>
   <p>
@@ -162,15 +173,16 @@ import ProductsContainer from "../products/productsContainer/productsContainer.a
     today to unlock your inner athlete!
   </p>
 </TextSection>
-<!-- </li> -->
-<!-- <li class=" sm:pl-10"> -->
+
 <TextSection>
   <h3 class="link--theme" id="relentless">
-    <span class="text-[--theme-on-bg]">5. </span> "Relentless: From Good to Great
-    to Unstoppable"
+    <span class="text-[--theme-on-bg]">5. </span>
+    <a href="">"Relentless: From Good to Great to Unstoppable"</a>
   </h3>
 
-  <ProductsContainer products={1} />
+  <div class="max-w-lg mx-auto">
+    <ProductCard products={1} slot="featured" />
+  </div>
 
   <p class="!mt-6">Are you ready to take your success to the next level?</p>
 
@@ -189,13 +201,8 @@ import ProductsContainer from "../products/productsContainer/productsContainer.a
   </p>
 
   <p>
-    Get started on your journey towards greatness today - join us at Relentless
-    for strategies that are used by some of the world’s top performers in
-    business, sport and life! <a class="underline link--theme" href=""
-      >Click here now!</a
-    >
+    Get started on your journey towards greatness today - Use Relentless for
+    strategies that are used by some of the world’s top performers in business,
+    sport and life! <a class="underline link--theme" href="">Click here now!</a>
   </p>
 </TextSection>
-<!-- </li> -->
-<!-- </li> -->
-<!-- </ul> -->
