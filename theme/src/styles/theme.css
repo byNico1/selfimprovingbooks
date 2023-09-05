@@ -44,6 +44,7 @@
   --slider-bg: #dddddd;
   --slider-bg-before: #fff2f2;
   --slider-input-bg: #8758ff;
+  --quotes-and-links: #000d3a;
 }
 
 [data-theme="dark"] {
@@ -66,14 +67,11 @@
 
   --theme-shape-radius: 0.5rem;
   --theme-button-border-radius: 0.5rem;
+  --quotes-and-links: #fff0b3;
 
   --form-field-input-color: var(--theme-on-bg);
 }
 
-[data-theme="dark"] .link--theme {
-  color: #fff0b3;
-}
-
 .link--theme {
-  color: #000d3a;
+  color: var(--quotes-and-links);
 }
