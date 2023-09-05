@@ -8,23 +8,13 @@ import TextSection from "../../../components/textSection/TextSection.astro";
 import FAQs from "../../../components/FAQs/FAQs.astro";
 import FAQ from "../../../components/FAQs/FAQ.astro";
 import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
+import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
 
 const seo = {
-  title: "Landing Page #1 | Astro Odyssey Theme",
-  description: "Landing Page #1 | Astro Odyssey Theme",
+  title: "Economics books: The ultimate guide",
+  description:
+    "Unlock the secrets of economics with our range of professional books. Get ahead in your studies with SIB's collection - featuring a variety of titles on topics like macroeconomics, microeconomics and more!",
 };
-
-const faqs = [
-  {
-    question: "FAQ question",
-    answer: "FAQ answer",
-  },
-  {
-    question: "FAQ question",
-    answer: "FAQ answer",
-    open: true,
-  },
-];
 ---
 
 <Layout {seo} announcementBar={true}>
@@ -44,8 +34,10 @@ const faqs = [
     <p slot="intro">in fact I have already learned a lot these last years</p>
 
     <h2 class="text-center" slot="featured">BEST-SELLING ECONOMY BOOK</h2>
-    <ProductsContainer products={1} slot="featured" />
+
+    <ProductCard mobile={true} products={1} slot="featured" />
   </IntroSection>
+
   <article class="pt-3 px-5 sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto">
     <div class="sm:p-0 sm:w-11/12 sm:mx-auto max-w-lg">
       <h3>Topics you'll learn on this post:</h3>
@@ -107,7 +99,9 @@ const faqs = [
           BEST SELLING ECONOMICS BOOKS
         </h2>
       </div>
-      <ProductsContainer products={12} />
+
+      <ProductsContainer products={12} mobile={true} />
+
       <div class="flex justify-center items-center mt-10 flex-wrap gap-3">
         <Button
           href="https://www.amazon.com/b/?node=2581&ref_=Oct_d_odnav_d_3_0&pd_rd_w=e2NWo&content-id=amzn1.sym.da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_p=da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_r=64PAYA8YMH05D2WN1YQ0&pd_rd_wg=2EAmh&pd_rd_r=fd9967f0-c191-4e96-bdbe-f04a773e1c24"

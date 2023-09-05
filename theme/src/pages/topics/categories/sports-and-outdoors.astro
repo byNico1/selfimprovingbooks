@@ -6,10 +6,13 @@ import Button from "../../../components/Button/button.astro";
 import TextSection from "../../../components/textSection/TextSection.astro";
 import FAQs from "../../../components/FAQs/FAQs.astro";
 import FAQ from "../../../components/FAQs/FAQ.astro";
-import BestSportsAndOutdoors from "../../../components/sections/Sports-article/BestSportsAndOutdoors.astro";
-import BestSportsBooksOfAllTime from "../../../components/sections/Sports-article/BestSportsBooksOfAllTime.astro";
-import BestBooksForAthletes from "../../../components/sections/Sports-article/BestBooksForAthletes.astro";
+
 import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
+
+import BestSportsAndOutdoors from "../../../components/sections/Article/Sports-article/BestSportsAndOutdoors.astro";
+import BestSportsBooksOfAllTime from "../../../components/sections/Article/Sports-article/BestSportsBooksOfAllTime.astro";
+import BestBooksForAthletes from "../../../components/sections/Article/Sports-article/BestBooksForAthletes.astro";
+import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
 
 const seo = {
   title: "Get Inspired by the Top 25 Sports and Outdoor Books | SIB",
@@ -36,13 +39,15 @@ const seo = {
     </p>
 
     <h2 class="text-center" slot="featured">BEST-SELLING SPORTS BOOK</h2>
-    <ProductsContainer products={1} slot="featured" />
+
+    <ProductCard mobile={true} products={1} slot="featured" />
   </IntroSection>
+
   <article
     class="pt-3 px-[20px] sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto"
   >
     <div
-      class="sm:w-11/12 max-w-2xl sm:mx-auto mt-10 bg-[--theme-surface-2] py-10 px-4 rounded-lg"
+      class=" sm:w-11/12 max-w-2xl sm:mx-auto mt-10 bg-[--theme-surface-2] py-10 px-4 sm:pl-16 rounded-lg"
     >
       <h2 class="leading-7">List Of Content:</h2>
       <ul class="items-left list-decimal ml-6 underline">
@@ -60,6 +65,10 @@ const seo = {
           <a class="cursor-pointer" href="#best-sports-books-oat"
             >Top 5 Best Sports Books Of All Time:</a
           >
+        </li>
+
+        <li class="mb-2">
+          <a class="cursor-pointer" href="#faqs">Frquently asked questions</a>
         </li>
       </ul>
     </div>
