@@ -1,12 +1,14 @@
 ---
+import { Image } from "astro:assets";
 const { mobile } = Astro.props;
 ---
 
 <div class=`book-card ${mobile && '!block relative'} sm:flex`>
-  <img
-    width="200"
-    height="248"
+  <Image
+    width="400"
+    height="558"
     class="book-cover"
+    quality={100}
     src="https://jamesclear.com/wp-content/uploads/2023/05/atomic-habits-dots.png"
     alt="Book Cover"
   />
@@ -31,11 +33,16 @@ const { mobile } = Astro.props;
     padding: 30px;
     text-align: center;
   }
-
   .book-cover {
-    /* max-width: 100%; */
-    height: auto;
+    max-width: 100%;
     margin: 0 auto;
+  }
+
+  @media screen and (min-width: 400px) {
+    .book-cover {
+      max-width: 230px;
+      margin: 0 auto;
+    }
   }
 
   .book-title {
