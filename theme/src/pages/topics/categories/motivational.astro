@@ -1,23 +1,21 @@
 ---
-import { Icon } from "astro-icon";
 import Layout from "../../../layouts/Page.astro";
-import ProductsContainer from "../../../components/sections/products/productsContainer/productsContainer.astro";
-import Button from "../../../components/Button/button.astro";
 import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
 
 import Body from "../../../components/sections/Article/MotivationalBooks/Body.astro";
 import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
 
 const seo = {
-  title: "Landing Page #1 | Astro Odyssey Theme",
-  description: "Landing Page #1 | Astro Odyssey Theme",
+  title: "Best 40 Motivational Books",
+  description:
+    "It's time to take control of your life and unlock your potential! Get the motivation you need with these inspirational books from SIB. Our selection of motivational books will help you become more disciplined and live a better, happier life.",
 };
 ---
 
 <Layout {seo} announcementBar={true}>
   <IntroSection>
     <h1 class="text-3xl sm:text-5xl text-center" slot="intro">
-      Best 50 Motivational Books to Inspire You to [Reach Your Goals]
+      Best 40 Motivational Books to Inspire You to [Reach Your Goals]
     </h1>
     <p slot="intro">
       Are you feeling stuck or unmotivated in your career or personal life?
@@ -28,9 +26,6 @@ const seo = {
       Luckily, there are many incredible books out there that can help you find
       your passion, set goals, and stay focused.
     </p>
-    <!-- <p slot="intro">
-      Everyone needs a little inspiration and motivation from time to time. Luckily, there are many incredible books out there that can help you find your passion, set goals, and stay focused. 
-    </p> -->
 
     <h2 class="text-center" slot="featured">BEST-SELLING Motivational BOOK</h2>
 

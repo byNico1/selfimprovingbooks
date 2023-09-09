@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon";
 import Button from "../../../Button/button.astro";
 import TextSection from "../../../textSection/TextSection.astro";
-import ProductsContainer from "../../products/productsContainer/productsContainer.astro";
 import ProductCard from "../../products/productCard/productCard.astro";
 
 import BestMotivationalBooks from "./BestMotivationalBooks.astro";
@@ -10,6 +9,8 @@ import BestMotivationalBooksAthletes from "./BestMotivationalBooksAthletes.astro
 
 import ArticleFaqs from "./ArticleFaqs.astro";
 import ListOfContent from "./ListOfContent.astro";
+import BestSellers from "./BestSellers.astro";
+import ProductsContainer from "../../products/productsContainer/productsContainer.astro";
 ---
 
 <article class="pt-3 px-[20px] sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto">
@@ -19,6 +20,172 @@ import ListOfContent from "./ListOfContent.astro";
   <!-- <Body /> -->
   <BestMotivationalBooks />
   <BestMotivationalBooksAthletes />
+
+  <BestSellers />
+
+  <!-- Info -->
+
+  <TextSection>
+    <h2 id="why-economics-books-matter" class="text-base sm:text-lg pt-6">
+      Do self-help books work?
+    </h2>
+
+    <p class="">
+      If you're feeling down in the dumps and need a little push to get
+      motivated, reading a good motivational book could be just the thing you
+      need!
+    </p>
+    <p>
+      The best motivational books out there are like a boost of energy for your
+      mind and spirit, inspiring you to take action and be your best self.
+    </p>
+    <p>
+      From classics like <a class="link--theme underline" href="#"
+        >"The 7 Habits of Highly Effective People"</a
+      > to modern favorites like <a class="link--theme underline" href=""
+        >"Atomic Habits",</a
+      > there are so many amazing books out there that can help you find your motivation
+      and stay on track toward your goals.
+    </p>
+    <p>
+      So why not give it a try and see how a little inspiration can go a long
+      way? With the right mindset and the best motivational books at your
+      fingertips, you can achieve anything you set your mind to!
+    </p>
+
+    <ProductsContainer products={2} />
+
+    <div class="flex justify-center items-center mt-6">
+      <Button href="#best-motivational-books" customIcon>
+        More Motivational Books
+        <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </Fragment>
+      </Button>
+    </div>
+  </TextSection>
+
+  <TextSection>
+    <h2 id="why-economics-books-matter" class="text-base sm:text-lg pt-6">
+      Is it good to read motivational books?
+    </h2>
+    <p class="">
+      Motivational books have become increasingly popular in recent years as
+      more people seek inspiration and guidance in various aspects of their
+      lives.
+    </p>
+    <p class="">
+      Some may question whether these books can truly make a difference, but
+      numerous studies have shown that reading motivational books can have a
+      significant positive impact on one's mindset and overall well-being.
+    </p>
+    <p class="">
+      From classics like Dale Carnegie's <a
+        class="underline link--theme"
+        href="">"How to Win Friends and Influence People"</a
+      > to more modern titles like <a class="underline link--theme" href=""
+        >"The 7 Habits of Highly Effective People"</a
+      > by Stephen Covey, there are countless options for the best motivational books
+      to choose from.
+    </p>
+    <p>
+      So if you're looking to jumpstart your motivation and unlock your full
+      potential, consider picking up one of these books and see the difference
+      it can make in your life.
+    </p>
+
+    <ProductsContainer products={2} />
+
+    <div class="flex justify-center items-center mt-6">
+      <Button href="#best-motivational-books" customIcon>
+        More Motivational Books
+        <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </Fragment>
+      </Button>
+    </div>
+  </TextSection>
+
+  <TextSection>
+    <h2 id="why-economics-books-matter" class="text-base sm:text-lg pt-6">
+      What is the best time to read motivational books?
+    </h2>
+    <p class="">
+      When it comes to reading motivational books, timing can be everything.
+    </p>
+    <p>
+      While some may prefer to dive into a powerful page-turner first thing in
+      the morning, others may find that evening hours are more conducive to
+      deepening their understanding of life's greatest challenges.
+    </p>
+    <p class="">
+      No matter what time you choose, it's important to consider what your goals
+      are and how you hope to be inspired. Some of the best motivational books
+      out there offer up insights into how to cultivate stronger relationships,
+      overcome adversity, and create a fulfilling career path.
+    </p>
+    <p class="">
+      Whatever your ultimate aspiration might be, setting aside an hour or so
+      each day to crack open your favorite motivational book is a surefire way
+      to stay energized and on track.
+    </p>
+
+    <div class="flex justify-center items-center gap-5 flex-wrap ">
+      <Button href="#best-motivational-books" customIcon>
+        Best Motivational Books For Everyone
+        <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </Fragment>
+      </Button>
+      <Button href="#best-motivational-books-for-athletes" customIcon>
+        Best Motivational Books For Athletes
+        <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </Fragment>
+      </Button>
+    </div>
+  </TextSection>
+
+  <TextSection>
+    <h2 id="why-economics-books-matter" class="text-base sm:text-lg pt-6">
+      How do you stay motivated to read a book?
+    </h2>
+    <p class="">
+      Reading something that resonates with you and leaves you feeling
+      invigorated can be a powerful motivating factor.
+    </p>
+    <p class="">But how do you stay motivated to read a book?</p>
+    <p>
+      One tip is to find a book that aligns with your goals and interests, so
+      you're more likely to be invested in the content.
+    </p>
+    <p class="">
+      Moreover, setting aside some dedicated time for reading every day can help
+      you build a habit and stay consistent.
+    </p>
+    <p>
+      Ultimately, if you're willing to put in the effort to find the right book
+      and commit to a regular reading routine, the benefits of motivational
+      literature can be truly life-changing.
+    </p>
+
+    <div class="flex justify-center items-center gap-5 flex-wrap pb-6">
+      <Button href="#best-motivational-books" customIcon>
+        Best Motivational Books
+        <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <p class="">
+      If you are not sure what book to pick, my recomendation is "Atomic Habits"
+    </p>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard />
+    </div>
+  </TextSection>
 
   <!-- Conclusion -->
 
@@ -37,44 +204,6 @@ import ListOfContent from "./ListOfContent.astro";
       our relentless desire to be awesome at everything we do! So what are you waiting
       for? Get out there, buy the book, and start taking charge of your life today!
     </p>
-  </TextSection>
-
-  <!-- Info -->
-
-  <TextSection>
-    <h2 id="why-economics-books-matter" class="text-base sm:text-lg pt-6">
-      Wich is the best book for athletes?
-    </h2>
-    <p class="">
-      As an athlete, you know that the mental game can be just as important as
-      the physical.
-    </p>
-    <p class="">
-      So, which book should you pick up to give you the mental edge you need to
-      push through those tough workouts or competition days?.
-    </p>
-    <p class="">
-      From autobiographies of legends like Michael Jordan and Serena Williams to
-      more instructional reads like "The Mind Gym" by Gary Mack and David
-      Casstevens, there is no shortage of options.
-    </p>
-
-    <div class="flex justify-center items-center pb-6">
-      <Button href="#best-books-for-athletes" customIcon>
-        Best Books For Athletes
-        <Fragment slot="icon">
-          <Icon name="ic:baseline-chevron-right" />
-        </Fragment>
-      </Button>
-    </div>
-
-    <p class="">
-      If you don't know how to decide my recomendation is "Peak Performance"
-    </p>
-
-    <div class="max-w-lg mx-auto">
-      <ProductCard products={1} />
-    </div>
   </TextSection>
 
   <ArticleFaqs />
