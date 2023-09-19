@@ -1,0 +1,117 @@
+---
+import Icon from "astro-icon";
+import Button from "../../../Button/button.astro";
+import TextSection from "../../../textSection/TextSection.astro";
+import ProductsContainer from "../../products/productsContainer/productsContainer.astro";
+---
+
+<TextSection>
+  <h2 id="info" class="text-base sm:text-lg pt-6">
+    What success book should I buy?
+  </h2>
+
+  <p class="">
+    When it comes to finding the best success book, it's essential to recognize
+    that the definition of success can vary greatly from person to person.
+  </p>
+  <p>
+    However, there are timeless classics in the realm of personal development
+    and achievement that have had a profound impact on countless individuals.
+  </p>
+  <p>
+    Books like Napoleon Hill's <a class="underline link--theme" href="#">
+      "Think and Grow Rich,"
+    </a> Dale Carnegie's <a class="underline link--theme" href="#">
+      "How to Win Friends and Influence People,"
+    </a> and Stephen R. Covey's <a class="underline link--theme" href="#">
+      "The 7 Habits of Highly Effective People"
+    </a> are often considered among the best in this category.
+  </p>
+  <p>
+    My personal opinion. I would start with <a
+      class="underline link--theme"
+      href="#"
+    >
+      "How to Win Friends and Influence People,"
+    </a> it teaches a lot about how to treat people better so you can get more friends,
+    clients, etc...
+  </p>
+
+  <ProductsContainer products={3} />
+
+  <div class="flex justify-center items-center mt-6">
+    <Button href="#best-motivational-books" customIcon>
+      More Motivational Books
+      <Fragment slot="icon">
+        <Icon name="ic:baseline-chevron-right" />
+      </Fragment>
+    </Button>
+  </div>
+</TextSection>
+
+<TextSection>
+  <h2 class="text-base sm:text-lg pt-6">
+    What are the best books to read to be successful?
+  </h2>
+
+  <p class="">
+    <a class="underline link--theme" href="#">
+      "Outliers: The Story of Success" by Malcolm Gladwell
+    </a>
+    - Gladwell explores the factors that contribute to exceptional success, shedding
+    light on the hidden dynamics that set high achievers apart.
+  </p>
+  <p>
+    <a class="underline link--theme" href="#"
+      >"The Power of Habit" by Charles Duhigg</a
+    >
+    - This book delves into the science of habit formation and how understanding
+    and changing habits can lead to personal and professional success.
+  </p>
+  <p>
+    <a class="underline link--theme" href="#">"The Compound Effect"</a>
+    by Darren Hardy - Hardy emphasizes the transformative impact of small, consistent
+    actions over time, illustrating how these actions can lead to remarkable success.
+  </p>
+  <p>
+    <a class="underline link--theme" href="#"
+      >"Mindset: The Power of Your Thinking"</a
+    >
+    by John C. Maxwell - Maxwell provides insights into the importance of mindset
+    in achieving success and offers practical advice for developing a positive and
+    growth-oriented mindset.
+  </p>
+  <p>
+    <a class="underline link--theme" href="#"
+      >"Originals: How Non-Conformists Move the World"</a
+    >
+    by Adam Grant - Grant explores the characteristics and behaviors of original
+    thinkers and how they drive innovation and success.
+  </p>
+  <p>
+    <a class="underline link--theme" href="#">"The Art of Possibility"</a>
+    by Rosamund Stone Zander and Benjamin Zander - This book offers a new perspective
+    on creativity, leadership, and personal transformation, encouraging readers to
+    embrace limitless possibilities.
+  </p>
+  <p>
+    <a class="underline link--theme" href="#"
+      >"Drive: The Surprising Truth About What Motivates Us"</a
+    >
+    by Daniel H. Pink - Pink examines the science of motivation and how autonomy,
+    mastery, and purpose can drive success in various areas of life.
+  </p>
+  <p>
+    Exploring this array of titles can offer a well-rounded perspective on what
+    it takes to achieve success in today's world.
+  </p>
+
+  <div class="flex justify-center items-center mt-6">
+    <Button href="#best-motivational-books" customIcon>
+      More Motivational Books
+      <Fragment slot="icon">
+        <Icon name="ic:baseline-chevron-right" />
+      </Fragment>
+    </Button>
+  </div>
+</TextSection>
