@@ -15,7 +15,7 @@ import BestBooksForAthletes from "../../../components/sections/Article/Sports-ar
 import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
 
 const seo = {
-  title: "Get Inspired by the Top 25 Sports and Outdoor Books | SIB",
+  title: "Top 25 Sports and Outdoor Motivational Books",
   description:
     "Whether you're a beginner or an experienced adventure-seeker, get inspired with this list of the top 25 sports and outdoor books. Read to learn more about key lessons on everything from climbing to skiing to hiking!",
 };
@@ -23,20 +23,16 @@ const seo = {
 
 <Layout {seo} announcementBar={true}>
   <IntroSection>
-    <h1 class="text-3xl sm:text-5xl text-center" slot="intro">
+    <h1 class="text-3xl sm:text-5xl text-center">
       Top 25 Sports Books & Lessons for Athletes and [EVERYONE]
     </h1>
-    <p slot="intro">
-      Are you an avid sports fan? Do you want to take your game to the next
-      level? Look no further than books! They’re full of wisdom, facts about the
-      sport(s) you love and help develop a positive attitude.
+    <p>Whether someone is just starting out or has been playing for years;</p>
+    <p>
+      these picks will help any athlete make improvements in their life by
+      helping them gain insight into training techniques, rest days (and why
+      they matter!)
     </p>
-    <p slot="intro">
-      Whether someone is just starting out or has been playing for years; these
-      picks will help any athlete make improvements in their life by helping
-      them gain insight into training techniques, rest days (and why they
-      matter!) nutrition tips plus build valuable team dynamics
-    </p>
+    <p>nutrition tips plus build valuable team dynamics</p>
 
     <h2 class="text-center" slot="featured">BEST-SELLING SPORTS BOOK</h2>
 
@@ -125,47 +121,44 @@ const seo = {
       <ProductsContainer products={1} />
     </TextSection>
 
-    <div id="faqs">
-      <FAQs>
-        <FAQ>
-          <h3
-            slot="question"
-            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+    <FAQs>
+      <FAQ>
+        <h3
+          slot="question"
+          class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+        >
+          Q: What are the best sports and outdoor books for all ages?<span
+            class="icon">+</span
           >
-            Q: What are the best sports and outdoor books for all ages?<span
-              class="icon">+</span
-            >
-          </h3>
-          <p slot="answer" class="!m-0">
-            Calling all sports enthusiasts and outdoor adventurers! Whether
-            you're looking for a gripping tale of perseverance and triumph or a
-            comprehensive guide to mastering your favorite activity, the world
-            of sports and outdoor literature has something for everyone. From
-            heart-racing memoirs to practical how-to's, there's no shortage of
-            page-turners to choose from. Some popular picks for all ages include
-            "Born to Run" by Christopher McDougall, "Wild" by Cheryl Strayed,
-            and "Into Thin Air" by Jon Krakauer. So grab a cozy blanket and a
-            hot cup of cocoa, and get ready to be inspired, informed, and
-            entertained by the very best sports books out there.
-          </p>
-        </FAQ>
-        <FAQ>
-          <h3
-            slot="question"
-            class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+        </h3>
+        <p slot="answer" class="!m-0">
+          Calling all sports enthusiasts and outdoor adventurers! Whether you're
+          looking for a gripping tale of perseverance and triumph or a
+          comprehensive guide to mastering your favorite activity, the world of
+          sports and outdoor literature has something for everyone. From
+          heart-racing memoirs to practical how-to's, there's no shortage of
+          page-turners to choose from. Some popular picks for all ages include
+          "Born to Run" by Christopher McDougall, "Wild" by Cheryl Strayed, and
+          "Into Thin Air" by Jon Krakauer. So grab a cozy blanket and a hot cup
+          of cocoa, and get ready to be inspired, informed, and entertained by
+          the very best sports books out there.
+        </p>
+      </FAQ>
+      <FAQ>
+        <h3
+          slot="question"
+          class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+        >
+          Q: What are the must-read books for athletes<span class="icon">+</span
           >
-            Q: What are the must-read books for athletes<span class="icon"
-              >+</span
-            >
-          </h3>
-          <p slot="answer" class="!m-0">
-            "Peak Performance", "The Champion's Mind: How Great Athletes Think,
-            Train, and Thrive" and "Mamba Mentality" are some if not the best
-            books for athletes, where you can learn how to improve you overall
-            Performance
-          </p>
-        </FAQ>
-      </FAQs>
-    </div>
+        </h3>
+        <p slot="answer" class="!m-0">
+          "Peak Performance", "The Champion's Mind: How Great Athletes Think,
+          Train, and Thrive" and "Mamba Mentality" are some if not the best
+          books for athletes, where you can learn how to improve you overall
+          Performance
+        </p>
+      </FAQ>
+    </FAQs>
   </article>
 </Layout>

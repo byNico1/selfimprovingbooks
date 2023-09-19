@@ -2,6 +2,7 @@
 import Layout from "../../../layouts/Base.astro";
 import LandingContactForm from "../../../components/forms/LandingContactForm.astro";
 import Logo from "../../../components/Logo.astro";
+import { Image } from "astro:assets";
 
 const seo = {
   title: "Landing Page #2 | Astro Odyssey Theme",
@@ -18,7 +19,9 @@ const seo = {
         </a>
       </div>
       <picture>
-        <img
+        <Image
+          width={100}
+          height={100}
           src="/assets/images/home/classic-hero.jpg"
           alt="Astro Odyssey"
           class="full-page-split__image"

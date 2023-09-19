@@ -1,156 +1,104 @@
 ---
-import { Icon } from "astro-icon";
 import Layout from "../../../layouts/Page.astro";
-import ProductsContainer from "../../../components/sections/products/productsContainer/productsContainer.astro";
-import Button from "../../../components/Button/button.astro";
+import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
+import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
+
+import ListOfContent from "../../../components/sections/Article/Success/ListOfContent.astro";
+
+import BooksToBeSuccessful from "../../../components/sections/Article/Success/BooksToBeSuccessful.astro";
+import BooksToSuccessfulMindset from "../../../components/sections/Article/Success/BooksToSuccessfulMindset.astro";
+import BooksForSuccess from "../../../components/sections/Article/Success/BooksForSuccess.astro";
+import InfoSection from "../../../components/sections/Article/Success/InfoSection.astro";
+import FAQ from "../../../components/FAQs/FAQ.astro";
+import FAQs from "../../../components/FAQs/FAQs.astro";
 
 const seo = {
-  title: "Landing Page #1 | Astro Odyssey Theme",
+  title: "Best 40 Success Books: Mindset And Stories",
   description: "Landing Page #1 | Astro Odyssey Theme",
 };
 ---
 
 <Layout {seo} announcementBar={true}>
-  <section class="mx-auto w-11/12 max-w-2xl lg:my-12 mt-24 mb-6">
-    <h1 class="text-4xl  sm:text-5xl">
-      Books on Success: Your Path to Achievement
+  <IntroSection>
+    <h1 class="text-3xl sm:text-5xl text-center">
+      Best 40 Success Books: Mindset And Stories
     </h1>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Uncover the Secrets of Success</h2>
+    <p class="">
+      If you want to learn techniques that can help you be successful
+    </p>
+    <p>Or know what techniques have helped other people become successful</p>
     <p>
-      Delve into a collection of enlightening books on success that unlock the
-      keys to achieving your goals, cultivating a winning mindset, and
-      navigating the road to success. Explore these impactful titles that
-      provide valuable insights, data-driven strategies, and timeless wisdom to
-      help you on your journey.
+      you are in the right place, here we have analyzed the best books to answer
+      all your questions about success
     </p>
-  </section>
+    <p>We will answer in this guide questions like:</p>
+    <p>What are the best books to read to be successful?</p>
+    <p>What is the best book for success?</p>
+    <p>What books should I read for successful mindset</p>
+    <p>And More</p>
 
-  <!-- <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Featured Economics Books</h2>
-    <p>
-      Discover a selection of top-rated economics books that offer valuable
-      insights into economic principles, financial literacy, and more. Explore
-      these recommended titles and deepen your understanding of the world of
-      economics.
-    </p>
-  </section> -->
+    <h2 class="text-center" slot="featured">BEST BOOK ON SUCCESS</h2>
 
-  <section class="flex-col flex justify-around min-h-[90vh] mt-12">
-    <div class="text-center sm:mx-auto">
-      <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">
-        BEST SELLING ECONOMICS BOOKS
-      </h2>
-    </div>
+    <ProductCard mobile={true} products={1} slot="featured" />
+  </IntroSection>
 
-    <ProductsContainer />
+  <article
+    class="pt-3 px-[20px] sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto"
+  >
+    <ListOfContent />
 
-    <div class="flex justify-center items-center mt-10">
-      <Button
-        href="https://www.amazon.com/b/?node=2581&ref_=Oct_d_odnav_d_3_0&pd_rd_w=e2NWo&content-id=amzn1.sym.da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_p=da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_r=64PAYA8YMH05D2WN1YQ0&pd_rd_wg=2EAmh&pd_rd_r=fd9967f0-c191-4e96-bdbe-f04a773e1c24"
-        customIcon
-      >
-        More offers on Amazon
-        <span slot="icon">
-          <Icon name="ic:baseline-chevron-right" />
-        </span>
-      </Button>
-    </div>
-  </section>
+    <!-- <Body /> -->
+    <BooksToBeSuccessful />
+    <BooksToSuccessfulMindset />
+    <BooksForSuccess />
 
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Introduction</h2>
-    <p class="!mt-10">
-      Welcome to our guide on books about success, where we embark on a journey
-      through literature that empowers you to unlock your potential and achieve
-      greatness. Whether you're an entrepreneur, aspiring leader, or simply
-      seeking personal growth, these books offer insights that can shape your
-      path to success.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">The Power of Mindset</h2>
-    <p>
-      The foundation of success often lies within your mindset. Dive into books
-      like "Mindset: The New Psychology of Success" that delve into the
-      psychology of achievement. Explore the impact of a growth mindset and how
-      it can revolutionize your approach to challenges and opportunities.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Decoding the Law of Success</h2>
-    <p>
-      Unlock the timeless principles of success through books that explore "The
-      Law of Success." Discover strategies, anecdotes, and case studies that
-      illuminate the universal laws that drive achievement. These books provide
-      a blueprint for success that transcends industries and generations.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Building Blocks of Achievement</h2>
-    <p>
-      Discover a selection of books meticulously curated to provide you with a
-      roadmap for success. These titles offer data-driven insights and
-      statistics that highlight the common traits shared by successful
-      individuals. Learn from real-world examples that showcase the application
-      of success principles in various fields.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Success Stories that Inspire</h2>
-    <p>
-      Inspirational stories have the power to ignite motivation and
-      determination. Immerse yourself in books that showcase the extraordinary
-      journeys of individuals who achieved remarkable success. These stories
-      serve as a source of inspiration and provide valuable lessons that you can
-      apply to your own path.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Essential Reading for Entrepreneurs</h2>
-    <p>
-      For budding and seasoned entrepreneurs alike, these books offer actionable
-      advice, strategies, and case studies to guide your journey. Whether you're
-      looking to launch a startup or scale your business, these resources
-      provide insights from successful business leaders.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">The Path to Personal Growth</h2>
-    <p>
-      Success isn't confined to the professional realm—it extends to personal
-      growth as well. Explore books that offer holistic strategies to improve
-      various aspects of your life, from relationships to well-being. Embrace
-      the wisdom that contributes to your overall success and fulfillment.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Navigating Challenges: Success Mindset</h2>
-    <p>
-      Challenges are a natural part of the journey to success. These books delve
-      into the mindset that allows individuals to navigate challenges, setbacks,
-      and failures with resilience and determination. Learn how a
-      success-oriented mindset transforms adversity into opportunity.
-    </p>
-  </section>
-
-  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
-    <h2 class="">Conclusion</h2>
-    <p>
-      In your pursuit of success, knowledge is your most valuable asset. Through
-      the pages of these books on success, you'll gain insights that shape your
-      perspective, refine your strategies, and empower you to overcome
-      obstacles. Embark on a transformative journey towards achieving your goals
-      and realizing your full potential.
-    </p>
-  </section>
+    <InfoSection />
+    <!-- <BestMotivationalBooksAthletes /> -->
+    <FAQs>
+      <FAQ>
+        <h3
+          slot="question"
+          class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+        >
+          Q: What are success books?<span class="icon">+</span>
+        </h3>
+        <p slot="answer" class="!m-0">
+          Success books are a genre of literature dedicated to helping
+          individuals achieve their personal and professional goals. These books
+          offer guidance, strategies, and inspirational stories to motivate
+          readers on their journey to success. Whether it's unlocking the
+          secrets of effective leadership, mastering time management, or
+          fostering a growth mindset, success books provide valuable insights
+          and actionable advice. They often draw from the experiences of
+          accomplished individuals and distill their wisdom into practical
+          principles. Success books serve as valuable resources for those
+          seeking personal development, self-improvement, and the attainment of
+          their dreams and aspirations.
+        </p>
+      </FAQ>
+      <FAQ>
+        <h3
+          slot="question"
+          class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+        >
+          Q: What is the best success book of all time? <span class="icon"
+            >+</span
+          >
+        </h3>
+        <p slot="answer" class="!m-0">
+          When it comes to the best success book of all time, one title
+          consistently stands out: "Think and Grow Rich" by Napoleon Hill. This
+          timeless classic, first published in 1937, has had a profound impact
+          on countless individuals worldwide. Hill's book explores the
+          principles of personal achievement and financial success, drawing from
+          the experiences of some of the most accomplished individuals in
+          history. It emphasizes the power of mindset, goal-setting, and
+          persistence in achieving one's dreams. "Think and Grow Rich" continues
+          to be a source of inspiration and guidance for those striving for
+          success in various aspects of life, making it a perennial favorite in
+          the genre.
+        </p>
+      </FAQ>
+    </FAQs>
+  </article>
 </Layout>
