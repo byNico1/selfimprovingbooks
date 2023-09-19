@@ -1,218 +1,276 @@
 ---
-const {navData} = Astro.props
-import Theme from '../../components/Theme-UI/theme.astro'
+const { navData } = Astro.props;
+import Theme from "../../components/Theme-UI/theme.astro";
 ---
+
 <header
-class="fixed lg:static top-0 w-full z-30 bg-[var(--theme-bg)]"
+  class="fixed lg:static top-0 w-full z-30 bg-[var(--theme-bg)]"
+  transition:persist
 >
-	<div class="flex justify-between items-center lg:flex-col lg:justify-center xl:flex-row xl:justify-between">
-		<slot />
-		
-		<div class="flex pr-4">
+  <div
+    class="flex justify-between items-center lg:flex-col lg:justify-center xl:flex-row xl:justify-between"
+  >
+    <slot />
 
-			<Theme />
-			
-			<nav class="hidden items-center lg:relative mt-0 lg:!flex lg:basis-auto">
-				<!-- Desktop Navigation -->
-				<ul class="list-style-none mr-auto flex pl-0 flex-row text-sm">
-					{navData.map(data => {
-						if(data.dropdown === true) {
-							return (
-								<li data-title={data.title} class="sm:block relative mx-2 lg:flex dropdown-container ">
-										<button data-title={data.title} class="drops dropbtn flex gap-1 items-center">
-											{data.title}
-											<svg viewBox="0 0 1024 1024" class="arrow icon w-3" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" ></path></g></svg>
-										</button>
-										<div data-title={data.title} class="dropdown-content absolute right-0 top-7 mt-2 w-48 bg-gray-800 rounded-md overflow-hidden z-10">
-											{data.subcat.map(el => (
-												<a href={el.slug} class="block px-4 py-2 text-gray-200 hover:bg-gray-700">
-													{el.title}
-												</a>
-											))}
-										</div>
-								</li>
-							)
-						}else {
-							return (
-								<li class="mb-0 pl-0 pr-1">
-									<a
-									class="p-0 transition duration-200  hover:ease-in-out motion-reduce:transition-none px-2"
-									href={`${data.slug}`}
-									>
-										{data.title}
-									</a>
-								</li>
-							)
-						}
-					})}
-				</ul>
-			</nav>
-		</div>
-		
-		<input class="side-menu lg:hidden" type="checkbox" id="side-menu"/>
-		<label class="hamb lg:hidden p-4" for="side-menu"><span class="hamb-line"></span></label>
-	</div>
+    <div class="flex pr-4">
+      <Theme />
 
-		
-	<!-- Collapsible navbar container -->
-	<nav
-	class="list-items overflow-scroll z-100 fixed w-full h-[92%] hidden items-center lg:!hidden
-	bg-[var(--theme-bg)]"
-	>
-		<!-- Mobile Navbar -->
-		<ul
-		class="list-style-none mr-auto flex flex-col pl-0  divide-y divide-[var(--theme-on-bg)] [&>*]:p-6  text-xl"
-		>
-			{
-				navData.map(data => {
-					if(data.dropdown === true) {
-						return (
-							<li class="mb-4 px-2 relative dropdowns dropdown-container">
-								<button data-title={data.title} class="drops dropbtn flex gap-1 text-left dropdownM  items-center">
-									{data.title}
-									<svg viewBox="0 0 1024 1024" class="arrow icon w-3" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" ></path></g></svg>
-								</button>
-								<div data-title={data.title} class="dropdown-content mt-2 rounded-md overflow-hidden z-10">
-									{data.subcat.map(el => (
-										<a href={el.slug} class="block py-2 text-sm">
-											{el.title}
-										</a>
-									))}
-								</div>
-							</li>
-						)
-					}else {
-						return (
-							<li class="mb-4 px-2 ">
-								<a
-								class="p-0 transition duration-200  hover:ease-in-out motion-reduce:transition-none lg:px-2"
-								href={`${data.slug}`}
-								data-te-nav-link-ref
-								>
-									{data.title}
-								</a>
-							</li>
-						)
-					}
-				})
-			}
-		</ul>
-	</nav>
-</header> 
+      <nav class="hidden items-center lg:relative mt-0 lg:!flex lg:basis-auto">
+        <!-- Desktop Navigation -->
+        <ul class="list-style-none mr-auto flex pl-0 flex-row text-sm">
+          {
+            navData.map((data) => {
+              if (data.dropdown === true) {
+                return (
+                  <li
+                    data-title={data.title}
+                    class="sm:block relative mx-2 lg:flex dropdown-container "
+                  >
+                    <button
+                      data-title={data.title}
+                      class="drops dropbtn flex gap-1 items-center"
+                    >
+                      {data.title}
+                      <svg
+                        viewBox="0 0 1024 1024"
+                        class="arrow icon w-3"
+                        version="1.1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                      >
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <>
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                          <g id="SVGRepo_iconCarrier">
+                            <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" />
+                          </g>
+                        </>
+                      </svg>
+                    </button>
+                    <div
+                      data-title={data.title}
+                      class="dropdown-content absolute right-0 top-7 mt-2 w-48 bg-gray-800 rounded-md overflow-hidden z-10"
+                    >
+                      {data.subcat.map((el) => (
+                        <a
+                          href={el.slug}
+                          class="block px-4 py-2 text-gray-200 hover:bg-gray-700"
+                        >
+                          {el.title}
+                        </a>
+                      ))}
+                    </div>
+                  </li>
+                );
+              } else {
+                return (
+                  <li class="mb-0 pl-0 pr-1">
+                    <a
+                      class="p-0 transition duration-200  hover:ease-in-out motion-reduce:transition-none px-2"
+                      href={`${data.slug}`}
+                    >
+                      {data.title}
+                    </a>
+                  </li>
+                );
+              }
+            })
+          }
+        </ul>
+      </nav>
+    </div>
+
+    <input class="side-menu lg:hidden" type="checkbox" id="side-menu" />
+    <label class="hamb lg:hidden p-4" for="side-menu"
+      ><span class="hamb-line"></span></label
+    >
+  </div>
+
+  <!-- Collapsible navbar container -->
+  <nav
+    class="list-items overflow-scroll z-100 fixed w-full h-[92%] hidden items-center lg:!hidden bg-[var(--theme-bg)]"
+  >
+    <!-- Mobile Navbar -->
+    <ul
+      class="list-style-none mr-auto flex flex-col pl-0 divide-y divide-[var(--theme-on-bg)] [&>*]:p-6 text-xl"
+    >
+      {
+        navData.map((data) => {
+          if (data.dropdown === true) {
+            return (
+              <li class="mb-4 px-2 relative dropdowns dropdown-container">
+                <button
+                  data-title={data.title}
+                  class="drops dropbtn flex gap-1 text-left dropdownM  items-center"
+                >
+                  {data.title}
+                  <svg
+                    viewBox="0 0 1024 1024"
+                    class="arrow icon w-3"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                  >
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <>
+                      <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                      <g id="SVGRepo_iconCarrier">
+                        <path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" />
+                      </g>
+                    </>
+                  </svg>
+                </button>
+                <div
+                  data-title={data.title}
+                  class="dropdown-content mt-2 rounded-md overflow-hidden z-10"
+                >
+                  {data.subcat.map((el) => (
+                    <a href={el.slug} class="block py-2 text-sm">
+                      {el.title}
+                    </a>
+                  ))}
+                </div>
+              </li>
+            );
+          } else {
+            return (
+              <li class="mb-4 px-2 ">
+                <a
+                  class="p-0 transition duration-200  hover:ease-in-out motion-reduce:transition-none lg:px-2"
+                  href={`${data.slug}`}
+                  data-te-nav-link-ref
+                >
+                  {data.title}
+                </a>
+              </li>
+            );
+          }
+        })
+      }
+    </ul>
+  </nav>
+</header>
 
 <style>
-header {
-	box-shadow: inset 0 0 0.5px 1px hsla(0, 0%,  
-			100%, 0.075),
-			/* shadow ring 👇 */
-			0 0 0 1px hsla(0, 0%, 0%, 0.05),
-			/* multiple soft shadows 👇 */
-			0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-			0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
-			0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-}
+  header {
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075),
+      /* shadow ring 👇 */ 0 0 0 1px hsla(0, 0%, 0%, 0.05),
+      /* multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+      0 0.9px 1.5px hsla(0, 0%, 0%, 0.045), 0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+  }
 
-	/* Menu Icon */
-.hamb{
+  /* Menu Icon */
+  .hamb {
     cursor: pointer;
-}/* Style label tag */
+  } /* Style label tag */
 
-.hamb-line {
+  .hamb-line {
     background: var(--theme-on-bg);
     display: block;
     height: 2px;
     position: relative;
     width: 24px;
+  } /* Style span tag */
 
-} /* Style span tag */
-
-.hamb-line::before,
-.hamb-line::after{
+  .hamb-line::before,
+  .hamb-line::after {
     background: var(--theme-on-bg);
-    content: '';
+    content: "";
     display: block;
     height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     width: 100%;
-}
-.hamb-line::before{
+  }
+  .hamb-line::before {
     top: 5px;
-}
-.hamb-line::after{
+  }
+  .hamb-line::after {
     top: -5px;
-}
+  }
 
-/* DropDown Styles */
+  /* DropDown Styles */
 
-.dropdown-content {
-	display: none;
-}
-
-.side-menu {
+  .dropdown-content {
     display: none;
-}
+  }
 
-.arrow {
-	transition: transform 0.3s ease;
-}
+  .side-menu {
+    display: none;
+  }
 
-.show .arrow {
-	transform: rotate(180deg);
-}
+  .arrow {
+    transition: transform 0.3s ease;
+  }
 
-.show {
-  display: block;
-}
+  .show .arrow {
+    transform: rotate(180deg);
+  }
+
+  .show {
+    display: block;
+  }
 </style>
 
 <script>
+  var dropdownContainers = document.querySelectorAll(".dropdown-container");
 
-var dropdownContainers = document.querySelectorAll(".dropdown-container");
+  dropdownContainers.forEach(function (container: HTMLDivElement) {
+    container.addEventListener("click", function (event) {
+      var targetDropdown = (event.target as HTMLElement).closest(".dropbtn");
+      if (!targetDropdown) return;
 
-dropdownContainers.forEach(function(container:HTMLDivElement) {
-  container.addEventListener("click", function(event) {
-    var targetDropdown = (event.target as HTMLElement).closest(".dropbtn");
-    if (!targetDropdown) return;
-
-    var dropdownContent = targetDropdown.nextElementSibling;
-    if (dropdownContent) {
-      var isDropdownVisible = dropdownContent.classList.contains("show");
-      closeAllDropdowns();
-      if (!isDropdownVisible) {
-        dropdownContent.classList.add("show");
-		targetDropdown.querySelector<HTMLElement>(".arrow").style.transform = "rotate(180deg)";
-      } else {
-        targetDropdown.querySelector<HTMLElement>(".arrow").style.transform = "rotate(0deg)"; // Reset arrow rotation
+      var dropdownContent = targetDropdown.nextElementSibling;
+      if (dropdownContent) {
+        var isDropdownVisible = dropdownContent.classList.contains("show");
+        closeAllDropdowns();
+        if (!isDropdownVisible) {
+          dropdownContent.classList.add("show");
+          targetDropdown.querySelector<HTMLElement>(".arrow").style.transform =
+            "rotate(180deg)";
+        } else {
+          targetDropdown.querySelector<HTMLElement>(".arrow").style.transform =
+            "rotate(0deg)"; // Reset arrow rotation
+        }
       }
+    });
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!(event.target as HTMLElement).closest(".dropdown-container")) {
+      closeAllDropdowns();
     }
   });
-});
-
-document.addEventListener("click", function(event) {
-  if (!(event.target as HTMLElement).closest(".dropdown-container")) {
+  document.addEventListener("astro:after-swap", () => {
     closeAllDropdowns();
+    nav.classList.toggle("hidden");
+  });
+
+  function closeAllDropdowns() {
+    var dropdownContents = document.querySelectorAll(".dropdown-content");
+    var arrows = document.querySelectorAll(".arrow");
+
+    dropdownContents.forEach(function (content) {
+      content.classList.remove("show");
+    });
+
+    arrows.forEach(function (arrow: HTMLElement) {
+      arrow.style.transform = "rotate(0deg)";
+    });
   }
-});
 
-function closeAllDropdowns() {
-  var dropdownContents = document.querySelectorAll(".dropdown-content");
-  var arrows = document.querySelectorAll(".arrow");
-  
-  dropdownContents.forEach(function(content) {
-    content.classList.remove("show");
+  const menu: HTMLInputElement = document.querySelector(".side-menu");
+  const nav = document.querySelector("nav.list-items");
+
+  menu.addEventListener("change", function () {
+    nav.classList.toggle("hidden");
   });
-  
-  arrows.forEach(function(arrow:HTMLElement) {
-    arrow.style.transform = "rotate(0deg)";
-  });
-}
-	
-const menu:HTMLInputElement = document.querySelector('.side-menu')
-const nav = document.querySelector('nav.list-items')
-
-menu.addEventListener('change', function() {
-nav.classList.toggle('hidden')
-})
-
 </script>

@@ -1,43 +1,43 @@
 <div class="faq">
-    <slot name="question" class="title" />
-    <div class="answer">
-      <slot name="answer">
-    </div>
-</div>
+  <slot name="question" class="title" />
+  <div class="answer">
+    <slot name="answer" />
+  </div>
 
-<script>
-  const faqs = document.querySelectorAll(".faq");
-  faqs.forEach((faq) => {
-    const question = faq.querySelector("h3");
-    const answer = faq.querySelector(".answer");
+  <script>
+    const faqs = document.querySelectorAll(".faq");
+    faqs.forEach((faq) => {
+      const question = faq.querySelector("h3");
+      const answer = faq.querySelector(".answer");
 
-    question.addEventListener("click", () => {
-      answer.classList.toggle("active");
-      question.querySelector(".icon").textContent = answer.classList.contains(
-        "active"
-      )
-        ? "-"
-        : "+";
+      question.addEventListener("click", () => {
+        answer.classList.toggle("active");
+        question.querySelector(".icon").textContent = answer.classList.contains(
+          "active"
+        )
+          ? "-"
+          : "+";
+      });
     });
-  });
-</script>
+  </script>
 
-<style>
-  .faq {
-    margin-block: 40px;
-  }
-  .faq .title.active .icon {
-    transform: rotate(45deg);
-  }
-  .answer {
-    display: none;
-    margin-top: 10px;
-    padding: 15px;
-    background-color: var(--theme-surface-1);
-    color: var(--theme-on-surface-1);
-    border-radius: 10px;
-  }
-  .active {
-    display: block;
-  }
-</style>
+  <style>
+    .faq {
+      margin-block: 40px;
+    }
+    .faq .title.active .icon {
+      transform: rotate(45deg);
+    }
+    .answer {
+      display: none;
+      margin-top: 10px;
+      padding: 15px;
+      background-color: var(--theme-surface-1);
+      color: var(--theme-on-surface-1);
+      border-radius: 10px;
+    }
+    .active {
+      display: block;
+    }
+  </style>
+</div>

@@ -1,6 +1,6 @@
 <div class="theme-switch-wrapper py-2 mt-1">
   <label class="theme-switch" for="checkbox">
-    <input type="checkbox" id="checkbox" />
+    <input data-theme-toggle type="checkbox" id="checkbox" />
     <div class="slider">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,6 @@
     }
   }
 
-  // Function that will switch the theme based on the if the theme toggle is checked or not
   function switchTheme(e) {
     if (e.target.checked) {
       document.documentElement.setAttribute("data-theme", "dark");
