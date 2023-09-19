@@ -1,0 +1,39 @@
+---
+import Sectionhead from "../components/Sectionhead.astro";
+import ContactForm from "../components/contactform.astro";
+import Layout from "../layouts/Page.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout>
+  <div class="max-w-screen-xl mx-auto px-5 mb-10">
+    <Sectionhead>
+      <Fragment slot="title">Contact</Fragment>
+      <Fragment slot="desc">We are a here to help.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl">Contact Us</h2>
+        <p class="text-lg leading-relaxed mt-3">
+          Have something to say? We are here to help. Fill up the form or send
+          email or call phone.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2">
+            <Icon class="w-4 h-4" name="uil:envelope" /><a
+              href="mailto:sibooks@gmail.com">sibooks@gmail.com</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2">
+            <Icon class="w-4 h-4" name="uil:phone" /><a
+              href="tel:+57 3165382781">+57 3165382781</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <ContactForm />
+      </div>
+    </div>
+  </div>
+</Layout>
