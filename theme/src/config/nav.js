@@ -20,7 +20,17 @@ export const nav = [
     dropdown: false,
   },
   {
-    title: "Most Viewed Categories",
+    title: "Contact",
+    slug: "/contact",
+    dropdown: false,
+  },
+  {
+    title: "About Us",
+    slug: "/about-us",
+    dropdown: false,
+  },
+  {
+    title: "Categories",
     slug: "/categories",
     subcat: [
       { title: "Economics", slug: "/topics/categories/economics" },
