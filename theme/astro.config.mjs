@@ -8,7 +8,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://odyssey-theme.littlesticks.dev/",
+  site: "https://selfimprovingbooks.netlify.app/",
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   sitemap: true,
   // Generate sitemap (set to "false" to disable)
@@ -22,6 +22,6 @@ export default defineConfig({
   },
   image: {
     remotePatterns: [{ protocol: "https" }],
-    domains: ["jamesclear.com"],
+    domains: ["jamesclear.com", "https://amzn.to", "https://amazon.com"],
   },
 });

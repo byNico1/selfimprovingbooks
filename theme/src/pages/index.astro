@@ -3,89 +3,664 @@ import { Container, FeatureCard } from "@littlesticks/odyssey-theme-components";
 
 import Layout from "../layouts/Page.astro";
 import HomeHeroSection from "../components/sections/heros/HomeHeroSection.astro";
+import ProductsContainer from "../components/sections/products/productsContainer/productsContainer.astro";
+import BooksQuote from "../components/BooksQuote/BooksQuote.astro";
+import ProductCard from "../components/sections/products/productCard/productCard.astro";
+import TextSection from "../components/textSection/TextSection.astro";
+import Button from "../components/Button/button.astro";
+import Icon from "astro-icon";
+import { Data } from "../utils/booksContainer/home";
 ---
 
 <Layout>
   <HomeHeroSection />
-  <Container>
-    <section class="feature-card__section">
-      <h2>Categories</h2>
-      <div class="feature-card__grid">
-        <FeatureCard
-          href="/landing-pages/landing-1"
-          title="Landing Page 1"
-          imgSrc="/assets/images/home/screenshots/landing-1"
-        />
-        <FeatureCard
-          href="/landing-pages/landing-2"
-          title="Landing Page 2"
-          imgSrc="/assets/images/home/screenshots/landing-2"
-        />
-        <FeatureCard
-          href="/landing-pages/landing-1"
-          title="Landing Page 1"
-          imgSrc="/assets/images/home/screenshots/landing-1"
-        />
-        <FeatureCard
-          href="/landing-pages/landing-2"
-          title="Landing Page 2"
-          imgSrc="/assets/images/home/screenshots/landing-2"
-        />
-      </div>
-    </section>
-  </Container>
+  <section
+    class="pt-3 px-[20px] sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto"
+  >
+    <h2>What self help books should I read?</h2>
+    <p>
+      The self-help books you should read depend on your specific goals and
+      interests. However, here are 10 highly regarded self-help books across
+      various areas of personal development:
+    </p>
 
-  <Container>
-    <section class="feature-card__section">
-      <h2>Best Sellers</h2>
-      <div class="feature-card__grid">
-        <FeatureCard
-          href="/company/about"
-          title="About Page"
-          imgSrc="/assets/images/home/screenshots/about"
-        />
-        <FeatureCard
-          href="/company/contact"
-          title="Contact Page"
-          imgSrc="/assets/images/home/screenshots/contact"
-        />
-        <FeatureCard
-          href="/blog/"
-          title="Blog Page"
-          imgSrc="/assets/images/home/screenshots/blog"
-        />
-        <FeatureCard
-          href="/blog/posts/remote-work-mental-health"
-          title="Blog Post"
-          imgSrc="/assets/images/home/screenshots/blog-post"
-        />
-        <FeatureCard
-          href="/company/legal"
-          imgSrc="/assets/images/home/screenshots/legal"
-          title="Legal Page"
-        />
-      </div>
-    </section>
-  </Container>
+    <h3 id="build-the-life">
+      1.
+      <span class="link--theme">
+        "Grit: The Power of Passion and Perseverance"
+      </span>
+      by Angela Duckworth
+    </h3>
 
-  <Container>
-    <section class="feature-card__section">
-      <h2>Theme Pages</h2>
-      <p>Learn more about how to set up and use the Odyssey Theme.</p>
-      <div class="feature-card__grid">
-        <FeatureCard
-          href="/theme/get-started"
-          imgSrc="/assets/images/home/screenshots/get-started"
-          title="Get Started"
-        />
-        <FeatureCard
-          href="/theme/style-guide"
-          imgSrc="/assets/images/home/screenshots/style-guide"
-          title="Style Guide"
-        />
-      </div>
-    </section>
-  </Container>
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/3PFJqUV">
+        <a
+          href="https://www.amazon.com/Grit-Passion-Perseverance-Angela-Duckworth/dp/1501111108?_encoding=UTF8&qid=1696431236&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=6d4f41b4585c75887f67d67d8efe8d5c&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1501111108&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="grit by Angela Duckworth"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="Without effort, your talent is nothing more than your unmet potential."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "Grit" by Angela Duckworth explores the significance of passion and
+      perseverance in achieving long-term success. Duckworth's research reveals
+      that grit, more than talent alone, is the true driver of outstanding
+      accomplishments.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      "Grit" by Angela Duckworth teaches readers the importance of cultivating
+      perseverance and passion as essential attributes for achieving meaningful,
+      long-term success in any endeavor. It emphasizes that consistent effort
+      and resilience can often outweigh innate talent in the pursuit of personal
+      and professional goals.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "The concept of Grit is so well explained in such a structured manner that
+      it’s easy to understand, diagnose and implement."
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3PFJqUV" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      2.
+      <span class="link--theme">"The 7 Habits of Highly Effective People"</span>
+      by Stephen R. Covey
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/3ZJ2WV3">
+        <a
+          href="https://www.amazon.com/Habits-Highly-Effective-People-Powerful/dp/1982137274?crid=2RJB5DIADJWM&keywords=the+7+habits&qid=1696431373&s=books&sprefix=the+7+h%2Cstripbooks%2C792&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=4a29777ba22b55cccd9175dd58d50571&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1982137274&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="The 7 habits of Highly effective people by Stephen R covey"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="It’s not what happens to us, but our response to what happens to us that hurts us."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "The 7 Habits of Highly Effective People" Covey is a transformative guide
+      to personal and professional effectiveness, offering practical principles
+      for achieving success and fulfillment through character-based habits and
+      timeless wisdom.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      "The 7 Habits of Highly Effective People" Covey teaches readers how to
+      prioritize and cultivate proactive behaviors, emphasizing personal
+      responsibility and principles as the foundation for lasting success and
+      effectiveness. Covey's book provides a framework for personal and
+      professional development, promoting values-based living and proactive
+      problem-solving.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "I wish I had known this 40 years ago! My paradigm has completely shifted
+      and I’m already calmer and more focused on my day and in my life."
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3ZJ2WV3" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      3. <span class="link--theme">"Atomic Habits"</span> by James Clear
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/3Q3Omob">
+        <a
+          href="https://www.amazon.com/Atomic-Habits-Proven-Build-Break/dp/0735211299?_encoding=UTF8&qid=1696433289&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=91935faf07c325f0f28a4564a99df170&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0735211299&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="Atomic Habits by James Clear"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="You do not rise to the level of your goals. You fall to the level of your systems."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "Atomic Habits" is a transformative guide that explores the science of
+      habit formation. Clear offers practical strategies to make small changes
+      that can lead to remarkable personal and professional growth.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      "Atomic Habits" teaches readers how to harness the power of small habits
+      to achieve long-term success. It emphasizes the importance of
+      understanding habit cues, cravings, responses, and rewards to create
+      meaningful and lasting behavioral change.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "I can only recommend it to people that want to build good habits and get
+      rid of bad ones. A good read and step by step explanation of the core
+      principles a habit is made out of"
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3Q3Omob" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      4. <span class="link--theme"
+        >"Mindset: The New Psychology of Success"</span
+      > by Carol S. Dweck
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/46e4jxv">
+        <a
+          href="https://www.amazon.com/Mindset-Carol-S-Dweck-audiobook/dp/B07N48NM33?crid=3G00EPXJPVFY5&keywords=mindset&qid=1696433510&s=books&sprefix=mindset%2Cstripbooks%2C151&sr=1-3&linkCode=li3&tag=selfimprovi09-20&linkId=29b6bb019a17ad6706eee241e66f952c&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07N48NM33&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="Mindset by Carol Dweck"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="We like to think of our champions and idols as superheroes who were born different from us. We don’t like to think of them as relatively ordinary people who made themselves extraordinary."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "Mindset" explores the concept of fixed and growth mindsets, revealing how
+      our beliefs about abilities profoundly impact success. Dweck advocates for
+      cultivating a growth mindset to unlock personal and professional
+      development potential.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      In "Mindset," Carol S. Dweck teaches readers to recognize the power of
+      their mindset—whether fixed or growth—and how it influences their approach
+      to challenges and learning. The book provides practical strategies for
+      shifting from a fixed mindset to a growth mindset, fostering resilience,
+      perseverance, and a passion for personal development.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "It gives you a clear understanding on what makes top 1% people successful
+      and be outstanding in all the dimensions of life"
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/46e4jxv" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      5. <span class="link--theme">"Awaken the Giant Within"</span> by Tony Robbins
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/3rMfWN8">
+        <a
+          href="https://www.amazon.com/Awaken-Giant-Within-Immediate-Emotional/dp/0671791540?_encoding=UTF8&qid=1696433635&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=f6ce507d0c79c5baf127af728f22e168&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0671791540&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="Awaken the Giant Within by Tonny Robins"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="Know that it’s your decisions, and not your conditions, that determine your destiny."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "Awaken the Giant Within" by Tony Robbins is a transformative self-help
+      book that empowers readers to take control of their lives, break through
+      limitations, and achieve personal and financial success through effective
+      strategies and mindset shifts.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      In "Awaken the Giant Within," Tony Robbins teaches readers how to harness
+      the power of their emotions and beliefs to create lasting change, set
+      compelling goals, and take consistent action toward achieving their
+      dreams. He emphasizes the importance of mastering one's psychology and
+      shaping a mindset that drives success and fulfillment.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "Everyone, regardless of age should read this book and / or go through the
+      exercises to understand who you are and why you are here and be more than
+      you ever thought possible"
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3rMfWN8" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      6. <span class="link--theme">"Daring Greatly"</span> by Brené Brown
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/3RN8QTu">
+        <a
+          href="https://www.amazon.com/Daring-Greatly-Courage-Vulnerable-Transforms/dp/1592407331?_encoding=UTF8&qid=1696434364&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=af7e0ec08f1f15211f9fbbe995446c44&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1592407331&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="Daring Greatly by Brené Brown"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="Courage starts with showing up and letting ourselves be seen."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "Daring Greatly" by Brené Brown explores the power of vulnerability and
+      courage in fostering meaningful connections and personal growth. Brown's
+      research-backed insights inspire readers to embrace vulnerability as a
+      pathway to authenticity and wholehearted living.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      "Daring Greatly" by Brené Brown teaches readers the importance of
+      embracing vulnerability as a source of strength, fostering authentic
+      connections, and cultivating courage to overcome shame and fear. It
+      provides practical strategies for daring to be vulnerable and living a
+      more fulfilling, wholehearted life.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "This book put into words feelings and experiences that I have had my
+      whole life and could never quite put my finger on. Everyone needs to read
+      this"
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3RN8QTu" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      7. <span class="link--theme">"Emotional Intelligence"</span> by Daniel Goleman
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/3Q1XdGG">
+        <a
+          href="https://www.amazon.com/Emotional-Intelligence-10th-Anniversary-Matter/dp/055380491X?_encoding=UTF8&qid=1696434724&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=19ea97de0541acdd1e5f3482f152be04&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=055380491X&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="Emotional Intelligence by Daniel Goleman"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="There is perhaps no psychological skill more fundamental than resisting impulse."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "Emotional Intelligence" by Daniel Goleman explores the significance of
+      emotional intelligence in our lives, highlighting its impact on personal
+      and professional success. The book delves into the vital role emotions
+      play in decision-making, relationships, and overall well-being.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      "Emotional Intelligence" by Daniel Goleman teaches readers how to
+      recognize, understand, and manage their own emotions effectively while
+      also improving their ability to empathize with and relate to others,
+      ultimately fostering better relationships and decision-making. It
+      emphasizes the importance of emotional awareness and regulation in
+      achieving personal and professional success.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "Great book to understand emotions of oneself as well as others.
+      Outstanding"
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3Q1XdGG" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      8. <span class="link--theme">"The Power of Now"</span> by Eckhart Tolle
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/3RFJve0">
+        <a
+          href="https://www.amazon.com/Power-Now-Guide-Spiritual-Enlightenment/dp/1577311523?_encoding=UTF8&qid=1696434811&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=4af2cdbb29b0f40570e5be826569de96&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1577311523&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="The Power of Now by Eckhart Tolle"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="If you get the inside right, the outside will fall into place."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "The Power of Now" by Eckhart Tolle is a spiritual guide that emphasizes
+      the importance of living in the present moment to find inner peace and
+      enlightenment. Tolle explores how transcending the mind's constant chatter
+      can lead to a deeper connection with the true self and a more fulfilling
+      life.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      "The Power of Now" teaches readers to free themselves from the tyranny of
+      their thoughts and ego, leading to a profound understanding of the
+      importance of living in the present moment. It offers practical guidance
+      on how to overcome negative thought patterns and find inner peace and
+      enlightenment through mindfulness and awareness.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "I’m not a spiritual person and this is not what I would consider
+      spiritual but more of a way to look inward (at yourself) and how to learn
+      from life and your surroundings."
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3RFJve0" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      9. <span class="link--theme">"You Are a Badass"</span> by Jen Sincero
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/45jOBQr">
+        <a
+          href="https://www.amazon.com/You-Are-Badass%C2%AE-Ultimate-Collectors/dp/0762486074?_encoding=UTF8&qid=1696434895&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=68217b6cb91d8ea6189837d32f375f3e&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0762486074&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="You Are a Badass by Jen Sincero"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="What other people think about you has nothing to do with you and everything to do with them."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "You Are a Badass" by Jen Sincero is a motivational self-help book that
+      encourages readers to embrace their inner potential and overcome
+      self-doubt to create a life they love. With humor and practical advice, it
+      inspires personal growth and self-confidence.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      "You Are a Badass" by Jen Sincero teaches readers how to break free from
+      self-limiting beliefs, tap into their inner power, and pursue their dreams
+      fearlessly. It offers practical strategies for cultivating
+      self-confidence, setting goals, and living a life filled with purpose and
+      passion.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "I love this book. It is a must to read If you are into self esteem and
+      high positive vibes. I have read it 2 times now and I just learn more."
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/45jOBQr" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h3 id="build-the-life">
+      10. <span class="link--theme">"Man's Search for Meaning"</span> by Viktor E.
+      Frankl
+    </h3>
+
+    <div class="max-w-lg mx-auto">
+      <ProductCard href="https://amzn.to/3LOOlBY">
+        <a
+          href="https://www.amazon.com/Mans-Search-Meaning-Viktor-Frankl/dp/0807014273?crid=131DCOR99ACJI&keywords=Man%27s+Search+for+Meaning%22+by+Viktor+E.+Frankl&qid=1696435002&s=books&sprefix=man%27s+search+for+meaning+by+viktor+e.+frankl%2Cstripbooks%2C272&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=f33e395a3f65c1becafb5753c61a75e7&language=en_US&ref_=as_li_ss_il"
+          target="_blank"
+          rel="nofollow"
+          ><img
+            width="165"
+            height="250"
+            src="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0807014273&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+            alt="Man's Search for Meaning by Viktor E. Frankl"
+          /></a
+        >
+      </ProductCard>
+    </div>
+
+    <BooksQuote
+      quote="When we are no longer able to change a situation, we are challenged to change ourselves."
+    />
+
+    <h3 class="!mt-6 link--theme">Summary:</h3>
+    <p>
+      "Man's Search for Meaning" by Viktor E. Frankl is a profound exploration
+      of human resilience and the pursuit of meaning, based on Frankl's
+      experiences as a Holocaust survivor. It emphasizes that even in the most
+      dire circumstances, individuals can find purpose and inner strength.
+    </p>
+
+    <h3 class="link--theme">What It Teaches:</h3>
+    <p>
+      "Man's Search for Meaning" teaches readers the importance of finding
+      meaning in suffering and adversity, emphasizing that individuals have the
+      power to choose their responses to life's challenges. It encourages a deep
+      exploration of one's inner values and purpose as a source of resilience
+      and fulfillment.
+    </p>
+
+    <h3 class="link--theme">Amazon Review:</h3>
+    <p class="text-sm">
+      "You never have to look far in this world to find someone in a more
+      difficult position than yourself. I love how the focus of the book was
+      less about the terrible things that happened to him and more about the
+      focus of the why you want to survive bringing about the how to survive. I
+      finished this book feeling very grateful for the people and comforts in my
+      life and feeling more motivated to LIVE my life."
+    </p>
+
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3LOOlBY" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <p>
+      These books cover a range of topics from personal development, mindset,
+      habits, emotional intelligence, and resilience, allowing you to choose
+      those that align with your self-improvement goals.
+    </p>
+  </section>
+
+  <article
+    class="mt-8 px-[20px] sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto"
+  >
+    <h2>Best self-improvement books on offer</h2>
+
+    <ProductsContainer products={12} mobile={true} productsArray={Data} />
+
+    <h2 class="!mt-8">Are self improvement books bad?</h2>
+    <p>
+      Self-improvement books are not inherently bad. They can provide valuable
+      insights and guidance for personal growth. However, their effectiveness
+      depends on individual preferences and the quality of the book itself.
+    </p>
+
+    <h2>Does self improvement books work?</h2>
+    <p>
+      Self-improvement books can work effectively when readers actively apply
+      the principles and strategies they offer. Success largely depends on one's
+      commitment to personal growth and the specific book's quality and
+      relevance to their goals. When used as tools for learning and
+      self-reflection, these books can lead to positive personal development
+      outcomes.
+    </p>
+
+    <h2>Best self-improvement book on offer</h2>
+    <p>
+      If you're looking to improve yourself, <span class="link--theme"
+        >"Grit" by Angela Duckworth</span
+      > is a standout choice among self-help books. Duckworth delves into the importance
+      of perseverance and passion in achieving success, offering invaluable insights
+      for personal growth. This book has inspired countless individuals to develop
+      resilience and determination along their paths to achieving their goals, making
+      it a compelling and highly recommended read for anyone interested in self-improvement.
+    </p>
+    <div class="mb-5">
+      <Button newTab noFollow href="https://amzn.to/3PFJqUV" customIcon>
+        Buy on Amazon
+        <Fragment slot="icon">
+          <Icon name="ri:amazon-fill" />
+        </Fragment>
+      </Button>
+    </div>
+
+    <h2>Who reads self-help books?</h2>
+    <p>
+      People of all ages, backgrounds, and lifestyles read self-help books for
+      personal growth, self-improvement, and guidance in areas such as
+      motivation, mental health, relationships, and career development. This
+      genre is beneficial to anyone who wishes to enhance their life and
+      well-being.
+    </p>
+  </article>
 </Layout>
 
 <style>

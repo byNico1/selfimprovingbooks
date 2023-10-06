@@ -1,26 +1,50 @@
 ---
+interface Props {
+  button?: boolean;
+  href: string;
+  imgLink?: string;
+  siteLink?: string;
+  title?: string;
+}
+
 import { Image } from "astro:assets";
-const { mobile } = Astro.props;
+import Button from "../../../Button/button.astro";
+import Icon from "astro-icon";
+const { button = true, href, imgLink, siteLink, title } = Astro.props as Props;
 ---
 
-<div class=`book-card ${mobile && '!block relative'} sm:flex`>
-  <Image
-    width="400"
-    height="558"
-    class="book-cover"
-    quality={100}
-    src="https://jamesclear.com/wp-content/uploads/2023/05/atomic-habits-dots.png"
-    alt="Book Cover"
-  />
-  <div class=`sm:w-1/2 ${mobile && '!w-full'} self-center`>
-    <h3 class="book-title">Atomic Habits</h3>
-    <div class="book-author">by James Clear</div>
-    <!-- <div class="book-delivery">
-    FREE delivery Fri, Sep 1 on $35 of items shipped by Amazon Or fastest
-    delivery Today 2 PM - 6 PM
-  </div> -->
-    <div class="book-price">Price: $19.99</div>
+<div class="book-card sm:max-w-xs sm:mx-auto block relative">
+  <!-- <a rel="nofollow" target="_blank" href={siteLink}> -->
+  <div class="flex justify-center">
+    <slot>
+      <a href={siteLink} target="_blank" rel="nofollow"
+        ><img width="165" height="250" src={imgLink} alt={title} /></a
+      >
+    </slot>
   </div>
+  <!-- <Image
+      width="2000"
+      height="2000"
+      class="book-cover"
+      quality={100}
+      src={imgLink}
+      alt="Book Cover"
+    /> -->
+  <div class=`'!w-full' self-center`>
+    {
+      button && (
+        <div class="mt-5 flex justify-center">
+          <Button newTab noFollow href={href} customIcon>
+            Buy on Amazon
+            <Fragment slot="icon">
+              <Icon name="ri:amazon-fill" />
+            </Fragment>
+          </Button>
+        </div>
+      )
+    }
+  </div>
+  <!-- </a> -->
 </div>
 
 <style>
@@ -40,7 +64,7 @@ const { mobile } = Astro.props;
 
   @media screen and (min-width: 400px) {
     .book-cover {
-      max-width: 230px;
+      max-width: 170px;
       margin: 0 auto;
     }
   }

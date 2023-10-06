@@ -1,5 +1,6 @@
 ---
 import TextSection from "../../../textSection/TextSection.astro";
+import ProductCard from "../../products/productCard/productCard.astro";
 import ProductsContainer from "../../products/productsContainer/productsContainer.astro";
 ---
 
@@ -89,7 +90,7 @@ import ProductsContainer from "../../products/productsContainer/productsContaine
 <!-- <li class="sm:pl-10"> -->
 <TextSection>
   <h3 id="born-to-run">
-    1.<a href="#" class="link--theme">"Born to Run"</a> by Christopher McDougall
+    1.<span class="link--theme">"Born to Run"</span> by Christopher McDougall
   </h3>
   <p>
     This memoir chronicles the author's journey to discover the secrets of the
@@ -97,13 +98,18 @@ import ProductsContainer from "../../products/productsContainer/productsContaine
     to Run" is a must-read for anyone interested in the science behind human
     endurance.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="Born to Run by Christopher McDougall"
+    href="https://amzn.to/46mmj95"
+    siteLink="https://amzn.to/46mmj95"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0307266303&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class="sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="mamba-mentality">
-    2.<a href="#" class="link--theme">"Mamba Mentality"</a> by Kobe Bryant
+    2.<span class="link--theme">"Mamba Mentality"</span> by Kobe Bryant
   </h3>
   <p>
     In the wake of his retirement from professional basketball, Kobe “The Black
@@ -111,92 +117,126 @@ import ProductsContainer from "../../products/productsContainer/productsContaine
     game to take readers on an unprecedented journey to the core of the
     legendary “Mamba mentality.”
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="The Mamba Mentality by Kobe Bryant"
+    href="https://amzn.to/45f7Z0J"
+    siteLink="https://amzn.to/45f7Z0J"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0374201234&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="into-thin-air">
-    3.<a href="#" class="link--theme">"Into Thin Air"</a> by Jon Krakauer
+    3.<span class="link--theme">"Into Thin Air"</span> by Jon Krakauer
   </h3>
   <p>
     This memoir delves into the devastating 1996 Mount Everest disaster, which
     claimed the lives of eight climbers. Krakauer offers an intimate and
     gripping account that will leave you on the edge of your seat.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="Into Thin Air by Jon Krakauer"
+    href="https://amzn.to/3ZFTiTn"
+    siteLink="https://amzn.to/3ZFTiTn"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0679457526&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="the-boys-in-the-boat">
-    4.<a href="#" class="link--theme">"The Boys in the Boat"</a> by Daniel James
-    Brown
+    4.<span class="link--theme">"The Boys in the Boat"</span> by Daniel James Brown
   </h3>
   <p>
     This biography follows the journey of the University of Washington's rowing
     team as they prepare for the 1936 Olympics in Nazi Germany. Brown's book is
     a powerful and poignant tale of perseverance and determination.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="The Boys in the Boat by Daniel James Brown"
+    href="https://amzn.to/3F2Ywis"
+    siteLink="https://amzn.to/3F2Ywis"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00AEBETU2&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="endurance-a">
-    5.<a href="#" class="link--theme">"Endurance"</a> by Alfred Lansing
+    5.<span class="link--theme">"Endurance"</span> by Alfred Lansing
   </h3>
   <p>
     This biography follows the journey of explorer Ernest Shackleton and his
     crew as they attempt to cross Antarctica in 1914. Lansing's meticulous
     research and vivid writing make for an exhilarating and gripping read.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="Endurance by Alfred Lansing"
+    href="https://amzn.to/46fV0NJ"
+    siteLink="https://amzn.to/46fV0NJ"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=029782919X&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="a-walk-in-the-woods">
-    6.<a href="#" class="link--theme">"A Walk in the Woods"</a> by Bill Bryson
+    6.<span class="link--theme">"A Walk in the Woods"</span> by Bill Bryson
   </h3>
   <p>
     This memoir follows Bryson's attempt to hike the Appalachian Trail with his
     friend Stephen Katz. Bryson's humor and wit make for a truly entertaining
     and engaging read.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="A Walk in the Woods by Bill Bryson"
+    href="https://amzn.to/3rHIXd1"
+    siteLink="https://amzn.to/3rHIXd1"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0767902521&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="the-perfect-mile">
-    7.<a href="#" class="link--theme">"The Perfect Mile"</a> by Neal Bascomb
+    7.<span class="link--theme">"The Perfect Mile"</span> by Neal Bascomb
   </h3>
   <p>
     This biography tells the story of the quest to break the four-minute mile
     barrier in the 1950s. Bascomb's writing is filled with suspense and drama,
     making for a truly exhilarating read.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="The Perfect Mile by Neal Bascomb"
+    href="https://amzn.to/3rELxQZ"
+    siteLink="https://amzn.to/3rELxQZ"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0618391126&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="barbarian-days">
-    8.<a href="#" class="link--theme">"Barbarian Days"</a> by William Finnegan
+    8.<span class="link--theme">"Barbarian Days"</span> by William Finnegan
   </h3>
   <p>
     This memoir chronicles Finnegan's lifelong passion for surfing. Finnegan's
     writing is honest and immersive, painting a vivid picture of the joys and
     struggles of chasing waves.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="Barbarian Days by William Finnegan"
+    href="https://amzn.to/46fQTB7"
+    siteLink="https://amzn.to/46fQTB7"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1594203474&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="the-river-of-doubt">
-    9.<a href="#" class="link--theme">"The River of Doubt"</a> by Candice Millard
+    9.<span class="link--theme">"The River of Doubt"</span> by Candice Millard
   </h3>
   <p>
     This biography follows Theodore Roosevelt's incredible journey down the
@@ -204,66 +244,91 @@ import ProductsContainer from "../../products/productsContainer/productsContaine
     thrilling and suspenseful, offering a vivid portrait of one of America's
     most beloved presidents.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="The River of Doubt by Candice Millard"
+    href="https://amzn.to/3PLcp9N"
+    siteLink="https://amzn.to/3PLcp9N"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0767913736&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="the-emeral-mike">
-    10.<a href="#" class="link--theme">"The Emerald Mile"</a> by Kevin Fedarko
+    10.<span class="link--theme">"The Emerald Mile"</span> by Kevin Fedarko
   </h3>
   <p>
     This memoir chronicles the author's journey to raft the entire length of the
     Colorado River through the Grand Canyon. Fedarko's writing is lyrical and
     immersive, making for a truly unforgettable read.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="The Emerald Mile by Kevin Fedarko"
+    href="https://amzn.to/3Q5zlCj"
+    siteLink="https://amzn.to/3Q5zlCj"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1439159866&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="the-climb">
-    11.<a href="#" class="link--theme">"The Climb"</a> by Anatoli Boukreev and G.
-    Weston DeWalt
+    11.<span class="link--theme">"The Climb"</span> by Anatoli Boukreev and G. Weston
+    DeWalt
   </h3>
   <p>
     This memoir follows the mountain-climbing career of Boukreev, who played a
     key role in the 1996 Mount Everest disaster. Boukreev's insights and
     expertise make for a fascinating and informative read.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="The Climb by Anatoli Boukreev"
+    href="https://amzn.to/45hSvJp"
+    siteLink="https://amzn.to/45hSvJp"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0312206372&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="touching-the-void">
-    12.<a href="#" class="link--theme">"Touching the Void"</a> by Joe Simpson
+    12.<span class="link--theme">"Touching the Void"</span> by Joe Simpson
   </h3>
   <p>
     This memoir recounts the harrowing experience of two climbers who become
     stranded on the Siula Grande mountain in the Peruvian Andes. Simpson's
     writing is haunting and powerful, making for a truly unforgettable read.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="Touching the Void by Joe Simpson"
+    href="https://amzn.to/48K1x51"
+    siteLink="https://amzn.to/48K1x51"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01MXJ7ROU&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="the-long-way">
-    13.<a href="#" class="link--theme">"The Long Way"</a> by Bernard Moitessier
+    13.<span class="link--theme">"The Long Way"</span> by Bernard Moitessier
   </h3>
   <p>
     This memoir follows Moitessier's journey to circumnavigate the globe alone,
     without stopping. Moitessier's writing is poetic and introspective, making
     for a truly beautiful and meditative read.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="The Long Way by Bernard Moitessier"
+    href="https://amzn.to/3rKzLEz"
+    siteLink="https://amzn.to/3rKzLEz"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1493042785&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="talking-to-goats">
-    14.<a href="#" class="link--theme">"Talking to GOATs"</a> by Jim Gray
+    14.<span class="link--theme">"Talking to GOATs"</span> by Jim Gray
   </h3>
   <p>
     Tom Brady, seven-time NFL Super Bowl champion GOATA riveting, insightful
@@ -273,20 +338,30 @@ import ProductsContainer from "../../products/productsContainer/productsContaine
     moments of the famous legends he has covered including, Muhammad Ali, Tom
     Brady, Kobe Bryant, LeBron James, Michael Jordan and Mike Tyson
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="Talking to GOATs by Jim Gray"
+    href="https://amzn.to/3RQwQF5"
+    siteLink="https://amzn.to/3RQwQF5"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0062992066&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- <li class=" sm:pl-10"> -->
 <TextSection mxw="">
   <h3 id="Wenger">
-    15.<a href="#" class="link--theme">"Wenger"</a> by Arsene Wenger
+    15.<span class="link--theme">"Wenger"</span> by Arsene Wenger
   </h3>
   <p>
     In Wenger: My Life and Lessons in Red and White, world-renowned and
     revolutionary soccer coach Arsène Wenger finally tells his own story for the
     very first time.
   </p>
-  <ProductsContainer products={1} />
+  <ProductCard
+    title="Wenger by Arsene Wenger"
+    href="https://amzn.to/46hFqBf"
+    siteLink="https://amzn.to/46hFqBf"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1474618243&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 </TextSection>
 <!-- </li> -->
 <!-- </ul> -->

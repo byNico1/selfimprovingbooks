@@ -1,80 +1,54 @@
 export const footerSocials = [
+  // {
+  //   name: "Twitter",
+  //   url: "https://twitter.com/littlesticksdev",
+  //   icon: "mdi:twitter",
+  // },
   {
-    name: 'Twitter',
-    url: 'https://twitter.com/littlesticksdev',
-    icon: "mdi:twitter",
-  },
-  {
-    name: 'Youtube',
-    url: 'https://youtube.com/c/LittleSticks',
+    name: "Youtube",
+    url: "https://www.youtube.com/@mentorlines/featured",
     icon: "mdi:youtube",
   },
-  {
-    name: 'Github',
-    url: 'https://github.com/littlesticks',
-    icon: "mdi:github",
-  },
-  {
-    name: 'Discord',
-    url: 'https://littlesticks.dev/discord',
-    icon: "ic:baseline-discord",
-  },
-]
+  // {
+  //   name: "Github",
+  //   url: "https://github.com/littlesticks",
+  //   icon: "mdi:github",
+  // },
+  // {
+  //   name: "Discord",
+  //   url: "https://littlesticks.dev/discord",
+  //   icon: "ic:baseline-discord",
+  // },
+];
 
 export const footerLists = [
-	{
-		title: 'Landing Pages',
-		items: [
-			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
-			},
-			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
-			},
-      // {
-			// 	title: 'Landing Page 3',
-			// 	slug: '/landing-pages/landing-3',
-			// },
-		],
-	},
-	{
-		title: 'Company',
-		items: [
-			{
-				title: 'About',
-				slug: '/company/about',
-			},
-			{
-				title: 'Blog',
-				slug: '/blog',
-			},
-			{
-				title: 'Contact',
-				slug: '/company/contact',
-			},
-		],
-	},
-	{
-		title: 'Theme',
-		items: [
-			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
-			},
-			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
-			},
+  {
+    title: "Categories",
+    items: [
+      { title: "Economics", slug: "/topics/categories/economics" },
       {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
+        title: "Sports and Outdoors",
+        slug: "/topics/categories/sports-and-outdoors",
+      },
+      { title: "Motivational", slug: "/topics/categories/motivational" },
+      { title: "Success", slug: "/topics/categories/success" },
+    ],
+  },
+  {
+    title: "Community",
+    items: [
+      {
+        title: "About Us",
+        slug: "/about-us",
       },
       {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
-		],
-	},
+        title: "Blog",
+        slug: "/blog",
+      },
+      {
+        title: "Contact",
+        slug: "/contact",
+      },
+    ],
+  },
 ];

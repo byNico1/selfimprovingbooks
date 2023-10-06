@@ -1,12 +1,14 @@
 ---
-// layout: "../layouts/Post.astro"
-// title: About Us
-// description: Learn how to setup Odyssey Theme's seo, logo, favicon, nav items, etc.
 import Icon from "astro-icon";
 import Layout from "../layouts/Page.astro";
+
+const seo = {
+  title: "SIB | About US",
+  description: "About Us",
+};
 ---
 
-<Layout>
+<Layout {seo}>
   <article
     class="mt-20 lg:mt-8 px-[20px] sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto"
   >

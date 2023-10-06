@@ -1,4 +1,6 @@
 ---
+import Icon from "astro-icon";
+import Button from "../../../Button/button.astro";
 import TextSection from "../../../textSection/TextSection.astro";
 import ProductCard from "../../products/productCard/productCard.astro";
 import ProductContainer from "../../products/productsContainer/productsContainer.astro";
@@ -42,12 +44,15 @@ import ProductContainer from "../../products/productsContainer/productsContainer
 <TextSection>
   <h3 class="link--theme" id="peak-performance">
     <span class="text-[--theme-on-bg]">1.</span>
-    <a href="#">"Peak Performance"</a>
+    "Peak Performance"
   </h3>
 
-  <div class="max-w-lg mx-auto">
-    <ProductCard products={1} slot="featured" />
-  </div>
+  <ProductCard
+    title="Peak Performance by Erik Seversen"
+    href="https://amzn.to/46ibC7B"
+    siteLink="https://amzn.to/46ibC7B"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BN4Y3CN5&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 
   <p class="!mt-6">Are you an athlete looking for ways to improve your game?</p>
   <p>
@@ -67,23 +72,28 @@ import ProductContainer from "../../products/productsContainer/productsContainer
     give up on your dream!
   </p>
 
-  <p>
-    Buy <a class="underline link--theme" href="#">Peak Performance</a> now and take
-    your training up a notch!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/46ibC7B" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
-<!-- </li> -->
-<!-- <li class="sm:pl-10"> -->
+
 <TextSection>
   <h3 class="link--theme" id="champions-mind">
-    <span class="text-[--theme-on-bg]">2.</span><a href="#"
-      >"The Champion's Mind: How Great Athletes Think, Train, and Thrive"</a
-    >
+    <span class="text-[--theme-on-bg]">2.</span>
+    "The Champion's Mind: How Great Athletes Think, Train, and Thrive"
   </h3>
 
-  <div class="max-w-lg mx-auto">
-    <ProductCard products={1} slot="featured" />
-  </div>
+  <ProductCard
+    title="The Champion's Mind by Jim Afremow"
+    href="https://amzn.to/3ZXU7XX"
+    siteLink="https://amzn.to/3ZXU7XX"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1623361486&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 
   <p class="!mt-6">Have you ever wondered what makes great athletes tick?</p>
   <p>
@@ -102,22 +112,28 @@ import ProductContainer from "../../products/productsContainer/productsContainer
     sport psychologists as well as real life examples of great athletes who have
     pushed themselves out of their comfort zones in order to be successful!
   </p>
-  <p>
-    Buy <a class="underline link--theme" href="#">The Champion's Mind</a> today!
-    take your performance, ambition, motivation & expectations to whole new level!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3ZXU7XX" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
   <h3 class="link--theme" id="mind-gym">
-    <span class="text-[--theme-on-bg]">3.</span><a href="#"
-      >"Mind Gym: An Athlete's Guide to Inner Excellence"</a
-    >
+    <span class="text-[--theme-on-bg]">3.</span>
+    "Mind Gym: An Athlete's Guide to Inner Excellence"
   </h3>
 
-  <div class="max-w-lg mx-auto">
-    <ProductCard products={1} slot="featured" />
-  </div>
+  <ProductCard
+    title="Mind Gym by Gary Mack"
+    href="https://amzn.to/46CqzB3"
+    siteLink="https://amzn.to/46CqzB3"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0071395970&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 
   <p class="!mt-6">Are you an athlete looking to unlock your true potential?</p>
   <p>
@@ -135,24 +151,28 @@ import ProductContainer from "../../products/productsContainer/productsContainer
     emotions, coping with stressful situations and improving communication
     skills - all essential for unlocking greater personal success.
   </p>
-  <p>
-    Get a copy of <a class="underline link--theme" href="#">Mind Gym</a> today and
-    start training smarter!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/46CqzB3" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection mxw="">
   <h3 class="link--theme" id="endure">
     <span class="text-[--theme-on-bg]">4.</span>
-    <a href="#"
-      >"Endure: Mind, Body, and the Curiously Elastic Limits of Human
-      Performance"</a
-    >
+    "Endure: Mind, Body, and the Curiously Elastic Limits of Human Performance"
   </h3>
 
-  <div class="max-w-lg mx-auto">
-    <ProductCard products={1} slot="featured" />
-  </div>
+  <ProductCard
+    title="Endure by Alex Hutchinson"
+    href="https://amzn.to/3PAQKB6"
+    siteLink="https://amzn.to/3PAQKB6"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0062499866&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 
   <p class="!mt-6">Ever wonder what makes some athletes push their limits?</p>
   <p>
@@ -168,21 +188,28 @@ import ProductContainer from "../../products/productsContainer/productsContainer
     this book will make you rethink your own limitations - and just maybe
     inspire you to take on bigger challenges and reach further than ever before!
   </p>
-  <p>
-    Preorder your copy of <a class="underline link--theme" href="#">Endure</a>
-    today to unlock your inner athlete!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3PAQKB6" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
   <h3 class="link--theme" id="relentless">
     <span class="text-[--theme-on-bg]">5.</span>
-    <a href="#">"Relentless: From Good to Great to Unstoppable"</a>
+    "Relentless: From Good to Great to Unstoppable"
   </h3>
 
-  <div class="max-w-lg mx-auto">
-    <ProductCard products={1} slot="featured" />
-  </div>
+  <ProductCard
+    title="Relentless by Tim S. Grover"
+    href="https://amzn.to/3F5w9jA"
+    siteLink="https://amzn.to/3F5w9jA"
+    imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1476710937&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+  />
 
   <p class="!mt-6">Are you ready to take your success to the next level?</p>
 
@@ -203,7 +230,14 @@ import ProductContainer from "../../products/productsContainer/productsContainer
   <p>
     Get started on your journey towards greatness today - Use Relentless for
     strategies that are used by some of the world’s top performers in business,
-    sport and life! <a class="underline link--theme" href="#">Click here now!</a
-    >
+    sport and life!
   </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3F5w9jA" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>

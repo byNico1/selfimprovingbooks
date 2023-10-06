@@ -1,20 +1,26 @@
 ---
 import { Icon } from "astro-icon";
 import Layout from "../../layouts/Page.astro";
-import ProductsContainer from "../../components/sections/products/productsContainer/productsContainer.astro";
 import Button from "../../components/Button/button.astro";
 
 const seo = {
-  title: "Landing Page #1 | Astro Odyssey Theme",
-  description: "Landing Page #1 | Astro Odyssey Theme",
+  title: "SIB | Self Improvement Topics and Categories",
+  description:
+    "Explore a diverse range of self-improvement categories for personal growth. From health and wellness to productivity and mindset, discover the paths to a better you.",
 };
 ---
 
 <Layout {seo} announcementBar={true}>
   <section class="mx-auto w-11/12 max-w-2xl lg:my-12 mt-24 mb-6">
-    <h1 class="text-4xl  sm:text-5xl">
+    <h1 class="text-4xl sm:text-5xl">
       Explore Our Topics: Your Path to Personal Growth
     </h1>
+  </section>
+
+  <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
+    <h2 class="text-red-500">
+      We Are Still In The Proccess Of Building this Page
+    </h2>
   </section>
 
   <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
@@ -84,28 +90,6 @@ const seo = {
       </div>
     </div>
   </section>
-
-  <!-- <section class="flex-col flex justify-around min-h-[90vh] mt-12">
-    <div class="text-center sm:mx-auto">
-      <h2 class="text-3xl sm:text-5xl sm:w-11/12 sm:!mx-auto">
-        BEST SELLING ECONOMICS BOOKS
-      </h2>
-    </div>
-
-    <ProductsContainer />
-
-    <div class="flex justify-center items-center mt-10">
-      <Button
-        href="https://www.amazon.com/b/?node=2581&ref_=Oct_d_odnav_d_3_0&pd_rd_w=e2NWo&content-id=amzn1.sym.da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_p=da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_r=64PAYA8YMH05D2WN1YQ0&pd_rd_wg=2EAmh&pd_rd_r=fd9967f0-c191-4e96-bdbe-f04a773e1c24"
-        customIcon
-      >
-        More offers on Amazon
-        <span slot="icon">
-          <Icon name="ic:baseline-chevron-right" />
-        </span>
-      </Button>
-    </div>
-  </section> -->
 
   <section class="mx-auto w-11/12 max-w-2xl my-12 text-left">
     <h2 class="">Navigating Our Content</h2>

@@ -1,4 +1,5 @@
 ---
+import { Data } from "../../../../utils/booksContainer/success";
 import ProductsContainer from "../../products/productsContainer/productsContainer.astro";
 ---
 
@@ -6,4 +7,4 @@ import ProductsContainer from "../../products/productsContainer/productsContaine
   20 Best-Selling Motivational Books
 </h2>
 
-<ProductsContainer products={12} mobile={true} />
+<ProductsContainer productsArray={Data} />

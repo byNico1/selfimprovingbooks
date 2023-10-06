@@ -36,17 +36,23 @@ const seo = {
 
     <h2 class="text-center" slot="featured">BEST-SELLING SPORTS BOOK</h2>
 
-    <ProductCard mobile={true} products={1} slot="featured" />
+    <ProductCard
+      title="The Mamba Mentality by Kobe Bryant"
+      href="https://amzn.to/3PDSj1k"
+      siteLink="https://amzn.to/3PDSj1k"
+      imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0374201234&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+      slot="featured"
+    />
   </IntroSection>
 
   <article
     class="pt-3 px-[20px] sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto"
   >
     <div
-      class="sm:w-11/12 max-w-2xl sm:mx-auto mt-10 bg-[--theme-surface-2] py-10 px-4 sm:pl-16 rounded-lg"
+      class="sm:w-11/12 max-w-2xl sm:mx-auto mb-10 bg-[--theme-surface-2] py-10 px-4 sm:pl-16 rounded-lg"
     >
       <h2 class="leading-7">List Of Content:</h2>
-      <ul class="items-left list-decimal ml-6 underline">
+      <ul class="items-left underline">
         <li class="mb-2">
           <a class="cursor-pointer" href="#best-books-for-athletes"
             >Top 5 Best Books For Athletes</a
@@ -118,7 +124,12 @@ const seo = {
         If you don't know how to decide my recomendation is "Peak Performance"
       </p>
 
-      <ProductsContainer products={1} />
+      <ProductCard
+        title="Peak Performance by Erik Seversen"
+        href="https://amzn.to/46ibC7B"
+        siteLink="https://amzn.to/46ibC7B"
+        imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0BN4Y3CN5&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+      />
     </TextSection>
 
     <FAQs>

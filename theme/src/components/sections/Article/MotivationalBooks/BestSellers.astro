@@ -1,9 +1,10 @@
 ---
 import ProductsContainer from "../../products/productsContainer/productsContainer.astro";
+import { Data } from "../../../../utils/booksContainer/motivational";
 ---
 
 <h2 class="leading-7" id="best-selling-motivational-books">
-  20 Best-Selling Motivational Books
+  12 Best-Selling Motivational Books
 </h2>
 
-<ProductsContainer products={12} mobile={true} />
+<ProductsContainer productsArray={Data} />

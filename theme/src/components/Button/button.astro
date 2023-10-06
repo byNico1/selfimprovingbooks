@@ -1,14 +1,27 @@
 ---
-const { href, unelevated, outlined, customIcon, onPrimary, newTab } =
-  Astro.props;
+const {
+  submit,
+  href,
+  unelevated,
+  outlined,
+  customIcon,
+  onPrimary,
+  newTab,
+  noFollow,
+} = Astro.props;
 ---
 
 <button
   class={`btn ${unelevated && `btn--unelevated`} ${
     outlined && `btn--outlined`
   } ${onPrimary && `btn--on-primary`}`}
+  type=`${submit ? 'submit' : 'button'}`
 >
-  <a href={href} target={`${newTab ? "_blank" : ``}`} rel={`${newTab ? "noopener noreferrer" : ``}`} >
+  <a
+    href={href}
+    target={`${newTab ? "_blank" : ``}`}
+    rel={`${newTab ? "noopener noreferrer" : ``} ${noFollow ? "nofollow" : ""}`}
+  >
     <slot />
   </a>
   {
@@ -37,7 +50,6 @@ const { href, unelevated, outlined, customIcon, onPrimary, newTab } =
   .btn:hover {
     background-color: var(--theme-primary-hover);
   }
-
 
   .btn--unelevated {
     background-color: transparent;

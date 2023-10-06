@@ -9,6 +9,16 @@ import FAQs from "../../../components/FAQs/FAQs.astro";
 import FAQ from "../../../components/FAQs/FAQ.astro";
 import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
 import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
+import {
+  Data,
+  allTimeBest,
+  econoBeginners,
+  forStudents,
+  topPicksForLearning,
+  booksForBusiness,
+  popularEcono,
+  personalReading,
+} from "../../../utils/booksContainer/economics";
 
 const seo = {
   title: "Economics books: The ultimate guide",
@@ -34,8 +44,13 @@ const seo = {
     <p>in fact I have already learned a lot these last years</p>
 
     <h2 class="text-center" slot="featured">BEST-SELLING ECONOMY BOOK</h2>
-
-    <ProductCard mobile={true} products={1} slot="featured" />
+    <ProductCard
+      title="The Intelligent Investor by Benjamin Graham"
+      href="https://amzn.to/45mkcke"
+      siteLink="https://amzn.to/45mkcke"
+      imgLink="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0060555661&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US"
+      slot="featured"
+    />
   </IntroSection>
 
   <article
@@ -44,60 +59,62 @@ const seo = {
     <div class="sm:p-0 sm:w-11/12 sm:mx-auto max-w-lg">
       <h3>Topics you'll learn on this post:</h3>
       <ul class="items-left list-decimal ml-6 underline">
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#best-selling-economics-books"
             >Best Economics Books</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#why-economics-books-matter"
             >Why Economics Books Matters</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#best-economics-books-for-beginners"
             >Best Economics Books for Beginners</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#the-power-of-financial-literacy"
             >The Power of Financial Literacy</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a
             class="cursor-pointer"
             href="#must-read-economics-books-for-students"
             >Must-Read Economics Books for Students</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#all-time-best-econmics-books"
             >Exploring the All-Time Best Economics Books</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#getting-started-top-picks"
             >Getting Started: Top Picks for Learning Economics</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#entrepreneur-economics-books"
             >Entrepreneur's Corner: Economics Books for Business Minds</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#popular-economics-books-for-success"
             >Unveiling Popular Economics Books for Success</a
           >
         </li>
-        <li>
+        <li class="mt-2">
           <a class="cursor-pointer" href="#personal-reading-list"
             >Unlocking Financial Insights: Your Personal Reading List</a
           >
         </li>
-        <li><a class="cursor-pointer" href="#conclusion">Conclusion</a></li>
-        <li><a class="cursor-pointer" href="#faqs">FAQs</a></li>
+        <li class="mt-2">
+          <a class="cursor-pointer" href="#conclusion">Conclusion</a>
+        </li>
+        <li class="mt-2"><a class="cursor-pointer" href="#faqs">FAQs</a></li>
       </ul>
     </div>
     <div class="flex-col flex justify-around min-h-[90vh] mt-6">
@@ -110,17 +127,19 @@ const seo = {
         </h2>
       </div>
 
-      <ProductsContainer products={12} mobile={true} />
+      <ProductsContainer productsArray={Data} />
 
       <div class="flex justify-center items-center mt-10 flex-wrap gap-3">
         <Button
+          newTab
+          noFollow
           href="https://www.amazon.com/b/?node=2581&ref_=Oct_d_odnav_d_3_0&pd_rd_w=e2NWo&content-id=amzn1.sym.da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_p=da9d5993-999b-41a1-9ebb-f85ff6fd0fb0&pf_rd_r=64PAYA8YMH05D2WN1YQ0&pd_rd_wg=2EAmh&pd_rd_r=fd9967f0-c191-4e96-bdbe-f04a773e1c24"
           customIcon
         >
           More offers on Amazon
-          <span slot="icon">
-            <Icon name="ic:baseline-chevron-right" />
-          </span>
+          <Fragment slot="icon">
+            <Icon name="ri:amazon-fill" />
+          </Fragment>
         </Button>
       </div>
     </div>
@@ -156,7 +175,8 @@ const seo = {
         These books simplify economic concepts and make learning an enjoyable
         experience.
       </p>
-      <ProductsContainer products={2} />
+
+      <ProductsContainer productsArray={econoBeginners} />
     </TextSection>
     <TextSection>
       <h2 id="the-power-of-financial-literacy">
@@ -184,7 +204,8 @@ const seo = {
         and "Macroeconomics" by Paul Krugman and Robin Wells are staples in
         academic reading lists.
       </p>
-      <ProductsContainer products={2} />
+
+      <ProductsContainer productsArray={forStudents} />
     </TextSection>
     <TextSection>
       <h2 id="all-time-best-econmics-books">
@@ -201,7 +222,8 @@ const seo = {
         These foundational works have shaped economic thought and continue to
         influence scholars and thinkers.
       </p>
-      <ProductsContainer products={2} />
+
+      <ProductsContainer productsArray={allTimeBest} />
     </TextSection>
     <TextSection>
       <h2 id="getting-started-top-picks">
@@ -216,7 +238,8 @@ const seo = {
         These books explore behavioral economics, shedding light on the
         psychology behind decision-making.
       </p>
-      <ProductsContainer products={2} />
+
+      <ProductsContainer productsArray={topPicksForLearning} />
     </TextSection>
     <TextSection>
       <h2 id="entrepreneur-economics-books">
@@ -231,7 +254,8 @@ const seo = {
         These books offer strategic insights for navigating the business
         landscape.
       </p>
-      <ProductsContainer products={2} />
+
+      <ProductsContainer productsArray={booksForBusiness} />
     </TextSection>
     <TextSection>
       <h2 id="popular-economics-books-for-success">
@@ -246,7 +270,8 @@ const seo = {
         are not only informative but also engaging, making them must-reads for
         anyone curious about economics.
       </p>
-      <ProductsContainer products={2} />
+
+      <ProductsContainer productsArray={popularEcono} />
     </TextSection>
     <TextSection>
       <h2 id="personal-reading-list">
@@ -261,7 +286,8 @@ const seo = {
         These books provide practical applications of economic theories to
         real-world scenarios.
       </p>
-      <ProductsContainer products={2} />
+
+      <ProductsContainer productsArray={personalReading} />
     </TextSection>
 
     <TextSection>

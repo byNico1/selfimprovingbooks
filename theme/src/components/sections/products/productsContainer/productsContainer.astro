@@ -1,10 +1,19 @@
 ---
 import ProductCard from "../productCard/productCard.astro";
-const { products, mobile = false } = Astro.props;
+const { productsArray } = Astro.props;
 ---
 
-<div class:list={["grid-container", "z-10", "relative", { columns: mobile }]}>
-  {[...Array(products)].map((el) => <ProductCard mobile={mobile} />)}
+<div class="grid-container z-10 relative columns">
+  {
+    productsArray.map((el) => (
+      <ProductCard
+        siteLink={el.siteLink}
+        imgLink={el.imgLink}
+        href={el.siteLink}
+        title={el.title}
+      />
+    ))
+  }
   <!-- Repeat the above book-card elements for more books -->
 </div>
 
