@@ -25,6 +25,7 @@
     "@webcomponents/template-shadowroot": "^0.2.1",
     "astro": "^3.0.12",
     "astro-icon": "^0.8.1",
+    "astro-robots-txt": "^1.0.0",
     "lit": "^2.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

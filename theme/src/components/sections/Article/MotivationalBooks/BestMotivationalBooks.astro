@@ -1,5 +1,7 @@
 ---
+import Icon from "astro-icon";
 import BooksQuote from "../../../BooksQuote/BooksQuote.astro";
+import Button from "../../../Button/button.astro";
 import TextSection from "../../../textSection/TextSection.astro";
 import ProductCard from "../../products/productCard/productCard.astro";
 ---
@@ -76,7 +78,9 @@ import ProductCard from "../../products/productCard/productCard.astro";
   <p class="!mt-6">Are you ready to take control of your life?</p>
 
   <p>
-    <a class="underline link--theme" href="#"
+    <a
+      class="underline link--theme"
+      href="https://www.amazon.com/Awaken-Giant-Within-Immediate-Emotional/dp/0671791540?_encoding=UTF8&qid=1696433635&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=f6ce507d0c79c5baf127af728f22e168&language=en_US&ref_=as_li_ss_il"
       >Awaken the Giant Within by Tony Robbins</a
     > is your guide to becoming the best version of yourself. Through this book,
     you will learn how to take control of your life and accomplish whatever you set
@@ -94,8 +98,11 @@ import ProductCard from "../../products/productCard/productCard.astro";
   </p>
 
   <p>
-    Get a <a class="underline link--theme" href="#">copy now</a> and let Awaken the
-    Giant Within unleash its full potential today!
+    Get a <a
+      class="underline link--theme"
+      href="https://www.amazon.com/Awaken-Giant-Within-Immediate-Emotional/dp/0671791540?_encoding=UTF8&qid=1696433635&sr=1-1&linkCode=li3&tag=selfimprovi09-20&linkId=f6ce507d0c79c5baf127af728f22e168&language=en_US&ref_=as_li_ss_il"
+      >copy now</a
+    > and let Awaken the Giant Within unleash its full potential today!
   </p>
 </TextSection>
 
@@ -124,7 +131,7 @@ import ProductCard from "../../products/productCard/productCard.astro";
   </p>
 
   <p>
-    <a class="underline link--theme" href="#"
+    <a class="underline link--theme" href="https://amzn.to/3PIgWtF"
       >The Magic of Thinking Big by David J. Schwartz</a
     > has helped millions of people unlock their true potential and take control
     of their lives. This book will show you how to become a winner in life and unleash
@@ -138,15 +145,18 @@ import ProductCard from "../../products/productCard/productCard.astro";
     rewarding opportunities that were previously hidden from view, becoming more
     productive with less effort…It’s all possible with <a
       class="underline link--theme"
-      href="#">The Magic Of Thinking Big!</a
+      href="https://amzn.to/3PIgWtF">The Magic Of Thinking Big!</a
     > Get this book now so you can start achieving success today!
   </p>
 
-  <p>
-    Buy <a class="underline link--theme" href="#"
-      >The Magic Of Thinking Big Now</a
-    > - Start Achieving Success Today!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3PIgWtF" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
@@ -188,10 +198,14 @@ import ProductCard from "../../products/productCard/productCard.astro";
     chapter unfolds!
   </p>
 
-  <p>
-    Buy <a class="underline link--theme" href="#">The Alchemist</a> today and start
-    your own exciting journey towards making your own destiny come true!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3rDpkmg" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
@@ -220,7 +234,7 @@ import ProductCard from "../../products/productCard/productCard.astro";
   </p>
 
   <p>
-    <a class="underline link--theme" href="#"
+    <a class="underline link--theme" href="https://amzn.to/3ROWEla"
       >"The War of Art by Steven Pressfield"</a
     > will give you the strategies you need to break through obstacles that are holding
     you back from accomplishing your goals. It’s an essential book for anyone who
@@ -236,11 +250,14 @@ import ProductCard from "../../products/productCard/productCard.astro";
     greatness.
   </p>
 
-  <p>
-    Put <a class="underline link--theme" href="#">The War of Art</a> into action
-    now by purchasing it today! Unlock the secret weapons within yourself that have
-    always been there waiting for activation. Get ready - the revolution starts now!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3ROWEla" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
@@ -268,7 +285,7 @@ import ProductCard from "../../products/productCard/productCard.astro";
   </p>
   <p>
     Norman Vincent Peale’s timeless classic,
-    <a class="underline link--theme" href="#">
+    <a class="underline link--theme" href="https://amzn.to/3RLkMVw">
       The Power Of Positive Thinking!
     </a>, is now available in a vividly updated edition perfect for today's
     reader. With inspiring stories and expert guidance through the principles of
@@ -278,18 +295,20 @@ import ProductCard from "../../products/productCard/productCard.astro";
   <p>
     By reading this book, you will learn <a
       class="underline link--theme"
-      href="#">The Power Of Positive Thinking!</a
+      href="https://amzn.to/3RLkMVw">The Power Of Positive Thinking!</a
     > and how it can change your life for the better. You will be able to think more
     positively, gain inner confidence and recognize opportunities available in everyday
     life.
   </p>
 
-  <p>
-    Take advantage of this timeless wisdom today by purchasing <a
-      class="underline link--theme"
-      href="#">The Power Of Positive Thinking!</a
-    >
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3RLkMVw" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
@@ -333,10 +352,14 @@ import ProductCard from "../../products/productCard/productCard.astro";
     development! Develop healthy habits that will help you become more
     successful; both professionally and personally.
   </p>
-  <p>
-    Read this best-selling book today,
-    <a class="underline link--theme" href="#">available right here!</a>
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3ZJ2WV3" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
@@ -362,7 +385,7 @@ import ProductCard from "../../products/productCard/productCard.astro";
   <p>
     Take a break and pick up Mark Manson's <a
       class="underline link--theme"
-      href="#">The Subtle Art of Not Giving a F*ck</a
+      href="https://amzn.to/46DyPRj">The Subtle Art of Not Giving a F*ck</a
     >. This book will help you focus on what really matters, prioritize your
     values and live a fulfilled life. It offers alternative techniques for
     managing the frustrations and disappointments of modern-day living.
@@ -373,10 +396,14 @@ import ProductCard from "../../products/productCard/productCard.astro";
     you spend your time. Stop feeling overwhelmed or burnt out - this book can
     show you another path forward!
   </p>
-  <p>
-    <a class="underline link--theme" href="#">Click here!</a> now to grab your copy
-    of The Subtle Art of Not Giving a F*ck today!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/46DyPRj" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
@@ -410,10 +437,12 @@ import ProductCard from "../../products/productCard/productCard.astro";
     Are you looking for a way to make lasting changes in your life?
   </p>
   <p>
-    <a class="underline link--theme" href="#">Atomic Habits</a> by James Clear is
-    the answer and it's here to help. He'll teach you not only how to get 1% better
-    every day, but also provide scientific insights into why habits work and what
-    science-backed approaches are best used when building new ones.
+    <a class="underline link--theme" href="https://amzn.to/3Q3Omob"
+      >Atomic Habits</a
+    > by James Clear is the answer and it's here to help. He'll teach you not only
+    how to get 1% better every day, but also provide scientific insights into why
+    habits work and what science-backed approaches are best used when building new
+    ones.
   </p>
   <p>
     You’ll be able to make small improvements daily while seeing real progress
@@ -421,9 +450,14 @@ import ProductCard from "../../products/productCard/productCard.astro";
     the secrets behind building positive habits so you can become unstoppable on
     your journey toward better health, relationships and overall well-being.
   </p>
-  <p>
-    Get <a class="underline link--theme" href="#">Atomic Habits</a> today!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/3Q3Omob" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
@@ -456,11 +490,12 @@ import ProductCard from "../../products/productCard/productCard.astro";
   <p class="!mt-6">Are you looking for the secret to success?</p>
 
   <p>
-    <a class="underline link--theme" href="#">Mindset by Carol Dweck</a> can show
-    you the way. This book breaks down how having a growth mindset will help enable
-    success in personally and professionally life. It provides practical advice and
-    tools to help those willing to take action on their goals, dreams, relationships,
-    and wellbeing.
+    <a class="underline link--theme" href="https://amzn.to/46e4jxv"
+      >Mindset by Carol Dweck</a
+    > can show you the way. This book breaks down how having a growth mindset will
+    help enable success in personally and professionally life. It provides practical
+    advice and tools to help those willing to take action on their goals, dreams,
+    relationships, and wellbeing.
   </p>
 
   <p>
@@ -470,12 +505,14 @@ import ProductCard from "../../products/productCard/productCard.astro";
     potential.
   </p>
 
-  <p>
-    Get your copy of <a class="underline link--theme" href="#"
-      >this inspiring read now!</a
-    > Discover how having the right mindset can be the key ingredient behind achieving
-    any goal or dream today.
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/46e4jxv" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
 
 <TextSection>
@@ -501,11 +538,12 @@ import ProductCard from "../../products/productCard/productCard.astro";
   <p class="!mt-6">Have you ever wished that you had more hours in the day?</p>
 
   <p>
-    <a class="underline link--theme" href="#">Join Robin Sharma’s 5AM Club</a> and
-    take back your mornings! This revolutionary program is an absolute must for anyone
-    who desires to make the most of their day. By waking up an hour early, every
-    morning can feel like a new beginning - rich with possibilities. You’ll be surprised
-    by how quickly each hour goes when it’s filled with meaningful activity.
+    <a class="underline link--theme" href="https://amzn.to/48FN4H0"
+      >Join Robin Sharma’s 5AM Club</a
+    > and take back your mornings! This revolutionary program is an absolute must
+    for anyone who desires to make the most of their day. By waking up an hour early,
+    every morning can feel like a new beginning - rich with possibilities. You’ll
+    be surprised by how quickly each hour goes when it’s filled with meaningful activity.
   </p>
 
   <p>
@@ -516,8 +554,12 @@ import ProductCard from "../../products/productCard/productCard.astro";
     there's no excuse not to get what matters done!
   </p>
 
-  <p>
-    <a class="underline link--theme" href="#">Click here now!</a> and purchase The
-    5 AM Club by Robin Sharma! Take control of your days starting right now!
-  </p>
+  <div class="mb-5">
+    <Button newTab noFollow href="https://amzn.to/48FN4H0" customIcon>
+      Buy on Amazon
+      <Fragment slot="icon">
+        <Icon name="ri:amazon-fill" />
+      </Fragment>
+    </Button>
+  </div>
 </TextSection>
