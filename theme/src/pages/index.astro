@@ -10,6 +10,14 @@ import Button from "../components/Button/button.astro";
 import Icon from "astro-icon";
 import { Data } from "../utils/booksContainer/home";
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+    "@type": "WebSite",
+      "name": "SIB",
+        "url": "https://selfimprovingbooks.netlify.app/",
+}
+</script>
 
 <Layout>
   <HomeHeroSection />
@@ -623,7 +631,7 @@ import { Data } from "../utils/booksContainer/home";
 
     <ProductsContainer products={12} mobile={true} productsArray={Data} />
 
-    <h2>Self Improvement Books</h2>
+    <h2 class="!mt-5">Self Improvement Books</h2>
     <p>
       In this section, we've explored ten remarkable self improvement books that
       cover a wide range of topics related to personal growth, motivation, and

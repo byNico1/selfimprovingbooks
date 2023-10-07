@@ -8,7 +8,7 @@ export interface Props {
   description?: string;
   canonicalURL?: URL | string;
   image?: string;
-  schema?: string;
+  // schema?: string;
 }
 
 const title = Astro.props.title || settings.title;
@@ -16,7 +16,7 @@ const description = Astro.props.description || settings.description;
 const canonicalURL =
   Astro.props.canonicalURL || new URL(Astro.url.pathname, Astro.site);
 const image = new URL(Astro.props.image || "./sib.png", Astro.site);
-const schema = Astro.props.schema;
+// const schema = Astro.props.schema;
 ---
 
 <!-- Global Metadata -->
@@ -51,19 +51,6 @@ const schema = Astro.props.schema;
 <meta property="twitter:image" content={image} />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
-
-<script
-  type="application/ld+json"
-  set:html={`
-  { 
-    "@context": "http://schema.org",
-    "@type": "WebPage",
-    "name": ${title},
-    "image": ${image},
-    "url": ${canonicalURL}
-  }
-`}
-></script>
 
 <!-- For Demonstration of the themes -->
 
