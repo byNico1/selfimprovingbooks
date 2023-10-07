@@ -6,4 +6,4 @@
 [[header]]
   for = "/*"
   [headers.values]
-  X-Robots-Tag = allow
+  X-Robots-Tag = "allow"
