@@ -49,9 +49,20 @@ const image = new URL(Astro.props.image || "./social.png", Astro.site);
 <!-- For Demonstration of the themes -->
 
 <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MN80337KDS"
+></script>
 <script>
   var host = window.location.hostname;
   if (host != "localhost") {
     // Place Google Analytics code here.
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-MN80337KDS");
   }
 </script>
+
+<!-- Google tag (gtag.js) -->
