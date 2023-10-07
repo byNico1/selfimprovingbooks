@@ -13,18 +13,32 @@ export default defineConfig({
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   sitemap: true,
   // Generate sitemap (set to "false" to disable)
-  integrations: [sitemap(), mdx(), lit(), react(), tailwind(), robotsTxt()],
+  integrations: [
+    sitemap(),
+    mdx(),
+    lit(),
+    react(),
+    tailwind(),
+    robotsTxt({
+      sitemap: [
+        "https://selfimprovingbooks.netlify.app/sitemap-index.xml",
+        "https://selfimprovingbooks.netlify.app/sitemap-0.xml",
+      ],
+    }),
+  ],
   // Add renderers to the config
   // This is for the astro-icon package. You can find more about the package here: https://www.npmjs.com/package/astro-icon
   vite: {
     ssr: {
-      external: ["svgo"]
-    }
+      external: ["svgo"],
+    },
   },
   image: {
-    remotePatterns: [{
-      protocol: "https"
-    }],
-    domains: ["jamesclear.com", "https://amzn.to", "https://amazon.com"]
-  }
+    remotePatterns: [
+      {
+        protocol: "https",
+      },
+    ],
+    domains: ["jamesclear.com", "https://amzn.to", "https://amazon.com"],
+  },
 });
