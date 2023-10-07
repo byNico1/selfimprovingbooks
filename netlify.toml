@@ -2,3 +2,8 @@
   base = "theme/"
   publish = "dist/"
   command = "npm run build"
+
+[[header]]
+  for = "/*"
+  [headers.values]
+  X-Robots-Tag = allow
