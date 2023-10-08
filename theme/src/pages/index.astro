@@ -9,15 +9,27 @@ import ProductCard from "../components/sections/products/productCard/productCard
 import Button from "../components/Button/button.astro";
 import Icon from "astro-icon";
 import { Data } from "../utils/booksContainer/home";
+
+import { Schema } from "astro-seo-schema";
 ---
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-    "@type": "WebSite",
-      "name": "SIB",
-        "url": "https://selfimprovingbooks.netlify.app/",
-}
-</script>
+
+<Schema
+  item={{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: '. "Grit: The Power of Passion and Perseverance" by Angela Duckworth',
+    image:
+      "https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=1501111108&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag=selfimprovi09-20&language=en_US",
+    description:
+      "&quot;Grit&quot; by Angela Duckworth explores the significance of passion and\n      perseverance in achieving long-term success. Duckworth&#39;s research reveals\n      that grit, more than talent alone, is the true driver of outstanding\n      accomplishments.",
+    url: "https://selfimprovingbooks.netlify.app/",
+    review: {
+      "@type": "Review",
+      reviewBody:
+        "&quot;The concept of Grit is so well explained in such a structured manner that\n      it’s easy to understand, diagnose and implement.&quot;",
+    },
+  }}
+/>
 
 <Layout>
   <HomeHeroSection />
