@@ -19,6 +19,7 @@ import {
   popularEcono,
   personalReading,
 } from "../../../utils/booksContainer/economics";
+import { Schema } from "astro-seo-schema";
 
 const seo = {
   title: "Economics books: The ultimate guide",
@@ -26,6 +27,39 @@ const seo = {
     "Unlock the secrets of economics with our range of professional books. Get ahead in your studies with SIB's collection - featuring a variety of titles on topics like macroeconomics, microeconomics and more!",
 };
 ---
+
+<Schema
+  item={{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "The Intelligent Investor",
+    description:
+      "The greatest investment advisor of the twentieth century, Benjamin Graham, taught and inspired people worldwide. Graham's philosophy of 'value investing' -- which shields investors from substantial error and teaches them to develop long-term strategies -- has made The Intelligent Investor the stock market bible ever since its original publication in 1949.",
+    review: {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: 4.5,
+        bestRating: 5,
+      },
+      author: [
+        {
+          "@type": "Person",
+          name: "Nicolas Forero",
+        },
+        {
+          "@type": "Person",
+          name: "Santiago Arias",
+        },
+      ],
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.4,
+      reviewCount: 89,
+    },
+  }}
+/>
 
 <Layout {seo} announcementBar={true}>
   <IntroSection>

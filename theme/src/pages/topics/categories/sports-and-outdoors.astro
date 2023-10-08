@@ -13,6 +13,7 @@ import BestSportsAndOutdoors from "../../../components/sections/Article/Sports-a
 import BestSportsBooksOfAllTime from "../../../components/sections/Article/Sports-article/BestSportsBooksOfAllTime.astro";
 import BestBooksForAthletes from "../../../components/sections/Article/Sports-article/BestBooksForAthletes.astro";
 import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
+import { Schema } from "astro-seo-schema";
 
 const seo = {
   title: "Top 25 Sports and Outdoor Motivational Books",
@@ -20,6 +21,39 @@ const seo = {
     "Whether you're a beginner or an experienced adventure-seeker, get inspired with this list of the top 25 sports and outdoor books. Read to learn more about key lessons on everything from climbing to skiing to hiking!",
 };
 ---
+
+<Schema
+  item={{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "The Champion's Mind",
+    description:
+      "If you’re looking to become an elite athlete yourself or just want to gain insight into what makes champions tick, then this book is for you! You can finally discover how top performers develop mental toughness so that come game time they’re ready both physically and mentally",
+    review: {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: 4.6,
+        bestRating: 5,
+      },
+      author: [
+        {
+          "@type": "Person",
+          name: "Nicolas Forero",
+        },
+        {
+          "@type": "Person",
+          name: "Santiago Arias",
+        },
+      ],
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.4,
+      reviewCount: 89,
+    },
+  }}
+/>
 
 <Layout {seo} announcementBar={true}>
   <IntroSection>

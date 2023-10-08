@@ -6,6 +6,7 @@ import Body from "../../../components/sections/Article/MotivationalBooks/Body.as
 import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
 import Button from "../../../components/Button/button.astro";
 import Icon from "astro-icon";
+import { Schema } from "astro-seo-schema";
 
 const seo = {
   title: "Best 40 Motivational Books To Reach Your Goals",
@@ -13,6 +14,39 @@ const seo = {
     "It's time to take control of your life and unlock your potential! Get the motivation you need with these inspirational books. Our selection of motivational books will help you become more disciplined and live a better, happier life.",
 };
 ---
+
+<Schema
+  item={{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "The Magic of Thinking Big",
+    description:
+      "Imagine having clarity about what you really want out of life, discovering rewarding opportunities that were previously hidden from view, becoming more productive with less effort…Its all possible with The Magic Of Thinking Big!",
+    review: {
+      "@type": "Review",
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: 4.5,
+        bestRating: 5,
+      },
+      author: [
+        {
+          "@type": "Person",
+          name: "Nicolas Forero",
+        },
+        {
+          "@type": "Person",
+          name: "Santiago Arias",
+        },
+      ],
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.6,
+      reviewCount: 89,
+    },
+  }}
+/>
 
 <Layout {seo} announcementBar={true}>
   <IntroSection>
