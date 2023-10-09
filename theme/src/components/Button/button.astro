@@ -8,13 +8,14 @@ const {
   onPrimary,
   newTab,
   noFollow,
+  backToBlog,
 } = Astro.props;
 ---
 
 <button
   class={`btn ${unelevated && `btn--unelevated`} ${
     outlined && `btn--outlined`
-  } ${onPrimary && `btn--on-primary`}`}
+  } ${onPrimary && `btn--on-primary`} ${backToBlog && `!px-5 !py-3`}`}
   type=`${submit ? 'submit' : 'button'}`
 >
   <a

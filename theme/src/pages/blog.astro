@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Page.astro";
+import Container from "../components/container.astro";
+import { Image } from "astro:assets";
+import Sectionhead from "../components/Sectionhead.astro";
+
+// Filter blog entries with 'draft: false' & date before current date
+const publishedBlogEntries = await getCollection("blog", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+---
+
+<Layout>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">All About Self-Improvement</Fragment>
+      <Fragment slot="desc">
+        We write about building startups and thoughts going on our mind.
+      </Fragment>
+    </Sectionhead>
+    <main class="my-8">
+      <ul class="grid gap-16 max-w-4xl mx-auto">
+        {
+          publishedBlogEntries.map((blogPostEntry, index) => (
+            <li>
+              <a href={`/blog/${blogPostEntry.slug}`}>
+                <div class="flex flex-col max-w-sm">
+                  <Image
+                    src={blogPostEntry.data.image.src}
+                    alt={blogPostEntry.data.image.alt}
+                    width={530}
+                    height={297}
+                    quality={100}
+                    loading="lazy"
+                    class="w-full rounded-md"
+                  />
+                  <div class="mt-3">
+                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                      {blogPostEntry.data.category}
+                    </span>
+
+                    <h2 class="!text-2xl font-semibold leading-snug tracking-tight mt-1 ">
+                      {blogPostEntry.data.title}
+                    </h2>
+
+                    <div class="flex gap-2 mt-3">
+                      <span class="text-gray-400">
+                        by {blogPostEntry.data.author}
+                      </span>
+                      <span class="text-gray-400">• </span>
+                      <time
+                        class="text-gray-400"
+                        datetime={blogPostEntry.data.publishDate.toISOString()}
+                      >
+                        {blogPostEntry.data.publishDate.toDateString()}
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>
