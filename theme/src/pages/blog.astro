@@ -14,9 +14,15 @@ const publishedBlogEntries = await getCollection("blog", ({ data }) => {
 publishedBlogEntries.sort(function (a, b) {
   return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
 });
+
+const seo = {
+  title: "SIB: Explore Our Blog Library",
+  description:
+    "Stay well-informed, inspired, and engaged with our excellent Self-Improvement content. Embark on your journey today!",
+};
 ---
 
-<Layout>
+<Layout seo={seo}>
   <Container>
     <Sectionhead>
       <Fragment slot="title">All About Self-Improvement</Fragment>
@@ -24,8 +30,8 @@ publishedBlogEntries.sort(function (a, b) {
         Our Goal is to help people accomplish their goals.
       </Fragment>
     </Sectionhead>
-    <main class="my-8">
-      <ul class="grid gap-16 max-w-4xl mx-auto">
+    <section class="my-8">
+      <ul class="flex flex-wrap gap-16 max-w-4xl mx-auto">
         {
           publishedBlogEntries.map((blogPostEntry, index) => (
             <li>
@@ -68,6 +74,6 @@ publishedBlogEntries.sort(function (a, b) {
           ))
         }
       </ul>
-    </main>
+    </section>
   </Container>
 </Layout>
