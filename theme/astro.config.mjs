@@ -9,7 +9,7 @@ import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://selfimprovingbooks.netlify.app/",
+  site: "https://selfimprovingbooks.com/",
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
   sitemap: true,
   // Generate sitemap (set to "false" to disable)
@@ -21,8 +21,8 @@ export default defineConfig({
     tailwind(),
     robotsTxt({
       sitemap: [
-        "https://selfimprovingbooks.netlify.app/sitemap-index.xml",
-        "https://selfimprovingbooks.netlify.app/sitemap-0.xml",
+        "https://selfimprovingbooks.com/sitemap-index.xml",
+        "https://selfimprovingbooks.com/sitemap-0.xml",
       ],
     }),
   ],
