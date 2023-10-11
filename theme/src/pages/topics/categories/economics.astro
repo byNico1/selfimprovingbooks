@@ -9,6 +9,7 @@ import FAQs from "../../../components/FAQs/FAQs.astro";
 import FAQ from "../../../components/FAQs/FAQ.astro";
 import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
 import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
+import Topfive from "../../../components/sections/Article/Economics/Topfive.astro";
 import {
   Data,
   allTimeBest,
@@ -22,9 +23,9 @@ import {
 import { Schema } from "astro-seo-schema";
 
 const seo = {
-  title: "Economics books: The ultimate guide",
+  title: "Economics books: The Ultimate Guide [For Everyone]",
   description:
-    "Unlock the secrets of economics with our range of professional books. Get ahead in your studies with SIB's collection - featuring a variety of titles on topics like macroeconomics, microeconomics and more!",
+    "Unlock the secrets of economics with our range of professional books. Get ahead in your studies with SIB's collection.",
 };
 ---
 
@@ -177,6 +178,9 @@ const seo = {
         </Button>
       </div>
     </div>
+
+    <Topfive />
+
     <TextSection bg="--theme-surface-1">
       <h2
         id="why-economics-books-matter"
