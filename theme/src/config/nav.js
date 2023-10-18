@@ -5,10 +5,6 @@ export const nav = [
     dropdown: false,
   },
   {
-    title: "Topics",
-    slug: "/topics",
-  },
-  {
     title: "Blog",
     slug: "/blog",
     dropdown: false,
@@ -27,13 +23,13 @@ export const nav = [
     title: "Categories",
     slug: "/categories",
     subcat: [
-      { title: "Economics", slug: "/topics/categories/economics" },
+      { title: "Economics", slug: "/categories/economics" },
       {
         title: "Sports and Outdoors",
-        slug: "/topics/categories/sports-and-outdoors",
+        slug: "/categories/sports-and-outdoors",
       },
-      { title: "Motivational", slug: "/topics/categories/motivational" },
-      { title: "Success", slug: "/topics/categories/success" },
+      { title: "Motivational", slug: "/categories/motivational" },
+      { title: "Success", slug: "/categories/success" },
     ],
     dropdown: true,
   },

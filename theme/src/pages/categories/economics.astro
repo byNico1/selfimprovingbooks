@@ -1,15 +1,15 @@
 ---
 import { Icon } from "astro-icon";
-import Layout from "../../../layouts/Page.astro";
-import ProductsContainer from "../../../components/sections/products/productsContainer/productsContainer.astro";
-import Button from "../../../components/Button/button.astro";
+import Layout from "../../layouts/Page.astro";
+import ProductsContainer from "../../components/sections/products/productsContainer/productsContainer.astro";
+import Button from "../../components/Button/button.astro";
 
-import TextSection from "../../../components/textSection/TextSection.astro";
-import FAQs from "../../../components/FAQs/FAQs.astro";
-import FAQ from "../../../components/FAQs/FAQ.astro";
-import IntroSection from "../../../components/sections/IntroSection/IntroSection.astro";
-import ProductCard from "../../../components/sections/products/productCard/productCard.astro";
-import Topfive from "../../../components/sections/Article/Economics/Topfive.astro";
+import TextSection from "../../components/textSection/TextSection.astro";
+import FAQs from "../../components/FAQs/FAQs.astro";
+import FAQ from "../../components/FAQs/FAQ.astro";
+import IntroSection from "../../components/sections/IntroSection/IntroSection.astro";
+import ProductCard from "../../components/sections/products/productCard/productCard.astro";
+import Topfive from "../../components/sections/Article/Economics/Topfive.astro";
 import {
   Data,
   allTimeBest,
@@ -19,11 +19,11 @@ import {
   booksForBusiness,
   popularEcono,
   personalReading,
-} from "../../../utils/booksContainer/economics";
+} from "../../utils/booksContainer/economics";
 import { Schema } from "astro-seo-schema";
 
 const seo = {
-  title: "Economics books: The Ultimate Guide [For Everyone]",
+  title: "Economics books: The Ultimate Guide (For Everyone)",
   description:
     "Unlock the secrets of economics with our range of professional books. Get ahead in your studies with SIB's collection.",
 };
@@ -93,64 +93,64 @@ const seo = {
   >
     <div class="sm:p-0 sm:w-11/12 sm:mx-auto max-w-lg">
       <h3>Topics you'll learn on this post:</h3>
-      <ul class="items-left list-decimal ml-6 underline">
-        <li class="mt-2">
+      <ol class="items-left underline">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#best-selling-economics-books"
             >Best Economics Books</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#why-economics-books-matter"
             >Why Economics Books Matters</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#best-economics-books-for-beginners"
             >Best Economics Books for Beginners</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#the-power-of-financial-literacy"
             >The Power of Financial Literacy</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a
             class="cursor-pointer"
             href="#must-read-economics-books-for-students"
             >Must-Read Economics Books for Students</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#all-time-best-econmics-books"
             >Exploring the All-Time Best Economics Books</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#getting-started-top-picks"
             >Getting Started: Top Picks for Learning Economics</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#entrepreneur-economics-books"
             >Entrepreneur's Corner: Economics Books for Business Minds</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#popular-economics-books-for-success"
             >Unveiling Popular Economics Books for Success</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#personal-reading-list"
             >Unlocking Financial Insights: Your Personal Reading List</a
           >
         </li>
-        <li class="mt-2">
+        <li class="mt-4">
           <a class="cursor-pointer" href="#conclusion">Conclusion</a>
         </li>
-        <li class="mt-2"><a class="cursor-pointer" href="#faqs">FAQs</a></li>
-      </ul>
+        <li class="mt-4"><a class="cursor-pointer" href="#faqs">FAQs</a></li>
+      </ol>
     </div>
     <div class="flex-col flex justify-around min-h-[90vh] mt-6">
       <div class="text-center sm:mx-auto">

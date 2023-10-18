@@ -17,14 +17,14 @@ import Theme from "../../components/Theme-UI/theme.astro";
 
       <nav class="hidden items-center lg:relative mt-0 lg:!flex lg:basis-auto">
         <!-- Desktop Navigation -->
-        <ul class="list-style-none mr-auto flex pl-0 flex-row text-sm">
+        <ul class="!list-none mr-auto flex pl-0 flex-row text-sm">
           {
             navData.map((data) => {
               if (data.dropdown === true) {
                 return (
                   <li
                     data-title={data.title}
-                    class="sm:block relative mx-2 lg:flex dropdown-container "
+                    class="sm:block relative mx-2 lg:flex dropdown-container !list-none"
                   >
                     <button
                       data-title={data.title}
@@ -68,7 +68,7 @@ import Theme from "../../components/Theme-UI/theme.astro";
                 );
               } else {
                 return (
-                  <li class="mb-0 pl-0 pr-1">
+                  <li class="mb-0 pl-0 pr-1 !list-none">
                     <a
                       class="p-0 transition duration-200  hover:ease-in-out motion-reduce:transition-none px-2"
                       href={`${data.slug}`}
@@ -96,7 +96,7 @@ import Theme from "../../components/Theme-UI/theme.astro";
   >
     <!-- Mobile Navbar -->
     <ul
-      class="list-style-none mr-auto flex flex-col pl-0 divide-y divide-[var(--theme-on-bg)] [&>*]:p-6 text-xl"
+      class="!list-none !p-0 mr-auto flex flex-col pl-0 divide-y divide-[var(--theme-on-bg)] [&>*]:p-6 text-xl"
     >
       {
         navData.map((data) => {

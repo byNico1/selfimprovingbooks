@@ -186,6 +186,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"overcoming-procrastination.mdx": {
+	id: "overcoming-procrastination.mdx";
+  slug: "overcoming-procrastination";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "self-confidence.mdx": {
 	id: "self-confidence.mdx";
   slug: "self-confidence";
