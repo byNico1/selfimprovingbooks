@@ -1,10 +1,16 @@
 ---
-import { Icon } from 'astro-icon';
-import Container  from '../core/Container.astro';
-import LittleSticksPlug from './LittleSticksPlug.astro';
+import { Icon } from "astro-icon";
+import Container from "../core/Container.astro";
+import LittleSticksPlug from "./LittleSticksPlug.astro";
 
-const { footerSocials, footerLists, copyrightName, background, color, showLittleSticksPlug = true } =
-  Astro.props;
+const {
+  footerSocials,
+  footerLists,
+  copyrightName,
+  background,
+  color,
+  showLittleSticksPlug = true,
+} = Astro.props;
 ---
 
 <footer
@@ -19,7 +25,7 @@ const { footerSocials, footerLists, copyrightName, background, color, showLittle
         <ul class="footer-socials__list">
           {
             footerSocials.map((social) => (
-              <li class="footer-socials__item">
+              <li class="footer-socials__item !list-none">
                 <a
                   href={social.url}
                   target="_blank"
@@ -37,10 +43,12 @@ const { footerSocials, footerLists, copyrightName, background, color, showLittle
       {
         footerLists.map((list) => (
           <div>
-            <p><strong>{list.title}</strong></p>
+            <p>
+              <strong>{list.title}</strong>
+            </p>
             <ul class="footer-link__list">
               {list.items.map((item) => (
-                <li>
+                <li class="">
                   <a href={item.slug}>{item.title}</a>
                 </li>
               ))}
@@ -50,10 +58,9 @@ const { footerSocials, footerLists, copyrightName, background, color, showLittle
       }
     </div>
     <div class="footer-copyright__container">
-      {showLittleSticksPlug && <LittleSticksPlug/>}
+      {showLittleSticksPlug && <LittleSticksPlug />}
       <p>Copyright &copy; {new Date().getFullYear()} {copyrightName}</p>
     </div>
-
   </Container>
 </footer>
 
