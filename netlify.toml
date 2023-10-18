@@ -16,12 +16,6 @@ status = 301
 force = true
 
 [[redirects]]
-from = "/topics"
-to = "/"
-status = 301
-force = true
-
-[[redirects]]
 from = "/topics/categories/sports-and-outdoors"
 to = "/categories/sports-and-outdoors"
 status = 301
