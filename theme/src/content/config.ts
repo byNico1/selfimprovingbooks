@@ -17,6 +17,7 @@ const blogCollection = defineCollection({
       author: z.string().default("Nicolas Forero"),
       category: z.string(),
       tags: z.array(z.string()),
+      ogImage: z.string(),
     }),
 });
 
