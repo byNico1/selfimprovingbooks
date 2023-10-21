@@ -2,11 +2,7 @@
 draft: false
 title: "How dopamine detox would help your live: Best Guide"
 description: "This is a complete guide on dopamine-detox. Learn how dopamine detox would help your live with this post"
-image:
-  {
-    src: "https://images.unsplash.com/photo-1668441126118-7ba4c6bac1b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2049&q=80",
-    alt: "Dopamine-detox Banner",
-  }
+image: { src: "@images/dopamine-detox.webp", alt: "Dopamine-detox Banner" }
 publishDate: "2023-10-08 01:15"
 category: "Dopamine-Detox"
 author: "Nicolas Forero & Santiago Arias"
@@ -14,10 +10,12 @@ tags: [dopamine, dopamine-detox, self-improvement]
 ---
 
 import { Image } from "astro:assets";
-import Container from "../../components/container.astro";
-import Button from "../../components/Button/button.astro";
+import Container from "@components/container.astro";
+import Button from "@components/Button/button.astro";
 import Icon from "astro-icon";
 import { Schema } from "astro-seo-schema";
+
+import Banner from "@images/dopamine-detox.webp";
 
 <Schema
   item={{
@@ -30,8 +28,7 @@ import { Schema } from "astro-seo-schema";
     headline: "How dopamine detox would help your live",
     description:
       "This is a complete guide on dopamine-detox. Learn how dopamine detox would help your live with this post.",
-    image:
-      "https://images.unsplash.com/photo-1668441126118-7ba4c6bac1b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2049&q=80",
+    image: { Banner },
     author: [
       {
         "@type": "Person",
@@ -56,7 +53,7 @@ import { Schema } from "astro-seo-schema";
 />
 
 <Image
-  src="https://images.unsplash.com/photo-1668441126118-7ba4c6bac1b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2049&q=80"
+  src={Banner}
   alt="Self-confidence Image"
   width={640}
   height={437}

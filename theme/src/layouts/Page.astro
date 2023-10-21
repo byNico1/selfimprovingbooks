@@ -1,11 +1,11 @@
 ---
-import { Footer } from "@littlesticks/odyssey-theme-components";
+import Footer from "@components/Footer.astro";
 import Layout from "./Base.astro";
-import type { Props as BaseHeadProps } from "../components/head/BaseHead.astro";
-import Logo from "../components/Logo.astro";
+import type { Props as BaseHeadProps } from "@components/head/BaseHead.astro";
+import Logo from "@components/Logo.astro";
 import settings from "../config/settings";
 import { footerLists, footerSocials } from "../config/footer";
-import Nav from "../components/Navbar/Nav.astro";
+import Nav from "@components/Navbar/Nav.astro";
 
 export interface Props {
   seo?: BaseHeadProps;

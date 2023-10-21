@@ -51,4 +51,10 @@ export const footerLists = [
       },
     ],
   },
+  {
+    title: "Reviews",
+    items: [
+      { title: "The Power Of Now", slug: "/reviews/the-power-of-now-review" },
+    ],
+  },
 ];

@@ -6,6 +6,11 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@images/*": ["src/images/*"]
+    },
     "types": ["vite/client"],
     "jsx": "react-jsx",
     "jsxImportSource": "react",

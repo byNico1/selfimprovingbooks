@@ -1,14 +1,24 @@
 ---
 import Layout from "../layouts/Page.astro";
-import HomeHeroSection from "../components/sections/heros/HomeHeroSection.astro";
-import ProductsContainer from "../components/sections/products/productsContainer/productsContainer.astro";
-import BooksQuote from "../components/BooksQuote/BooksQuote.astro";
-import ProductCard from "../components/sections/products/productCard/productCard.astro";
-import Button from "../components/Button/button.astro";
+import HomeHeroSection from "@components/sections/heros/HomeHeroSection.astro";
+import ProductsContainer from "@components/sections/products/productsContainer/productsContainer.astro";
+import BooksQuote from "@components/BooksQuote/BooksQuote.astro";
+import ProductCard from "@components/sections/products/productCard/productCard.astro";
+import Button from "@components/Button/button.astro";
 import Icon from "astro-icon";
 import { Data } from "../utils/booksContainer/home";
 
 import { Schema } from "astro-seo-schema";
+import { Image } from "astro:assets";
+import FAQs from "@components/FAQs/FAQs.astro";
+import FAQ from "@components/FAQs/FAQ.astro";
+import { categories } from "../utils/categories";
+
+const seo = {
+  title: "40 Best Self Improvement Books for you in 2023",
+  description:
+    "This is the best self-improvement books list. Learn strategies you can use to reach your goals with this post.",
+};
 ---
 
 <Schema
@@ -44,23 +54,17 @@ import { Schema } from "astro-seo-schema";
   }}
 />
 
-<Layout>
+<Layout seo={seo}>
   <HomeHeroSection />
   <section
     class="pt-3 px-[20px] sm:p-0 max-w-3xl mx-auto sm:w-11/12 sm:mx-auto"
   >
-    <h2>What self-improvement books should I read?</h2>
+    <h2>What self-improvement books should you read?</h2>
+
     <p>
-      Self-improvement is a lifelong journey, and one of the best ways to embark
-      on this path is by reading self improvement books. These literary gems
-      offer valuable insights, practical advice, and inspiration to help you
-      become the best version of yourself.
+      Whether you're seeking personal growth, motivation, success, or a change
+      in perspective, these books have got you covered.
     </p>
-    <p>
-      Whether you're seeking personal growth, motivation, or a change in
-      perspective, these books have got you covered.
-    </p>
-    <p>10 Must-Read Self-Improvement Books:</p>
 
     <h3 id="grit">
       1.
@@ -656,15 +660,32 @@ import { Schema } from "astro-seo-schema";
 
     <ProductsContainer products={12} mobile={true} productsArray={Data} />
 
-    <h2 class="!mt-5">Self Improvement Books</h2>
-    <p>
-      In this section, we've explored ten remarkable self improvement books that
-      cover a wide range of topics related to personal growth, motivation, and
-      success. Each of these books offers unique insights and actionable advice
-      that can empower you to lead a more fulfilling life.
-    </p>
+    <h2 class="!mt-10">What category are you looking for?</h2>
+    <div
+      class="!mt-7 grid grid-cols-1 md:grid-cols-2 md:max-w-3xl xl:max-w-full mx-auto xl:grid-cols-3 gap-7 md:gap-10"
+    >
+      {
+        categories.map((category) => (
+          <div class="shadow-lg rounded-md bg-white ">
+            <a href={category.slug}>
+              <Image
+                src={category.image}
+                alt={category.title}
+                quality={100}
+                width="5222"
+                height="3481"
+                class="rounded-t-md"
+              />
+              <p class="text-center !mt-3 text-black">{category.title}</p>
+            </a>
+          </div>
+        ))
+      }
+    </div>
 
-    <h2>How do self improvement books benefit personal growth?</h2>
+    <h2 class="!mt-8">
+      How do self improvement books benefit personal growth?
+    </h2>
     <p>
       Self improvement books offer valuable insights, practical advice, and
       inspiration that can help individuals enhance their personal growth
@@ -717,12 +738,6 @@ import { Schema } from "astro-seo-schema";
     <p>
       They are designed to be informative and engaging, making them suitable for
       both beginners and those already on their self improvement journey.
-    </p>
-
-    <h2>Conclusion</h2>
-    <p>
-      Embarking on a journey of self improvement is a rewarding endeavor, and
-      the right books can be your trusted companions along the way.
     </p>
     <p>
       The self improvement books mentioned in this article offer a wealth of
@@ -779,6 +794,55 @@ import { Schema } from "astro-seo-schema";
       genre is beneficial to anyone who wishes to enhance their life and
       well-being.
     </p>
+
+    <h2>Conclusion</h2>
+    <p class="mb-5">
+      Embarking on a journey of self improvement is a rewarding endeavor, and
+      the right books can be your trusted companions along the way.
+    </p>
+
+    <FAQs>
+      <FAQ>
+        <h3
+          slot="question"
+          class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+        >
+          Q: What are some popular self-improvement books right now?<span
+            class="icon">+</span
+          >
+        </h3>
+        <p slot="answer" class="!m-0">
+          We feature a diverse range of bestsellers and classics, but currently,
+          titles like <a
+            href="https://amzn.to/3Q3Omob"
+            class="link--theme underline">"Atomic Habits" by James Clear</a
+          >, <a class="link--theme underline" href="https://amzn.to/3RFJve0"
+            >"The Power of Now" by Eckhart Tolle</a
+          >, and <a href="https://amzn.to/404ORBA" class="link--theme underline"
+            >"Becoming" by Michelle Obama</a
+          > are highly sought after.
+        </p>
+      </FAQ>
+      <FAQ>
+        <h3
+          slot="question"
+          class="justify-between flex cursor-pointer items-center transition-transform text-sm leading-8"
+        >
+          Q: I'm new to self-improvement books. Where should I start?<span
+            class="icon">+</span
+          >
+        </h3>
+        <p slot="answer" class="!m-0">
+          For beginners, we recommend timeless classics like <a
+            href="https://amzn.to/3ZJ2WV3"
+            class="link--theme underline"
+            >"The 7 Habits of Highly Effective People" by Stephen R. Covey</a
+          > and <a class="link--theme underline" href="https://amzn.to/3F53wTJ"
+            >"How to Win Friends and Influence People" by Dale Carnegie</a
+          >. These provide a strong foundation for personal growth.
+        </p>
+      </FAQ>
+    </FAQs>
   </article>
 </Layout>
 

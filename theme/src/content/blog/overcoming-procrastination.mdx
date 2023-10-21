@@ -4,7 +4,7 @@ title: "How to Overcome Procrastination and Get Things Done"
 description: "This is a complete guide on overcoming-procrastination. Learn How to Overcome Procrastination with this post."
 image:
   {
-    src: "https://images.unsplash.com/photo-1607523751915-5291fab91551?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    src: "@images/overcomin-procrastination.webp",
     alt: "Overcoming Procrastination Image",
   }
 publishDate: "2023-10-13 01:15"
@@ -14,12 +14,14 @@ tags: [procrastination, self-improvement, overcoming]
 ---
 
 import { Image } from "astro:assets";
-import Container from "../../components/container.astro";
 import { Schema } from "astro-seo-schema";
-import Button from "../../components/Button/button.astro";
+import Banner from "@images/overcomin-procrastination.webp";
+
+import Container from "@components/container.astro";
+import Button from "@components/Button/button.astro";
 import Icon from "astro-icon";
-import FAQs from "../../components/FAQs/FAQs.astro";
-import FAQ from "../../components/FAQs/FAQ.astro";
+import FAQs from "@components/FAQs/FAQs.astro";
+import FAQ from "@components/FAQs/FAQ.astro";
 
 <Schema
   item={{
@@ -32,8 +34,7 @@ import FAQ from "../../components/FAQs/FAQ.astro";
     headline: "How to Overcome Procrastination and Get Things Done",
     description:
       "This is a complete guide on overcoming-procrastination. Learn How to Overcome Procrastination with this post",
-    image:
-      "https://images.unsplash.com/photo-1607523751915-5291fab91551?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    image: { Banner },
     author: [
       {
         "@type": "Person",
@@ -58,7 +59,7 @@ import FAQ from "../../components/FAQs/FAQ.astro";
 />
 
 <Image
-  src="https://images.unsplash.com/photo-1607523751915-5291fab91551?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+  src={Banner}
   alt="Procrastination Image"
   width={480}
   height={340}
@@ -579,7 +580,7 @@ Complete elimination of procrastination may not be realistic, as it's a common a
 
 <div class="pb-4">
 
-<p class="text-xl font-bold">More Content about Self-Improvement:</p>
+<p class="text-3xl font-bold">More Content about Self-Improvement:</p>
 
 <a
   href="https://selfimprovingbooks.com/blog/dopamine-detox/"

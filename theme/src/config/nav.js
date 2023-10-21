@@ -20,6 +20,14 @@ export const nav = [
     dropdown: false,
   },
   {
+    title: "Reviews",
+    slug: "/reviews",
+    subcat: [
+      { title: "The Power Of Now", slug: "/reviews/the-power-of-now-review" },
+    ],
+    dropdown: true,
+  },
+  {
     title: "Categories",
     slug: "/categories",
     subcat: [
