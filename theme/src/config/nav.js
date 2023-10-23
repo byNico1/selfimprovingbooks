@@ -41,4 +41,15 @@ export const nav = [
     ],
     dropdown: true,
   },
+  {
+    title: "Topics",
+    slug: "/topics",
+    subcat: [
+      {
+        title: "Books to Overcome Stress",
+        slug: "/topics/books-for-overcoming-stress",
+      },
+    ],
+    dropdown: true,
+  },
 ];

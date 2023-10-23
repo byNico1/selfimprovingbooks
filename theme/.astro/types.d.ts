@@ -192,6 +192,13 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] };
+"financial-literacy.mdx": {
+	id: "financial-literacy.mdx";
+  slug: "financial-literacy";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] };
 "overcoming-procrastination.mdx": {
 	id: "overcoming-procrastination.mdx";
   slug: "overcoming-procrastination";

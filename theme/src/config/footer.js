@@ -57,4 +57,13 @@ export const footerLists = [
       { title: "The Power Of Now", slug: "/reviews/the-power-of-now-review" },
     ],
   },
+  {
+    title: "Topics",
+    items: [
+      {
+        title: "Books to Overcome Stress",
+        slug: "/topics/books-for-overcoming-stress",
+      },
+    ],
+  },
 ];
